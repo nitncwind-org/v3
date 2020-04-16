@@ -1,0 +1,26 @@
+{
+  "concours": [
+    {
+      "year": 2020,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "課題曲alksdjfhhjklfasd",
+      "freeProgram": "自由曲akhdjfs"
+    },
+    {
+      "year": 2020,
+      "award": "銅賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "課題曲1",
+      "freeProgram": "自由曲A"
+    }
+  ]
+}

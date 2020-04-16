@@ -1,0 +1,12 @@
+{
+  "title": "This Is Title.",
+  "date" : {
+    "year": 2020,
+    "month": 1,
+    "day": 1
+  },
+  "open": "10:00",
+  "start": "10:30",
+  "place": "Dokaka Hall",
+  "fee": 1000
+}
