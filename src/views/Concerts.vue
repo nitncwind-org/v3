@@ -18,7 +18,8 @@ export default {
     }
   },
   created() {
-    this.axios.get('/data/latest_concerts.json').then(res => {
+    const URL = process.env.BASE_URL + '/data/latest_concerts.json';
+    this.axios.get(URL).then(res => {
       this.latest_concerts = res.data;
     });
   }

@@ -26,10 +26,12 @@ export default {
     }
   },
   created() {
-    this.axios.get('/data/concours.json').then(res => {
+    const URL1 = process.env.BASE_URL + '/data/concours.json';
+    const URL2 = process.env.BASE_URL + '/data/ensemble.json';
+    this.axios.get(URL1).then(res => {
       this.concours = res.data.concours;
     });
-    this.axios.get('/data/ensemble.json').then(res => {
+    this.axios.get(URL2).then(res => {
       this.ensemble = res.data.ensemble;
     });
   }
