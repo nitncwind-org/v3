@@ -1,7 +1,253 @@
 {
   "concours": [
     {
-      "year": 2020,
+      "year": 2018,
+      "award": "銀賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "吹奏楽のための「ワルツ」",
+      "freeProgram": "梁塵秘抄～熊野古道の幻想～"
+    },
+    {
+      "year": 2017,
+      "award": "銀賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "マーチ・シャイニング・ロード",
+      "freeProgram": "ジェラシー"
+    },
+    {
+      "year": 2016,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "マーチ・スカイブルー・ドリーム",
+      "freeProgram": "スパルタカス"
+    },
+    {
+      "year": 2015,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "マーチ「春の道を歩こう」",
+      "freeProgram": "吹奏楽のための「竹田の子守唄」による幻想曲"
+    },
+    {
+      "year": 2014,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "「斎太郎節」の主題による幻想",
+      "freeProgram": "アトラス ～夢への地図～"
+    },
+    {
+      "year": 2013,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "復興への序曲「夢の明日に」",
+      "freeProgram": "吹奏楽のためのファンファーレとソリロクイ"
+    },
+    {
+      "year": 2012,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "吹奏楽のための綺想曲「じゅげむ」",
+      "freeProgram": "古いアメリカの賛歌による序曲"
+    },
+    {
+      "year": 2011,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "マーチ「ライヴリー アヴェニュー」",
+      "freeProgram": "マードックからの最後の手紙"
+    },
+    {
+      "year": 2010,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "汐風のマーチ",
+      "freeProgram": "歌劇《カヴァレリア・ルスティカーナ》"
+    },
+    {
+      "year": 2009,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "ネストリアン・モニュメント",
+      "freeProgram": "マゼランの未知なる大陸への挑戦"
+    },
+    {
+      "year": 2008,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "ブライアンの休日",
+      "freeProgram": "喜歌劇《メリー・ウィドウ》 セレクション"
+    },
+    {
+      "year": 2007,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "マーチ「ブルースカイ」",
+      "freeProgram": "たなばた"
+    },
+    {
+      "year": 2006,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "海へ... 吹奏楽の為に",
+      "freeProgram": "吹奏楽のための音詩「輝きの海へ」"
+    },
+    {
+      "year": 2005,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "マーチ「春風」",
+      "freeProgram": "ハンガリー民謡〈くじゃく〉による変奏曲"
+    },
+    {
+      "year": 2004,
+      "award": "銀賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "吹奏楽のための「風之舞」",
+      "freeProgram": "バレエ音楽《ガイーヌ》 より 恋人たちの踊り、アイシェの踊り、収穫祭"
+    },
+    {
+      "year": 2003,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "マーチ「ベスト・フレンド」",
+      "freeProgram": "シンフォニア・タプカーラ より I. III."
+    },
+    {
+      "year": 2002,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "吹奏楽のためのラメント",
+      "freeProgram": "管弦楽組曲《第六の幸福をもたらす宿》 より III."
+    },
+    {
+      "year": 2001,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "行進曲「SLが行く」",
+      "freeProgram": "組曲《仮面舞踏会》 より I. ワルツ IV. ロマンス V. ギャロップ"
+    },
+    {
+      "year": 2000,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "道祖神の詩",
+      "freeProgram": "ミシシッピ組曲 より IV. マルディ・グラ"
+    },
+    {
+      "year": 1999,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "マーチ・グリーン・フォレスト",
+      "freeProgram": "海の男たちの歌"
+    },
+    {
+      "year": 1998,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "稲穂の波",
+      "freeProgram": "ジュビリー序曲"
+    },
+    {
+      "year": 1997,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "マーチ「夢と勇気、憧れ、希望」",
+      "freeProgram": "吹奏楽のための神話(天岩屋戸の物語による)"
+    },
+    {
+      "year": 1996,
+      "award": "金賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "般若",
+      "freeProgram": "ヴィヴァ・ムジカ！"
+    },
+    {
+      "year": 1995,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "スプリング・マーチ",
+      "freeProgram": "吹奏楽のための交響詩《ぐるりよざ》 より III. 祭り"
+    },
+    {
+      "year": 1994,
       "award": "金賞",
       "isRepresent": true,
       "next": [
@@ -11,16 +257,268 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "課題曲alksdjfhhjklfasd",
-      "freeProgram": "自由曲akhdjfs"
+      "aSetPiece": "雲のコラージュ",
+      "freeProgram": "ドラゴンの年 より フィナーレ"
     },
     {
-      "year": 2020,
-      "award": "銅賞",
+      "year": 1993,
+      "award": "金賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "課題曲1",
-      "freeProgram": "自由曲A"
+      "aSetPiece": "マーチ・エイプリル・メイ",
+      "freeProgram": "交響詩《スパルタクス》"
+    },
+    {
+      "year": 1992,
+      "award": "金賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "ゆかいな仲間の行進曲",
+      "freeProgram": "メトセラII打楽器群と吹奏楽のために"
+    },
+    {
+      "year": 1991,
+      "award": "金賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "コーラル・ブルー 沖縄民謡「谷茶前」の主題による交響的印象",
+      "freeProgram": "第3組曲《バレエの情景》"
+    },
+    {
+      "year": 1990,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "マーチ「カタロニアの栄光」",
+      "freeProgram": "交響曲《メキシコの祭り》 より I."
+    },
+    {
+      "year": 1989,
+      "award": "金賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "風と炎の踊り",
+      "freeProgram": "二つの交響的断章"
+    },
+    {
+      "year": 1988,
+      "award": "金賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "カーニバルのマーチ",
+      "freeProgram": "呪文と踊り"
+    },
+    {
+      "year": 1987,
+      "award": "金賞",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "風紋",
+      "freeProgram": "交響的断章"
+    },
+    {
+      "year": 1986,
+      "award": "銀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "コンサート・マーチ「テイク・オフ」",
+      "freeProgram": "プレリュードとダンス"
+    },
+    {
+      "year": 1985,
+      "award": "2位",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "シンフォニック・ファンファーレとマーチ",
+      "freeProgram": "フェスティヴァル・ヴァリエーション"
+    },
+    {
+      "year": 1984,
+      "award": "優秀賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "マーチ・オーパス・ワン",
+      "freeProgram": "オセロ より1. 前奏曲 3. オセロとデズデモーナ 4. 廷臣たちの入場"
+    },
+    {
+      "year": 1983,
+      "award": "2位",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "吹奏楽のためのインヴェンション第1番",
+      "freeProgram": "第3組曲《バレエの情景》 より I. II. IV."
+    },
+    {
+      "year": 1982,
+      "award": "2位",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "カンツォーネ",
+      "freeProgram": "デル＝ボルゴ"
+    },
+    {
+      "year": 1981,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "東北地方の民謡によるコラージュ",
+      "freeProgram": "二つの交響的断章"
+    },
+    {
+      "year": 1980,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "行進曲《オーバー・ザ・ギャラクシー》",
+      "freeProgram": "アルメニアン・ダンス・パートII より ロリの歌"
+    },
+    {
+      "year": 1979,
+      "award": "優良賞",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "フェリスタス",
+      "freeProgram": "シンフォニックバンドのための《パッサカリア》"
+    },
+    {
+      "year": 1978,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "ジュビラーテ",
+      "freeProgram": "吹奏楽のための小狂詩曲"
+    },
+    {
+      "year": 1977,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "ディスコ・キッド",
+      "freeProgram": "主よ、人の望みの喜びよ BWV147より"
+    },
+    {
+      "year": 1976,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "カンティレーナ",
+      "freeProgram": "小組曲"
+    },
+    {
+      "year": 1975,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": null,
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "吹奏楽のための練習曲",
+      "freeProgram": "アレルヤ！ラウダムス・テ"
+    },
+    {
+      "year": 1974,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "吹奏楽のためのシンフォニア",
+      "freeProgram": "アレルヤ！ラウダムス・テ"
+    },
+    {
+      "year": 1973,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "吹奏楽のためのアラベスク",
+      "freeProgram": "シシリアーノとフィナーレ"
+    },
+    {
+      "year": 1972,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "シンフォニック・ファンファーレ",
+      "freeProgram": "トリティコ"
+    },
+    {
+      "year": 1971,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "行進曲《太陽の下に》",
+      "freeProgram": "ドラマティコ"
+    },
+    {
+      "year": 1970,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "音楽祭のプレリュード",
+      "freeProgram": "トッカータとフーガ ニ短調 BWV565"
+    },
+    {
+      "year": 1969,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [],
+      "aSetPiece": "吹奏楽のための音詩《南極点への序曲》",
+      "freeProgram": "交響曲第4番 より IV."
+    },
+    {
+      "year": 1968,
+      "award": "棄権",
+      "isRepresent": false,
+      "next": [],
+      "aSetPiece": "吹奏楽のための幻想曲《移り気な五度のムード》",
+      "freeProgram": "ケンジントン序曲"
+    },
+    {
+      "year": 1967,
+      "award": "1位",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": null,
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "吹奏楽のための《ディヴェルティメント》",
+      "freeProgram": "序奏とインヴェンション"
+    },
+    {
+      "year": 1966,
+      "award": "参加",
+      "isRepresent": true,
+      "next": [
+        {
+          "competitionName": "関西大会",
+          "award": null,
+          "isRepresent": false
+        }
+      ],
+      "aSetPiece": "吹奏楽のための小狂詩曲",
+      "freeProgram": "コラール"
     }
   ]
 }
