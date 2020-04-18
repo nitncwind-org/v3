@@ -23,7 +23,7 @@ export default {
     }
   },
   created: function() {
-    const URL = process.env.BASE_URL + 'data/links.json';
+    const URL = './data/links.json';
     this.axios.get(URL).then(res => {
       this.links = res.data.links;
     });

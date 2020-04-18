@@ -20,7 +20,7 @@ export default {
     }
   },
   created() {
-    const URL = process.env.BASE_URL + 'data/about.json';
+    const URL = './data/about.json'
     this.axios.get(URL).then(res => {
       this.about_QandA = res.data.about;
     });

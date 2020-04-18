@@ -29,7 +29,7 @@ export default {
     }
   },
   created() {
-    const URL = process.env.BASE_URL + '/data/latest_concerts.json';
+    const URL = './data/latest_concerts.json';
     this.axios.get(URL).then(res => {
       this.latest_concerts = res.data;
     });

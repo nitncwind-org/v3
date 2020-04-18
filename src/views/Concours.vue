@@ -26,8 +26,8 @@ export default {
     }
   },
   created() {
-    const URL1 = process.env.BASE_URL + '/data/concours.json';
-    const URL2 = process.env.BASE_URL + '/data/ensemble.json';
+    const URL1 = './data/concours.json';
+    const URL2 = './data/ensemble.json';
     this.axios.get(URL1).then(res => {
       this.concours = res.data.concours;
     });
