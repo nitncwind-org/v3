@@ -42,7 +42,9 @@ export default {
         centerMode: true,
         infiniteScroll: true,
         autoPlay: true,
-        playSpeed: 2000,
+        playSpeed: 5000,
+        transition: 600,
+        hoverPause: false,
       },
     }
   },
