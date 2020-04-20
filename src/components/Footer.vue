@@ -1,7 +1,7 @@
 <template>
-  <div id="footer">
+  <v-footer>
     &copy; 2014-{{ now }} 奈良高専吹奏楽部
-  </div>
+  </v-footer>
 </template>
 
 <script>
@@ -18,9 +18,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-#footer {
-  background-color: bisque;
-}
-</style>

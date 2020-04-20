@@ -1,8 +1,8 @@
 <template>
-  <div id="f2">
-    <h2>{{ QandA.question }}</h2>
-    <p v-html="QandA.answer"></p>
-  </div>
+  <v-card tile outlined>
+    <v-card-title>{{ QandA.question }}</v-card-title>
+    <v-card-text v-html="QandA.answer"></v-card-text>
+  </v-card>
 </template>
 
 <script>

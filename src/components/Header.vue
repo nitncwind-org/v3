@@ -1,11 +1,11 @@
 <template>
-  <div id="header">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/concerts">Concerts</router-link>
-    <router-link to="/concours">Concours</router-link>
-    <router-link to="/link">Link</router-link>
-  </div>
+  <v-app-bar id="header">
+    <v-btn text to="/">Home</v-btn>
+    <v-btn text to="/about">About</v-btn>
+    <v-btn text to="/concerts">Concerts</v-btn>
+    <v-btn text to="/concours">Concours</v-btn>
+    <v-btn text to="/link">Link</v-btn>
+  </v-app-bar>
 </template>
 
 <script>
@@ -13,9 +13,3 @@ export default {
   name: 'Header'
 }
 </script>
-
-<style scoped>
-#header {
-  background-color: bisque;
-}
-</style>
