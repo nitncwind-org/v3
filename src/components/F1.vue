@@ -1,7 +1,7 @@
 <template>
   <div id="f1">
     <h1>{{ d.title }}</h1>
-    <div v-show="d.notice">
+    <div v-if="d.notice">
       <h2>{{ d.notice.title }}</h2>
       <p>{{ d.notice.text }}</p>
     </div>
