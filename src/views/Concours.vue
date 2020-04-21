@@ -2,8 +2,8 @@
   <div id="concours">
     <div>
       <h2>吹奏楽コンクール実績</h2>
-      <v-btn-toggle mandatory v-model="selectedGeneration">
-        <v-btn v-for="generation in generationConcours.keys()" :key="generation" :index="generation" :value="generation">{{ generation }}</v-btn>
+      <v-btn-toggle mandatory v-model="selectedGeneration" dense>
+        <v-btn v-for="generation in generationConcours.keys()" :key="generation" :index="generation" :value="generation">{{ generation }}s</v-btn>
       </v-btn-toggle>
       <v-card v-for="[generation, con] in generationConcours" :key="generation" :index="generation" v-show="generation === selectedGeneration">
         <F3 v-for="(c, index) in con" :key=index v-bind:concurs="c"></F3>
@@ -55,3 +55,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.v-btn{
+  text-transform: none;
+}
+</style>
