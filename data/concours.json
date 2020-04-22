@@ -11,8 +11,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "吹奏楽のための「ワルツ」",
-      "freeProgram": "梁塵秘抄～熊野古道の幻想～"
+      "setPiece": {
+        "title": "吹奏楽のための「ワルツ」",
+        "subtitle": "",
+        "composer": "高昌帥",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "梁塵秘抄～熊野古道の幻想～",
+        "subtitle": "",
+        "composer": "福島弘和",
+        "arranger": ""
+      }
     },
     {
       "year": 2017,
@@ -25,8 +35,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "マーチ・シャイニング・ロード",
-      "freeProgram": "ジェラシー"
+      "setPiece": {
+        "title": "マーチ・シャイニング・ロード",
+        "subtitle": "",
+        "composer": "木内涼",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ジェラシー",
+        "subtitle": "",
+        "composer": "ゲーゼ",
+        "arranger": "岩井直溥"
+      }
     },
     {
       "year": 2016,
@@ -39,8 +59,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "マーチ・スカイブルー・ドリーム",
-      "freeProgram": "スパルタカス"
+      "setPiece": {
+        "title": "マーチ・スカイブルー・ドリーム",
+        "subtitle": "",
+        "composer": "矢藤学",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "スパルタカス",
+        "subtitle": "",
+        "composer": "ノース",
+        "arranger": "カカヴァス"
+      }
     },
     {
       "year": 2015,
@@ -53,88 +83,198 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "マーチ「春の道を歩こう」",
-      "freeProgram": "吹奏楽のための「竹田の子守唄」による幻想曲"
+      "setPiece": {
+        "title": "マーチ「春の道を歩こう」",
+        "subtitle": "",
+        "composer": "佐藤邦宏",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "吹奏楽のための「竹田の子守唄」による幻想曲",
+        "subtitle": "",
+        "composer": "山本教生",
+        "arranger": ""
+      }
     },
     {
       "year": 2014,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "「斎太郎節」の主題による幻想",
-      "freeProgram": "アトラス ～夢への地図～"
+      "setPiece": {
+        "title": "「斎太郎節」の主題による幻想",
+        "subtitle": "",
+        "composer": "合田佳代子",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "アトラス ～夢への地図～",
+        "subtitle": "",
+        "composer": "福島弘和",
+        "arranger": ""
+      }
     },
     {
       "year": 2013,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "復興への序曲「夢の明日に」",
-      "freeProgram": "吹奏楽のためのファンファーレとソリロクイ"
+      "setPiece": {
+        "title": "復興への序曲「夢の明日に」",
+        "subtitle": "",
+        "composer": "岩井直溥",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "吹奏楽のためのファンファーレとソリロクイ",
+        "subtitle": "",
+        "composer": "シャープ",
+        "arranger": ""
+      }
     },
     {
       "year": 2012,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "吹奏楽のための綺想曲「じゅげむ」",
-      "freeProgram": "古いアメリカの賛歌による序曲"
+      "setPiece": {
+        "title": "吹奏楽のための綺想曲「じゅげむ」",
+        "subtitle": "",
+        "composer": "足立正",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "古いアメリカの賛歌による序曲",
+        "subtitle": "",
+        "composer": "C.T.スミス",
+        "arranger": ""
+      }
     },
     {
       "year": 2011,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "マーチ「ライヴリー アヴェニュー」",
-      "freeProgram": "マードックからの最後の手紙"
+      "setPiece": {
+        "title": "マーチ「ライヴリー アヴェニュー」",
+        "subtitle": "",
+        "composer": "堀田庸元",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "マードックからの最後の手紙",
+        "subtitle": "",
+        "composer": "樽屋雅徳",
+        "arranger": ""
+      }
     },
     {
       "year": 2010,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "汐風のマーチ",
-      "freeProgram": "歌劇《カヴァレリア・ルスティカーナ》"
+      "setPiece": {
+        "title": "汐風のマーチ",
+        "subtitle": "",
+        "composer": "田嶋勉",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "歌劇《カヴァレリア・ルスティカーナ》",
+        "subtitle": "",
+        "composer": "マスカーニ",
+        "arranger": ""
+      }
     },
     {
       "year": 2009,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "ネストリアン・モニュメント",
-      "freeProgram": "マゼランの未知なる大陸への挑戦"
+      "setPiece": {
+        "title": "ネストリアン・モニュメント",
+        "subtitle": "",
+        "composer": "平田智暁",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "マゼランの未知なる大陸への挑戦",
+        "subtitle": "",
+        "composer": "樽屋雅徳",
+        "arranger": ""
+      }
     },
     {
       "year": 2008,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "ブライアンの休日",
-      "freeProgram": "喜歌劇《メリー・ウィドウ》 セレクション"
+      "setPiece": {
+        "title": "ブライアンの休日",
+        "subtitle": "",
+        "composer": "内藤淳一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "喜歌劇《メリー・ウィドウ》 セレクション",
+        "subtitle": "",
+        "composer": "レハール",
+        "arranger": "鈴木英史"
+      }
     },
     {
       "year": 2007,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "マーチ「ブルースカイ」",
-      "freeProgram": "たなばた"
+      "setPiece": {
+        "title": "マーチ「ブルースカイ」",
+        "subtitle": "",
+        "composer": "高木登古",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "たなばた",
+        "subtitle": "",
+        "composer": "酒井格",
+        "arranger": ""
+      }
     },
     {
       "year": 2006,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "海へ... 吹奏楽の為に",
-      "freeProgram": "吹奏楽のための音詩「輝きの海へ」"
+      "setPiece": {
+        "title": "海へ... 吹奏楽の為に",
+        "subtitle": "",
+        "composer": "三澤慶",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "吹奏楽のための音詩「輝きの海へ」",
+        "subtitle": "",
+        "composer": "八木澤教司",
+        "arranger": ""
+      }
     },
     {
       "year": 2005,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "マーチ「春風」",
-      "freeProgram": "ハンガリー民謡〈くじゃく〉による変奏曲"
+      "setPiece": {
+        "title": "マーチ「春風」",
+        "subtitle": "",
+        "composer": "南俊明",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ハンガリー民謡〈くじゃく〉による変奏曲",
+        "subtitle": "",
+        "composer": "コダーイ",
+        "arranger": ""
+      }
     },
     {
       "year": 2004,
@@ -147,24 +287,54 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "吹奏楽のための「風之舞」",
-      "freeProgram": "バレエ音楽《ガイーヌ》 より 恋人たちの踊り、アイシェの踊り、収穫祭"
+      "setPiece": {
+        "title": "吹奏楽のための「風之舞」",
+        "subtitle": "",
+        "composer": "福田洋介",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "バレエ音楽《ガイーヌ》 より 恋人たちの踊り、アイシェの踊り、収穫祭",
+        "subtitle": "",
+        "composer": "ハチャトゥリアン",
+        "arranger": "前田幸弘"
+      }
     },
     {
       "year": 2003,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "マーチ「ベスト・フレンド」",
-      "freeProgram": "シンフォニア・タプカーラ より I. III."
+      "setPiece": {
+        "title": "マーチ「ベスト・フレンド」",
+        "subtitle": "",
+        "composer": "松浦伸吾",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "シンフォニア・タプカーラ より I. III.",
+        "subtitle": "",
+        "composer": "伊福部昭",
+        "arranger": "片岡大蔵"
+      }
     },
     {
       "year": 2002,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "吹奏楽のためのラメント",
-      "freeProgram": "管弦楽組曲《第六の幸福をもたらす宿》 より III."
+      "setPiece": {
+        "title": "吹奏楽のためのラメント",
+        "subtitle": "",
+        "composer": "高昌帥",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "管弦楽組曲《第六の幸福をもたらす宿》 より III.",
+        "subtitle": "",
+        "composer": "アーノルド",
+        "arranger": "瀬尾宗利"
+      }
     },
     {
       "year": 2001,
@@ -177,8 +347,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "行進曲「SLが行く」",
-      "freeProgram": "組曲《仮面舞踏会》 より I. ワルツ IV. ロマンス V. ギャロップ"
+      "setPiece": {
+        "title": "行進曲「SLが行く」",
+        "subtitle": "",
+        "composer": "若杉海一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "組曲《仮面舞踏会》 より I. ワルツ IV. ロマンス V. ギャロップ",
+        "subtitle": "",
+        "composer": "ハチャトゥリアン",
+        "arranger": ""
+      }
     },
     {
       "year": 2000,
@@ -191,8 +371,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "道祖神の詩",
-      "freeProgram": "ミシシッピ組曲 より IV. マルディ・グラ"
+      "setPiece": {
+        "title": "道祖神の詩",
+        "subtitle": "",
+        "composer": "福島弘和",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ミシシッピ組曲 より IV. マルディ・グラ",
+        "subtitle": "",
+        "composer": "グローフェ",
+        "arranger": "瀬尾宗利"
+      }
     },
     {
       "year": 1999,
@@ -205,16 +395,36 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "マーチ・グリーン・フォレスト",
-      "freeProgram": "海の男たちの歌"
+      "setPiece": {
+        "title": "マーチ・グリーン・フォレスト",
+        "subtitle": "",
+        "composer": "内藤淳一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "海の男たちの歌",
+        "subtitle": "",
+        "composer": "R.W.スミス",
+        "arranger": ""
+      }
     },
     {
       "year": 1998,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "稲穂の波",
-      "freeProgram": "ジュビリー序曲"
+      "setPiece": {
+        "title": "稲穂の波",
+        "subtitle": "",
+        "composer": "福島弘和",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ジュビリー序曲",
+        "subtitle": "",
+        "composer": "スパーク",
+        "arranger": ""
+      }
     },
     {
       "year": 1997,
@@ -227,24 +437,54 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "マーチ「夢と勇気、憧れ、希望」",
-      "freeProgram": "吹奏楽のための神話(天岩屋戸の物語による)"
+      "setPiece": {
+        "title": "マーチ「夢と勇気、憧れ、希望」",
+        "subtitle": "",
+        "composer": "内藤淳一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "吹奏楽のための神話～天の岩屋戸の物語による～",
+        "subtitle": "",
+        "composer": "大栗裕",
+        "arranger": ""
+      }
     },
     {
       "year": 1996,
       "award": "金賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "般若",
-      "freeProgram": "ヴィヴァ・ムジカ！"
+      "setPiece": {
+        "title": "般若",
+        "subtitle": "",
+        "composer": "松浦欣也",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ヴィヴァ・ムジカ！",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1995,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "スプリング・マーチ",
-      "freeProgram": "吹奏楽のための交響詩《ぐるりよざ》 より III. 祭り"
+      "setPiece": {
+        "title": "スプリング・マーチ",
+        "subtitle": "",
+        "composer": "大石美香",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "吹奏楽のための交響詩《ぐるりよざ》 より III. 祭り",
+        "subtitle": "",
+        "composer": "伊藤康英",
+        "arranger": ""
+      }
     },
     {
       "year": 1994,
@@ -257,56 +497,126 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "雲のコラージュ",
-      "freeProgram": "ドラゴンの年 より フィナーレ"
+      "setPiece": {
+        "title": "雲のコラージュ",
+        "subtitle": "",
+        "composer": "櫛田胅之扶",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ドラゴンの年 より フィナーレ",
+        "subtitle": "",
+        "composer": "スパーク",
+        "arranger": ""
+      }
     },
     {
       "year": 1993,
       "award": "金賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "マーチ・エイプリル・メイ",
-      "freeProgram": "交響詩《スパルタクス》"
+      "setPiece": {
+        "title": "マーチ・エイプリル・メイ",
+        "subtitle": "",
+        "composer": "矢部政男",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "交響詩《スパルタクス》",
+        "subtitle": "",
+        "composer": "ヴァン＝デル＝ロースト",
+        "arranger": ""
+      }
     },
     {
       "year": 1992,
       "award": "金賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "ゆかいな仲間の行進曲",
-      "freeProgram": "メトセラII打楽器群と吹奏楽のために"
+      "setPiece": {
+        "title": "ゆかいな仲間の行進曲",
+        "subtitle": "",
+        "composer": "坂本智",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "メトセラII打楽器群と吹奏楽のために",
+        "subtitle": "",
+        "composer": "田中賢",
+        "arranger": ""
+      }
     },
     {
       "year": 1991,
       "award": "金賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "コーラル・ブルー 沖縄民謡「谷茶前」の主題による交響的印象",
-      "freeProgram": "第3組曲《バレエの情景》"
+      "setPiece": {
+        "title": "コーラル・ブルー 沖縄民謡「谷茶前」の主題による交響的印象",
+        "subtitle": "",
+        "composer": "真島俊夫",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "第3組曲《バレエの情景》",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1990,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "マーチ「カタロニアの栄光」",
-      "freeProgram": "交響曲《メキシコの祭り》 より I."
+      "setPiece": {
+        "title": "マーチ「カタロニアの栄光」",
+        "subtitle": "",
+        "composer": "間宮芳生",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "交響曲《メキシコの祭り》 より I.",
+        "subtitle": "",
+        "composer": "H.O.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1989,
       "award": "金賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "風と炎の踊り",
-      "freeProgram": "二つの交響的断章"
+      "setPiece": {
+        "title": "風と炎の踊り",
+        "subtitle": "",
+        "composer": "小長谷宗一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "二つの交響的断章",
+        "subtitle": "",
+        "composer": "ネリベル",
+        "arranger": ""
+      }
     },
     {
       "year": 1988,
       "award": "金賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "カーニバルのマーチ",
-      "freeProgram": "呪文と踊り"
+      "setPiece": {
+        "title": "カーニバルのマーチ",
+        "subtitle": "",
+        "composer": "杉本幸一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "呪文と踊り",
+        "subtitle": "",
+        "composer": "チャンス",
+        "arranger": ""
+      }
     },
     {
       "year": 1987,
@@ -319,48 +629,108 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "風紋",
-      "freeProgram": "交響的断章"
+      "setPiece": {
+        "title": "風紋",
+        "subtitle": "",
+        "composer": "保科洋",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "交響的断章",
+        "subtitle": "",
+        "composer": "ネリベル",
+        "arranger": ""
+      }
     },
     {
       "year": 1986,
       "award": "銀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "コンサート・マーチ「テイク・オフ」",
-      "freeProgram": "プレリュードとダンス"
+      "setPiece": {
+        "title": "コンサート・マーチ「テイク・オフ」",
+        "subtitle": "",
+        "composer": "建部知弘",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "プレリュードとダンス",
+        "subtitle": "",
+        "composer": "クレストン",
+        "arranger": ""
+      }
     },
     {
       "year": 1985,
       "award": "2位",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "シンフォニック・ファンファーレとマーチ",
-      "freeProgram": "フェスティヴァル・ヴァリエーション"
+      "setPiece": {
+        "title": "シンフォニック・ファンファーレとマーチ",
+        "subtitle": "",
+        "composer": "仲本政国",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "フェスティヴァル・ヴァリエーション",
+        "subtitle": "",
+        "composer": "C.T.スミス",
+        "arranger": ""
+      }
     },
     {
       "year": 1984,
       "award": "優秀賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "マーチ・オーパス・ワン",
-      "freeProgram": "オセロ より1. 前奏曲 3. オセロとデズデモーナ 4. 廷臣たちの入場"
+      "setPiece": {
+        "title": "マーチ・オーパス・ワン",
+        "subtitle": "",
+        "composer": "浦田健次郎",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "オセロ より1. 前奏曲 3. オセロとデズデモーナ 4. 廷臣たちの入場",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1983,
       "award": "2位",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "吹奏楽のためのインヴェンション第1番",
-      "freeProgram": "第3組曲《バレエの情景》 より I. II. IV."
+      "setPiece": {
+        "title": "吹奏楽のためのインヴェンション第1番",
+        "subtitle": "",
+        "composer": "内藤淳一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "第3組曲《バレエの情景》 より I. II. IV.",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1982,
       "award": "2位",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "カンツォーネ",
-      "freeProgram": "デル＝ボルゴ"
+      "setPiece": {
+        "title": "",
+        "subtitle": "",
+        "composer": "",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "カンツォーネ",
+        "subtitle": "",
+        "composer": "デル＝ボルゴ",
+        "arranger": ""
+      }
     },
     {
       "year": 1981,
@@ -373,8 +743,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "東北地方の民謡によるコラージュ",
-      "freeProgram": "二つの交響的断章"
+      "setPiece": {
+        "title": "東北地方の民謡によるコラージュ",
+        "subtitle": "",
+        "composer": "櫛田胅之扶",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "二つの交響的断章",
+        "subtitle": "",
+        "composer": "ネリベル",
+        "arranger": ""
+      }
     },
     {
       "year": 1980,
@@ -387,40 +767,90 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "行進曲《オーバー・ザ・ギャラクシー》",
-      "freeProgram": "アルメニアン・ダンス・パートII より ロリの歌"
+      "setPiece": {
+        "title": "行進曲《オーバー・ザ・ギャラクシー》",
+        "subtitle": "",
+        "composer": "齋藤高順",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "アルメニアン・ダンス・パートII より ロリの歌",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1979,
       "award": "優良賞",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "フェリスタス",
-      "freeProgram": "シンフォニックバンドのための《パッサカリア》"
+      "setPiece": {
+        "title": "フェリスタス",
+        "subtitle": "",
+        "composer": "青木進",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "シンフォニックバンドのための《パッサカリア》",
+        "subtitle": "",
+        "composer": "兼田敏",
+        "arranger": ""
+      }
     },
     {
       "year": 1978,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "ジュビラーテ",
-      "freeProgram": "吹奏楽のための小狂詩曲"
+      "setPiece": {
+        "title": "ジュビラーテ",
+        "subtitle": "",
+        "composer": "ジェイガー",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "吹奏楽のための小狂詩曲",
+        "subtitle": "",
+        "composer": "大栗裕",
+        "arranger": ""
+      }
     },
     {
       "year": 1977,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "ディスコ・キッド",
-      "freeProgram": "主よ、人の望みの喜びよ BWV147より"
+      "setPiece": {
+        "title": "ディスコ・キッド",
+        "subtitle": "",
+        "composer": "東海林修",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "主よ、人の望みの喜びよ BWV147より",
+        "subtitle": "",
+        "composer": "J.S.バッハ",
+        "arranger": ""
+      }
     },
     {
       "year": 1976,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "カンティレーナ",
-      "freeProgram": "小組曲"
+      "setPiece": {
+        "title": "カンティレーナ",
+        "subtitle": "",
+        "composer": "保科洋",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "小組曲",
+        "subtitle": "",
+        "composer": "ドビュッシー",
+        "arranger": ""
+      }
     },
     {
       "year": 1975,
@@ -433,64 +863,144 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "吹奏楽のための練習曲",
-      "freeProgram": "アレルヤ！ラウダムス・テ"
+      "setPiece": {
+        "title": "吹奏楽のための練習曲",
+        "subtitle": "",
+        "composer": "小林徹",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "アレルヤ！ラウダムス・テ",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1974,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "吹奏楽のためのシンフォニア",
-      "freeProgram": "アレルヤ！ラウダムス・テ"
+      "setPiece": {
+        "title": "吹奏楽のためのシンフォニア",
+        "subtitle": "",
+        "composer": "小林徹",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "アレルヤ！ラウダムス・テ",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      }
     },
     {
       "year": 1973,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "吹奏楽のためのアラベスク",
-      "freeProgram": "シシリアーノとフィナーレ"
+      "setPiece": {
+        "title": "吹奏楽のためのアラベスク",
+        "subtitle": "",
+        "composer": "名取吾朗",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "シシリアーノとフィナーレ",
+        "subtitle": "",
+        "composer": "ヴィヴァルディ",
+        "arranger": ""
+      }
     },
     {
       "year": 1972,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "シンフォニック・ファンファーレ",
-      "freeProgram": "トリティコ"
+      "setPiece": {
+        "title": "シンフォニック・ファンファーレ",
+        "subtitle": "",
+        "composer": "三沢栄一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "トリティコ",
+        "subtitle": "",
+        "composer": "ネリベル",
+        "arranger": ""
+      }
     },
     {
       "year": 1971,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "行進曲《太陽の下に》",
-      "freeProgram": "ドラマティコ"
+      "setPiece": {
+        "title": "行進曲《太陽の下に》",
+        "subtitle": "",
+        "composer": "奥村一",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ドラマティコ",
+        "subtitle": "",
+        "composer": "マクベス",
+        "arranger": ""
+      }
     },
     {
       "year": 1970,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "音楽祭のプレリュード",
-      "freeProgram": "トッカータとフーガ ニ短調 BWV565"
+      "setPiece": {
+        "title": "音楽祭のプレリュード",
+        "subtitle": "",
+        "composer": "A.リード",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "トッカータとフーガ ニ短調 BWV565",
+        "subtitle": "",
+        "composer": "J.S.バッハ",
+        "arranger": ""
+      }
     },
     {
       "year": 1969,
       "award": "1位",
       "isRepresent": true,
       "next": [],
-      "aSetPiece": "吹奏楽のための音詩《南極点への序曲》",
-      "freeProgram": "交響曲第4番 より IV."
+      "setPiece": {
+        "title": "吹奏楽のための音詩《南極点への序曲》",
+        "subtitle": "",
+        "composer": "岩河三郎",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "交響曲第4番 より IV.",
+        "subtitle": "",
+        "composer": "チャイコフスキー",
+        "arranger": "サフラネク"
+      }
     },
     {
       "year": 1968,
       "award": "棄権",
       "isRepresent": false,
       "next": [],
-      "aSetPiece": "吹奏楽のための幻想曲《移り気な五度のムード》",
-      "freeProgram": "ケンジントン序曲"
+      "setPiece": {
+        "title": "吹奏楽のための幻想曲《移り気な五度のムード》",
+        "subtitle": "",
+        "composer": "塚原晢夫",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "ケンジントン序曲",
+        "subtitle": "",
+        "composer": "ホエアー",
+        "arranger": ""
+      }
     },
     {
       "year": 1967,
@@ -503,8 +1013,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "吹奏楽のための《ディヴェルティメント》",
-      "freeProgram": "序奏とインヴェンション"
+      "setPiece": {
+        "title": "吹奏楽のための《ディヴェルティメント》",
+        "subtitle": "",
+        "composer": "兼田敏",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "序奏とインヴェンション",
+        "subtitle": "",
+        "composer": "ホエアー",
+        "arranger": ""
+      }
     },
     {
       "year": 1966,
@@ -517,8 +1037,18 @@
           "isRepresent": false
         }
       ],
-      "aSetPiece": "吹奏楽のための小狂詩曲",
-      "freeProgram": "コラール"
+      "setPiece": {
+        "title": "吹奏楽のための小狂詩曲",
+        "subtitle": "",
+        "composer": "大栗裕",
+        "arranger": ""
+      },
+      "freeProgram": {
+        "title": "コラール",
+        "subtitle": "",
+        "composer": "ネリベル",
+        "arranger": ""
+      }
     }
   ]
 }

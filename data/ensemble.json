@@ -5,7 +5,12 @@
       "award": "銅賞",
       "isRepresent": false,
       "next": [],
-      "musicTitle": "タイトルmusic_title"
+      "music": {
+        "title": "タイトル",
+        "subtitle": "",
+        "composer": "",
+        "arranger": ""
+      }
     }
   ]
 }
