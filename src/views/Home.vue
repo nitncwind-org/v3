@@ -14,7 +14,7 @@
     </p>
 
     <F1 v-if="latest_concerts" v-bind:d="latest_concerts"></F1>
-    <Timeline :id="user_id" source-type="profile" :options="{ tweetLimit: '3' }" />
+    <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100'}"/>
   </div>
 </template>
 
