@@ -9,8 +9,8 @@
       <p v-for="(c, i) in concurs.next" :key="i">
         {{ c.competitionName }} {{ c.award }}<span v-if="c.isRepresent"> & 代表</span>
       </p>
-      <p v-if="concurs.aSetPiece">曲名 {{ concurs.aSetPiece }} ／ {{ concurs.freeProgram }}</p>
-      <p v-if="concurs.musicTitle">曲名 {{ concurs.musicTitle }}</p>
+      <p v-if="concurs.setPiece">曲名 {{ concurs.setPiece.title }} ／ {{ concurs.freeProgram.title }}</p>
+      <p v-if="concurs.music">曲名 {{ concurs.music.title }}</p>
     </v-card-text>
   </v-card>
 </template>
