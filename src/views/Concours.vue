@@ -38,13 +38,15 @@ export default {
     this.axios.get(URL1).then(res => {
       this.concours = res.data.concours;
 
+      let m = new Map();
       this.concours.forEach(e => {
         e.generation = Math.floor(e.year / 10) * 10;
-        if(this.generationConcours.get(e.generation) === undefined){
-          this.generationConcours.set(e.generation, []);
+        if(m.get(e.generation) === undefined){
+          m.set(e.generation, []);
         }
-        this.generationConcours.get(e.generation).push(e);
+        m.get(e.generation).push(e);
       });
+      this.generationConcours = m;
     });
     this.axios.get(URL2).then(res => {
       this.ensemble = res.data.ensemble;
