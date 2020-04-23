@@ -1,8 +1,8 @@
 <template>
-  <div id="home">
+  <v-container id="home">
     <Hooper :settings="hooperSettings">
       <Slide v-for="(image, index) in images" :key="index" :index="index">
-        <img :src="image" />
+        <v-img :src="image" />
       </Slide>
     </Hooper>
 
@@ -15,7 +15,7 @@
 
     <F1 v-if="latest_concerts" v-bind:d="latest_concerts"></F1>
     <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100'}"/>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -67,6 +67,13 @@ export default {
 
 <style scoped>
 .hooper{
-  height: 426px;
+  height: auto;
+}
+</style>
+
+<style>
+/* vuetifyによる"ul"へのpadding-leftスタイルを打ち消している */
+.v-application .hooper-track{
+  padding: 0;
 }
 </style>
