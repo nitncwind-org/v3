@@ -1,5 +1,5 @@
 <template>
-  <div id="link">
+  <v-container id="link">
     <h2>LINK集</h2>
     <div>
       <div v-for="(group, index) in links" :key=index>
@@ -11,7 +11,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
