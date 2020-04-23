@@ -1,7 +1,7 @@
 <template>
-  <div id="concerts">
+  <v-container id="concerts">
     <F1 v-if="latest_concerts" v-bind:d="latest_concerts"></F1>
-  </div>
+  </v-container>
 </template>
 
 <script>
