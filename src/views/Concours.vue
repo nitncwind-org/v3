@@ -1,19 +1,21 @@
 <template>
-  <div id="concours">
+  <v-container id="concours">
     <div>
       <h2>吹奏楽コンクール実績</h2>
-      <v-btn-toggle mandatory v-model="selectedGeneration" dense>
-        <v-btn v-for="generation in generationConcours.keys()" :key="generation" :index="generation" :value="generation">{{ generation }}s</v-btn>
-      </v-btn-toggle>
-      <v-card v-for="[generation, con] in generationConcours" :key="generation" :index="generation" v-show="generation === selectedGeneration">
-        <F3 v-for="(c, index) in con" :key=index v-bind:concurs="c"></F3>
-      </v-card>
+      <v-tabs mandatory v-model="selectedGeneration" dense show-arrows>
+        <v-tab v-for="generation in generationConcours.keys()" :key="generation" :index="generation" :value="generation">{{ generation }}s</v-tab>
+      </v-tabs>
+      <v-tabs-items v-model="selectedGeneration">
+        <v-tab-item v-for="[generation, con] in generationConcours" :key="generation" :index="generation">
+          <F3 v-for="(c, index) in con" :key=index v-bind:concurs="c"></F3>
+        </v-tab-item>
+      </v-tabs-items>
     </div>
     <div>
       <h2>アンサンブルコンテスト</h2>
       <F3 v-for="(e, index) in ensemble" :key=index v-bind:concurs="e"></F3>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -59,7 +61,7 @@ export default {
 </script>
 
 <style scoped>
-.v-btn{
+.v-tab{
   text-transform: none;
 }
 </style>
