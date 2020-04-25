@@ -52,7 +52,16 @@ export default {
     const URL1 = './data/latest_concerts.json';
     const URL2 = './data/top.json';
     this.axios.get(URL1).then(res => {
-      this.latest_concerts = res.data;
+      let latestConcertsList = res.data.latestConcerts;
+      console.log(latestConcertsList);
+      latestConcertsList.forEach(lc => {
+        let hour = lc.start.split(':')[0];
+        let minutes = lc.start.split(':')[1];
+        let concertsDate = new Date(lc.date.year, lc.date.month-1, lc.date.day, hour, minutes);
+        if(concertsDate >= new Date() && this.latest_concerts === null){
+          this.latest_concerts = lc;
+        }
+      });
     });
     this.axios.get(URL2).then(res => {
       let imagesPath = res.data.images.map(e => {

@@ -1,5 +1,5 @@
 <template>
-  <v-card id="f1">
+  <v-card id="f1" :disabled="isEnd">
     <v-card-title>{{ d.title }}</v-card-title>
     <v-card-text>
       <div v-if="d.notice">
@@ -22,6 +22,28 @@ export default {
   name: 'F1',
   props: {
     d: Object
+  },
+  data: function() {
+    return {
+      date: null
+    }
+  },
+  created: function() {
+    this.date = new Date();
+  },
+  computed: {
+    isEnd: function() {
+      let hour = this.d.start.split(':')[0];
+      let minutes = this.d.start.split(':')[1];
+      let concertsDate = new Date(this.d.date.year, this.d.date.month-1, this.d.date.day, hour, minutes);
+      return concertsDate < this.date;
+    }
   }
 }
 </script>
+
+<style scoped>
+.theme--light.v-card--disabled{
+  background-color: #EEEEEE;
+}
+</style>
