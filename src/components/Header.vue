@@ -10,7 +10,9 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar id="header">
-      <v-btn text to="/">Home</v-btn>
+      <router-link to="/">
+        <v-img :src="logoImage" max-height="96" max-width="160" contain></v-img>
+      </router-link>
       <div class="d-none d-sm-flex">
       <v-btn text to="/about">About</v-btn>
       <v-btn text to="/concerts">Concerts</v-btn>
@@ -29,6 +31,7 @@ export default {
   data: function() {
     return {
       drawer: null,
+      logoImage: "./images/logo2.png",
     }
   }
 }
