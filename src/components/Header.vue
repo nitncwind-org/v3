@@ -1,14 +1,5 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" temporary right fixed>
-      <v-list>
-        <v-list-item to="/">Home</v-list-item>
-        <v-list-item to="/about">About</v-list-item>
-        <v-list-item to="/concerts">Concerts</v-list-item>
-        <v-list-item to="/concours">Concours</v-list-item>
-        <v-list-item to="/link">Link</v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-app-bar id="header">
       <router-link to="/">
         <v-img :src="logoImage" max-height="96" max-width="160" contain></v-img>
@@ -20,7 +11,28 @@
       <v-btn text to="/link">Link</v-btn>
       </div>
       <v-spacer></v-spacer>
-      <v-app-bar-nav-icon class="hidden-sm-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-menu offset-y content-class="max" transition="slide-y-transition" >
+        <template v-slot:activator="{ on }">
+          <v-app-bar-nav-icon class="hidden-sm-and-up" v-on="on"></v-app-bar-nav-icon>
+        </template>
+        <v-list width="100vw">
+          <v-list-item to="/">
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/about">
+            <v-list-item-title>About</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/concerts">
+            <v-list-item-title>Concerts</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/concours">
+            <v-list-item-title>Concours</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/link">
+            <v-list-item-title>Link</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
   </div>
 </template>
@@ -36,3 +48,11 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-menu__content.max{
+  max-width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+}
+</style>
