@@ -53,7 +53,6 @@ export default {
     const URL2 = './data/top.json';
     this.axios.get(URL1).then(res => {
       let latestConcertsList = res.data.latestConcerts;
-      console.log(latestConcertsList);
       latestConcertsList.forEach(lc => {
         let hour = lc.start.split(':')[0];
         let minutes = lc.start.split(':')[1];
