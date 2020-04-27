@@ -11,11 +11,11 @@
       <v-btn text to="/link">Link</v-btn>
       </div>
       <v-spacer></v-spacer>
-      <v-menu offset-y content-class="max" transition="slide-y-transition" >
+      <v-menu offset-y content-class="max" transition="slide-x-reverse-transition" origin="right top" width="100vw">
         <template v-slot:activator="{ on }">
           <v-app-bar-nav-icon class="hidden-sm-and-up" v-on="on"></v-app-bar-nav-icon>
         </template>
-        <v-list width="100vw">
+        <v-list :height=height class="fit" width="30vw">
           <v-list-item to="/">
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
@@ -45,14 +45,29 @@ export default {
       drawer: null,
       logoImage: "./images/logo2.png",
     }
+  },
+  computed:{
+    height: function(){
+      return window.innerHeight - 48;
+    }
   }
 }
 </script>
 
 <style>
 .v-menu__content.max{
-  max-width: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
   border-radius: 0;
-  box-shadow: none;
+  right: 0;
+  box-shadow: 0 10000px 0 10000px rgba(0, 0, 0, 0.2);
+}
+.v-list.fit{
+  margin-left: 70vw;
+  z-index: 9;
+  padding: 0;
+  border-radius: 0;
+  right: 0;
+  box-shadow: 0 10px 0 10000px rgba(0, 0, 0, 0.2);
 }
 </style>
