@@ -5,10 +5,10 @@
         <v-img :src="logoImage" max-height="96" max-width="160" contain></v-img>
       </router-link>
       <div class="d-none d-sm-flex">
-      <v-btn text to="/about">About</v-btn>
-      <v-btn text to="/concerts">Concerts</v-btn>
-      <v-btn text to="/concours">Concours</v-btn>
-      <v-btn text to="/link">Link</v-btn>
+      <v-btn text to="/about" large tile>About</v-btn>
+      <v-btn text to="/concerts" large tile>Concerts</v-btn>
+      <v-btn text to="/concours" large tile>Concours</v-btn>
+      <v-btn text to="/link" large tile>Link</v-btn>
       </div>
       <v-spacer></v-spacer>
       <v-menu offset-y content-class="max" transition="slide-x-reverse-transition" origin="right top" width="100vw">
