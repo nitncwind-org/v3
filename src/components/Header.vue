@@ -15,7 +15,7 @@
         <template v-slot:activator="{ on }">
           <v-app-bar-nav-icon class="hidden-sm-and-up" v-on="on"></v-app-bar-nav-icon>
         </template>
-        <v-list :height=height class="fit" width="30vw">
+        <v-list :height=height class="fit" width="50vw">
           <v-list-item to="/">
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
@@ -63,7 +63,7 @@ export default {
   box-shadow: 0 10000px 0 10000px rgba(0, 0, 0, 0.2);
 }
 .v-list.fit{
-  margin-left: 70vw;
+  margin-left: 50vw;
   z-index: 9;
   padding: 0;
   border-radius: 0;
