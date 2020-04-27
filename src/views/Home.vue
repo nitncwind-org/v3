@@ -13,7 +13,7 @@
       なお、このホームページは奈良高専の公式Webサイトではありません。
     </p>
 
-    <F1 v-if="latest_concerts" v-bind:d="latest_concerts"></F1>
+    <F1 v-if="latestConcerts" v-bind:d="latestConcerts"></F1>
     <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100'}"/>
   </v-container>
 </template>
@@ -34,7 +34,7 @@ export default {
   },
   data: function() {
     return {
-      latest_concerts: null,
+      latestConcerts: null,
       user_id: "NITNC_Band",
       images: [],
       hooperSettings: {
@@ -49,16 +49,16 @@ export default {
     }
   },
   created() {
-    const URL1 = './data/latest_concerts.json';
+    const URL1 = './data/latest.json';
     const URL2 = './data/top.json';
     this.axios.get(URL1).then(res => {
-      let latestConcertsList = res.data.latestConcerts;
+      let latestConcertsList = res.data.latest;
       latestConcertsList.forEach(lc => {
         let hour = lc.start.split(':')[0];
         let minutes = lc.start.split(':')[1];
         let concertsDate = new Date(lc.date.year, lc.date.month-1, lc.date.day, hour, minutes);
-        if(concertsDate >= new Date() && this.latest_concerts === null){
-          this.latest_concerts = lc;
+        if(concertsDate >= new Date() && this.latestConcerts === null){
+          this.latestConcerts = lc;
         }
       });
     });
