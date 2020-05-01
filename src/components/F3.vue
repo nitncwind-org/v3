@@ -1,16 +1,14 @@
 <template>
   <v-card id="f3" tile outlined>
-    <v-card-title>{{ concurs.year }}年</v-card-title>
+    <v-card-title>{{ concours.year }}年</v-card-title>
     <v-card-text>
-      <p>
-        奈良県大会 <span :class="{ gold : isGold }">{{ concurs.award }}</span>
-        <span v-if="concurs.isRepresent"> & <span :class="{gold: isRepresent}">代表</span></span>
+      <p v-for="(c, i) in concours.concours" :key="i">
+        {{ c.label }}
+        <span :class="{ gold : isGold(c.award) }">{{ c.award }}</span>
+        <span v-if="c.isRepresent"> & <span :class="{gold: c.isRepresent}">代表</span></span>
       </p>
-      <p v-for="(c, i) in concurs.next" :key="i">
-        {{ c.competitionName }} {{ c.award }}<span v-if="c.isRepresent"> & 代表</span>
-      </p>
-      <p v-if="concurs.setPiece">曲名 {{ concurs.setPiece.title }} ／ {{ concurs.freeProgram.title }}</p>
-      <p v-if="concurs.music">曲名 {{ concurs.music.title }}</p>
+      <p v-if="concours.setPiece">曲名 {{ concours.setPiece.title }} ／ {{ concours.freeProgram.title }}</p>
+      <p v-if="concours.music">曲名 {{ concours.music.title }}</p>
     </v-card-text>
   </v-card>
 </template>
@@ -19,14 +17,16 @@
 export default {
   name: 'F3',
   props: {
-    concurs: Object
+    concours: Object
   },
   computed: {
     isGold: function() {
-      return this.concurs.award === "金賞";
+      return function(award) {
+        return award === "金賞";
+      }
     },
     isRepresent: function() {
-      return this.concurs.isRepresent;
+      return this.concours.isRepresent;
     }
   }
 }
