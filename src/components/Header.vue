@@ -9,6 +9,7 @@
       <v-btn text to="/concerts" large tile>Concerts</v-btn>
       <v-btn text to="/concours" large tile>Concours</v-btn>
       <v-btn text to="/link" large tile>Link</v-btn>
+      <v-btn text to="/contact" large tile>Contact</v-btn>
       </div>
       <v-spacer></v-spacer>
       <v-menu offset-y content-class="max" transition="slide-x-reverse-transition" origin="right top" width="100vw">
@@ -30,6 +31,9 @@
           </v-list-item>
           <v-list-item to="/link">
             <v-list-item-title>Link</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/contact">
+            <v-list-item-title>Contact</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
