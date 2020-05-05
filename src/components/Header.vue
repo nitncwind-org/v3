@@ -7,7 +7,21 @@
       <div class="d-none d-sm-flex">
       <v-btn text to="/about" large tile>About</v-btn>
       <v-btn text to="/concerts" large tile>Concerts</v-btn>
-      <v-btn text to="/concours" large tile>Concours</v-btn>
+      <v-menu offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" text large tile>
+            Concours
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item to="/concours">
+            <v-list-item-title>Concours</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/ensemble">
+            <v-list-item-title>Ensemble</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-btn text to="/link" large tile>Link</v-btn>
       </div>
       <v-spacer></v-spacer>
