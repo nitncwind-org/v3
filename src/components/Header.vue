@@ -14,10 +14,10 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item to="/concours">
-            <v-list-item-title>Concours</v-list-item-title>
+          <v-list-item to="/concours/winds">
+            <v-list-item-title>Winds</v-list-item-title>
           </v-list-item>
-          <v-list-item to="/ensemble">
+          <v-list-item to="/concours/ensemble">
             <v-list-item-title>Ensemble</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -57,7 +57,7 @@ export default {
   data: function() {
     return {
       drawer: null,
-      logoImage: "./images/logo2.png",
+      logoImage: process.env.BASE_URL + "/images/logo2.png",
     }
   },
   computed:{
