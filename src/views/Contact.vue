@@ -8,7 +8,7 @@
         <v-text-field label="所属高専" v-if="affiliation=='他高専(OBOG含む)'"></v-text-field>
         <v-text-field label="団体名" v-if="affiliation=='団体'"></v-text-field>
         <v-text-field label="メールアドレス" :rules="[rules.required, rules.email]" v-model="emailAddress"></v-text-field>
-        <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="enquiry"></v-select>
+        <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="inquiry"></v-select>
         <v-textarea label="お問い合わせ内容" v-model="content"></v-textarea>
       </v-card-text>
     </v-card>
@@ -21,7 +21,7 @@ export default {
     return {
       name: '',
       affiliation: '',
-      mailAddress: '',
+      emailAddress: '',
       inquiry: '',
       content: '',
       rules: {
