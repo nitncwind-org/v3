@@ -3,13 +3,16 @@
     <v-card>
       <v-card-title>お問い合わせ</v-card-title>
       <v-card-text>
-        <v-text-field label="名前" :rules="[rules.required]" v-model="name"></v-text-field>
-        <v-select label="所属" :rules="[rules.required]" :items="affiliations" v-model="affiliation"></v-select>
-        <v-text-field label="所属高専" v-if="affiliation=='他高専(OBOG含む)'"></v-text-field>
-        <v-text-field label="団体名" v-if="affiliation=='団体'"></v-text-field>
-        <v-text-field label="メールアドレス" :rules="[rules.required, rules.email]" v-model="emailAddress"></v-text-field>
-        <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="inquiry"></v-select>
-        <v-textarea label="お問い合わせ内容" v-model="content"></v-textarea>
+        <v-form ref="form" v-model="valid">
+          <v-text-field label="名前" :rules="[rules.required]" v-model="name"></v-text-field>
+          <v-select label="所属" :rules="[rules.required]" :items="affiliations" v-model="affiliation"></v-select>
+          <v-text-field label="所属高専" v-if="affiliation=='他高専(OBOG含む)'"></v-text-field>
+          <v-text-field label="団体名" v-if="affiliation=='団体'"></v-text-field>
+          <v-text-field label="メールアドレス" :rules="[rules.required, rules.email]" v-model="emailAddress"></v-text-field>
+          <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="inquiry"></v-select>
+          <v-textarea label="お問い合わせ内容" v-model="content"></v-textarea>
+          <v-btn :disabled="!valid">送信</v-btn>
+        </v-form>
       </v-card-text>
     </v-card>
   </v-container>
@@ -19,6 +22,7 @@
 export default {
   data: function() {
     return {
+      valid: false,
       name: '',
       affiliation: '',
       emailAddress: '',
