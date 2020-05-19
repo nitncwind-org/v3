@@ -7,13 +7,13 @@
       </v-tabs>
       <v-tabs-items v-model="selectedGeneration">
         <v-tab-item v-for="[generation, con] in generationConcours" :key="generation" :index="generation">
-          <F3 v-for="(c, index) in con" :key=index v-bind:concurs="c"></F3>
+          <F3 v-for="(c, index) in con" :key=index v-bind:concours="c"></F3>
         </v-tab-item>
       </v-tabs-items>
     </div>
     <div>
       <h2>アンサンブルコンテスト</h2>
-      <F3 v-for="(e, index) in ensemble" :key=index v-bind:concurs="e"></F3>
+      <F3 v-for="(e, index) in ensemble" :key=index v-bind:concours="e"></F3>
     </div>
   </v-container>
 </template>
