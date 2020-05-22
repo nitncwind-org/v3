@@ -11,6 +11,7 @@
         <template v-slot:activator="{ on }">
           <v-btn v-on="on" text large tile>
             Concours
+            <v-icon>mdi-chevron-down</v-icon>
           </v-btn>
         </template>
         <v-list>
