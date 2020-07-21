@@ -20,6 +20,7 @@
 
 <script>
 import F3 from '@/components/F3.vue'
+import { loadCSV } from '@/lib/csv.js'
 
 export default {
   name: 'Concours',
@@ -35,11 +36,49 @@ export default {
     }
   },
   created() {
-    const URL1 = './data/concours.json';
     const URL2 = './data/ensemble.json';
-    this.axios.get(URL1).then(res => {
-      this.concours = res.data.concours;
+    this.axios.get(URL2).then(res => {
+      this.ensemble = res.data.ensemble;
+      this.ensemble.forEach(e => {
+        e.generation = Math.floor(e.year / 10) * 10;
+      });
+    });
 
+    const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQxQ-SUZmEy2TqWGIIHa6aFI_e3JY7lfASZwAhX3GLf-1_24RRw4xAjkDQPvF7UffSjSZfWullZSLFD/pub?gid=0&single=true&output=csv';
+    loadCSV(CSV_URL, array => {
+      let concours = {
+        'year': Number(array[0]),
+        'setPiece': {
+          'title': array[1],
+          'subtitle': array[2],
+          'composer': array[3],
+          'arranger': ''
+        },
+        'freeProgram': {
+          'title': array[4],
+          'subtitle': array[5],
+          'composer': array[6],
+          'arranger': array[7]
+        },
+        'concours': [
+          {
+            'label': '奈良県大会',
+            'award': array[9],
+            'isRepresent': false,
+          }
+        ]
+      };
+      if(array[12] !== ''){
+        concours['concours'][0]['isRepresent'] = true;
+        concours['concours'].push({
+          'label': '関西大会',
+          'award': array[12],
+          'isRepresent': false,
+        });
+      }
+      return concours;
+    }).then(res => {
+      this.concours = res.reverse();
       let m = new Map();
       this.concours.forEach(e => {
         e.generation = Math.floor(e.year / 10) * 10;
@@ -49,12 +88,6 @@ export default {
         m.get(e.generation).push(e);
       });
       this.generationConcours = m;
-    });
-    this.axios.get(URL2).then(res => {
-      this.ensemble = res.data.ensemble;
-      this.ensemble.forEach(e => {
-        e.generation = Math.floor(e.year / 10) * 10;
-      });
     });
   }
 }
