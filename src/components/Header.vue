@@ -7,11 +7,11 @@
       <div class="d-none d-sm-flex">
       <v-btn text to="/about" large tile>About</v-btn>
       <v-btn text to="/concerts" large tile>Concerts</v-btn>
-      <v-menu offset-y>
+      <v-menu offset-y v-model="isOpen">
         <template v-slot:activator="{ on }">
           <v-btn v-on="on" text large tile>
             Concours
-            <v-icon>mdi-chevron-down</v-icon>
+            <v-icon v-bind:class="{rotate: isOpen}">mdi-chevron-down</v-icon>
           </v-btn>
         </template>
         <v-list>
@@ -59,6 +59,7 @@ export default {
     return {
       drawer: null,
       logoImage: process.env.BASE_URL + "/images/logo2.png",
+      isOpen: false,
     }
   },
   computed:{
@@ -84,5 +85,8 @@ export default {
   border-radius: 0;
   right: 0;
   box-shadow: 0 10px 0 10000px rgba(0, 0, 0, 0.2);
+}
+.rotate{
+  transform: rotateZ(180deg);
 }
 </style>
