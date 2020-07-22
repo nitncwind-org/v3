@@ -2,9 +2,13 @@
   "ensemble": [
     {
       "year": 2020,
-      "award": "銅賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銅賞",
+          "isRepresent": false
+        }
+      ],
       "music": {
         "title": "タイトル",
         "subtitle": "",
