@@ -13,6 +13,8 @@
           <v-textarea label="お問い合わせ内容" v-model="content"></v-textarea>
           <v-btn :disabled="!valid" v-on:click="submit">送信</v-btn>
         </v-form>
+        <v-snackbar v-model="successSnackbar" color="success" top app transition="scroll-y-transition">送信成功</v-snackbar>
+        <v-snackbar v-model="failureSnackbar" color="error" top app transition="scroll-y-transition">送信失敗<br>{{ message }}</v-snackbar>
       </v-card-text>
     </v-card>
   </v-container>
@@ -46,7 +48,10 @@ export default {
       inquiries: [
         'なにか',
         'その他'
-      ]
+      ],
+      successSnackbar: false,
+      failureSnackbar: false,
+      message: '',
     }
   },
   methods: {
@@ -72,7 +77,14 @@ export default {
       params.append("inquiry", this.inquiry);
       params.append("content", this.content);
       this.axios.post("https://script.google.com/macros/s/AKfycbxYDFF-V927nDu8dRQ4AOtWfZ--OQyccT0k9brXgE2AxCrWdqHa/exec", params).then(res => {
-        console.log(res);
+        if(res.data['success']){
+          this.successSnackbar = true;
+        }else{
+          this.failureSnackbar = true;
+          this.message = res.data['message']
+        }
+      }).catch(() => {
+          this.failureSnackbar = true;
       })
     }
   }
