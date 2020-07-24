@@ -2,11 +2,14 @@
   "concours": [
     {
       "year": 2018,
-      "award": "銀賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -26,11 +29,14 @@
     },
     {
       "year": 2017,
-      "award": "銀賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -50,11 +56,14 @@
     },
     {
       "year": 2016,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -74,11 +83,14 @@
     },
     {
       "year": 2015,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -98,9 +110,13 @@
     },
     {
       "year": 2014,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "「斎太郎節」の主題による幻想",
         "subtitle": "",
@@ -116,9 +132,13 @@
     },
     {
       "year": 2013,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "復興への序曲「夢の明日に」",
         "subtitle": "",
@@ -134,9 +154,13 @@
     },
     {
       "year": 2012,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "吹奏楽のための綺想曲「じゅげむ」",
         "subtitle": "",
@@ -152,9 +176,13 @@
     },
     {
       "year": 2011,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "マーチ「ライヴリー アヴェニュー」",
         "subtitle": "",
@@ -170,9 +198,13 @@
     },
     {
       "year": 2010,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "汐風のマーチ",
         "subtitle": "",
@@ -188,9 +220,13 @@
     },
     {
       "year": 2009,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "ネストリアン・モニュメント",
         "subtitle": "",
@@ -206,9 +242,13 @@
     },
     {
       "year": 2008,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "ブライアンの休日",
         "subtitle": "",
@@ -224,9 +264,13 @@
     },
     {
       "year": 2007,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "マーチ「ブルースカイ」",
         "subtitle": "",
@@ -242,9 +286,13 @@
     },
     {
       "year": 2006,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "海へ... 吹奏楽の為に",
         "subtitle": "",
@@ -260,9 +308,13 @@
     },
     {
       "year": 2005,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "マーチ「春風」",
         "subtitle": "",
@@ -278,11 +330,14 @@
     },
     {
       "year": 2004,
-      "award": "銀賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -302,9 +357,13 @@
     },
     {
       "year": 2003,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "マーチ「ベスト・フレンド」",
         "subtitle": "",
@@ -320,9 +379,13 @@
     },
     {
       "year": 2002,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "吹奏楽のためのラメント",
         "subtitle": "",
@@ -338,11 +401,14 @@
     },
     {
       "year": 2001,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -362,11 +428,14 @@
     },
     {
       "year": 2000,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -386,11 +455,14 @@
     },
     {
       "year": 1999,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -410,9 +482,13 @@
     },
     {
       "year": 1998,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "稲穂の波",
         "subtitle": "",
@@ -428,11 +504,14 @@
     },
     {
       "year": 1997,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -452,9 +531,13 @@
     },
     {
       "year": 1996,
-      "award": "金賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "般若",
         "subtitle": "",
@@ -470,9 +553,13 @@
     },
     {
       "year": 1995,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "スプリング・マーチ",
         "subtitle": "",
@@ -488,11 +575,14 @@
     },
     {
       "year": 1994,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銀賞",
           "isRepresent": false
         }
@@ -512,9 +602,13 @@
     },
     {
       "year": 1993,
-      "award": "金賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "マーチ・エイプリル・メイ",
         "subtitle": "",
@@ -530,9 +624,13 @@
     },
     {
       "year": 1992,
-      "award": "金賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "ゆかいな仲間の行進曲",
         "subtitle": "",
@@ -548,9 +646,13 @@
     },
     {
       "year": 1991,
-      "award": "金賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "コーラル・ブルー 沖縄民謡「谷茶前」の主題による交響的印象",
         "subtitle": "",
@@ -566,9 +668,13 @@
     },
     {
       "year": 1990,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "マーチ「カタロニアの栄光」",
         "subtitle": "",
@@ -584,9 +690,13 @@
     },
     {
       "year": 1989,
-      "award": "金賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "風と炎の踊り",
         "subtitle": "",
@@ -602,9 +712,13 @@
     },
     {
       "year": 1988,
-      "award": "金賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "カーニバルのマーチ",
         "subtitle": "",
@@ -620,11 +734,14 @@
     },
     {
       "year": 1987,
-      "award": "金賞",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "金賞",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銀賞",
           "isRepresent": false
         }
@@ -644,9 +761,13 @@
     },
     {
       "year": 1986,
-      "award": "銀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "銀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "コンサート・マーチ「テイク・オフ」",
         "subtitle": "",
@@ -662,9 +783,13 @@
     },
     {
       "year": 1985,
-      "award": "2位",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "2位",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "シンフォニック・ファンファーレとマーチ",
         "subtitle": "",
@@ -680,9 +805,13 @@
     },
     {
       "year": 1984,
-      "award": "優秀賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "優秀賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "マーチ・オーパス・ワン",
         "subtitle": "",
@@ -698,9 +827,13 @@
     },
     {
       "year": 1983,
-      "award": "2位",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "2位",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "吹奏楽のためのインヴェンション第1番",
         "subtitle": "",
@@ -716,9 +849,13 @@
     },
     {
       "year": 1982,
-      "award": "2位",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "2位",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "",
         "subtitle": "",
@@ -734,11 +871,14 @@
     },
     {
       "year": 1981,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銅賞",
           "isRepresent": false
         }
@@ -758,11 +898,14 @@
     },
     {
       "year": 1980,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": "銀賞",
           "isRepresent": false
         }
@@ -782,9 +925,13 @@
     },
     {
       "year": 1979,
-      "award": "優良賞",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "優良賞",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "フェリスタス",
         "subtitle": "",
@@ -800,9 +947,13 @@
     },
     {
       "year": 1978,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "ジュビラーテ",
         "subtitle": "",
@@ -818,9 +969,13 @@
     },
     {
       "year": 1977,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "ディスコ・キッド",
         "subtitle": "",
@@ -836,9 +991,13 @@
     },
     {
       "year": 1976,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "カンティレーナ",
         "subtitle": "",
@@ -854,11 +1013,14 @@
     },
     {
       "year": 1975,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": null,
           "isRepresent": false
         }
@@ -878,9 +1040,13 @@
     },
     {
       "year": 1974,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "吹奏楽のためのシンフォニア",
         "subtitle": "",
@@ -896,9 +1062,13 @@
     },
     {
       "year": 1973,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "吹奏楽のためのアラベスク",
         "subtitle": "",
@@ -914,9 +1084,13 @@
     },
     {
       "year": 1972,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "シンフォニック・ファンファーレ",
         "subtitle": "",
@@ -932,9 +1106,13 @@
     },
     {
       "year": 1971,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "行進曲《太陽の下に》",
         "subtitle": "",
@@ -950,9 +1128,13 @@
     },
     {
       "year": 1970,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "音楽祭のプレリュード",
         "subtitle": "",
@@ -968,9 +1150,13 @@
     },
     {
       "year": 1969,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        }
+      ],
       "setPiece": {
         "title": "吹奏楽のための音詩《南極点への序曲》",
         "subtitle": "",
@@ -986,9 +1172,13 @@
     },
     {
       "year": 1968,
-      "award": "棄権",
-      "isRepresent": false,
-      "next": [],
+      "concours": [
+        {
+          "label": "奈良県大会",
+          "award": "棄権",
+          "isRepresent": false
+        }
+      ],
       "setPiece": {
         "title": "吹奏楽のための幻想曲《移り気な五度のムード》",
         "subtitle": "",
@@ -1004,11 +1194,14 @@
     },
     {
       "year": 1967,
-      "award": "1位",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "1位",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": null,
           "isRepresent": false
         }
@@ -1028,11 +1221,14 @@
     },
     {
       "year": 1966,
-      "award": "参加",
-      "isRepresent": true,
-      "next": [
+      "concours": [
         {
-          "competitionName": "関西大会",
+          "label": "奈良県大会",
+          "award": "参加",
+          "isRepresent": true
+        },
+        {
+          "label": "関西大会",
           "award": null,
           "isRepresent": false
         }

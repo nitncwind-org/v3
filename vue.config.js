@@ -1,5 +1,5 @@
 module.exports = {
-  "publicPath": "/gen3",
+  "publicPath": "/",
   "transpileDependencies": [
     "vuetify"
   ]
