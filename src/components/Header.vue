@@ -58,7 +58,7 @@ export default {
   data: function() {
     return {
       drawer: null,
-      logoImage: process.env.BASE_URL + "/images/logo2.png",
+      logoImage: process.env.BASE_URL + "images/logo2.png",
       isOpen: false,
     }
   },

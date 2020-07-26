@@ -30,7 +30,7 @@ export default {
     }
   },
   created() {
-    const URL = process.env.BASE_URL + '/data/ensemble.json';
+    const URL = process.env.BASE_URL + 'data/ensemble.json';
     this.axios.get(URL).then(res => {
       this.ensemble = res.data.ensemble;
 
