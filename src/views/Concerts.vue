@@ -18,7 +18,7 @@ export default {
     }
   },
   created() {
-    const URL = './data/latest.json';
+    const URL = process.env.BASE_URL + 'data/latest.json';
     let date = new Date();
     this.axios.get(URL).then(res => {
       this.latest = res.data.latest;
