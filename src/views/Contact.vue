@@ -77,7 +77,7 @@ export default {
       params.append("inquiry", this.inquiry);
       params.append("content", this.content);
       this.axios.post("https://script.google.com/macros/s/AKfycbxYDFF-V927nDu8dRQ4AOtWfZ--OQyccT0k9brXgE2AxCrWdqHa/exec", params).then(res => {
-        if(res.data['success']){
+        if(res.data['success'] == 'true'){
           this.successSnackbar = true;
         }else{
           this.failureSnackbar = true;
