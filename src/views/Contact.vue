@@ -6,8 +6,8 @@
         <v-form ref="form" v-model="valid">
           <v-text-field label="名前" :rules="[rules.required]" v-model="name"></v-text-field>
           <v-select label="所属" :rules="[rules.required]" :items="affiliations" v-model="affiliation"></v-select>
-          <v-text-field label="所属高専" v-if="affiliation=='他高専(OBOG含む)'" v-model="affiliation_kosen"></v-text-field>
-          <v-text-field label="団体名" v-if="affiliation=='団体'" v-model="affiliation_group"></v-text-field>
+          <v-text-field label="所属高専" v-show="affiliation=='他高専(OBOG含む)'" v-model="affiliation_kosen"></v-text-field>
+          <v-text-field label="団体名" v-show="affiliation=='団体'" v-model="affiliation_group"></v-text-field>
           <v-text-field label="メールアドレス" :rules="[rules.required, rules.email]" v-model="emailAddress"></v-text-field>
           <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="inquiry"></v-select>
           <v-textarea label="お問い合わせ内容" v-model="content"></v-textarea>
@@ -79,6 +79,7 @@ export default {
       this.axios.post("https://script.google.com/macros/s/AKfycbxYDFF-V927nDu8dRQ4AOtWfZ--OQyccT0k9brXgE2AxCrWdqHa/exec", params).then(res => {
         if(res.data['success'] == 'true'){
           this.successSnackbar = true;
+          this.$refs.form.reset()
         }else{
           this.failureSnackbar = true;
           this.message = res.data['message']
