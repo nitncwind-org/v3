@@ -22,13 +22,39 @@ const routes = [
     },
     {
         path: '/concours',
-        name: 'Concours',
-        component: () => import('../views/Concours.vue')
+        component: () => import('../views/Concours.vue'),
+        children: [
+            {
+                path: 'winds',
+                name: 'Winds',
+                component: () => import('../views/Winds.vue')
+            },
+            {
+                path: 'ensemble',
+                name: 'Ensemble',
+                component: () => import('../views/Ensemble.vue')
+            }
+        ]
+    },
+    {
+        path: '/ensemble',
+        name: 'Ensemble',
+        component: () => import('../views/Ensemble.vue')
     },
     {
         path: '/link',
         name: 'Link',
         component: () => import('../views/Link.vue')
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: () => import('../views/Contact.vue')
+    },
+    {
+        path: '*',
+        name: '404',
+        component: () => import('../views/404.vue')
     }
 ]
 

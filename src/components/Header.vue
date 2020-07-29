@@ -7,8 +7,24 @@
       <div class="d-none d-sm-flex">
       <v-btn text to="/about" large tile>About</v-btn>
       <v-btn text to="/concerts" large tile>Concerts</v-btn>
-      <v-btn text to="/concours" large tile>Concours</v-btn>
+      <v-menu offset-y v-model="isOpen">
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" text large tile>
+            Concours
+            <v-icon v-bind:class="{rotate: isOpen}">mdi-chevron-down</v-icon>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item to="/concours/winds">
+            <v-list-item-title>Winds</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/concours/ensemble">
+            <v-list-item-title>Ensemble</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-btn text to="/link" large tile>Link</v-btn>
+      <v-btn text to="/contact" large tile>Contact</v-btn>
       </div>
       <v-spacer></v-spacer>
       <v-menu offset-y content-class="max" transition="slide-x-reverse-transition" origin="right top" width="100vw">
@@ -31,6 +47,9 @@
           <v-list-item to="/link">
             <v-list-item-title>Link</v-list-item-title>
           </v-list-item>
+          <v-list-item to="/contact">
+            <v-list-item-title>Contact</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -43,7 +62,8 @@ export default {
   data: function() {
     return {
       drawer: null,
-      logoImage: "./images/logo2.png",
+      logoImage: process.env.BASE_URL + "images/logo2.png",
+      isOpen: false,
     }
   },
   computed:{
@@ -69,5 +89,8 @@ export default {
   border-radius: 0;
   right: 0;
   box-shadow: 0 10px 0 10000px rgba(0, 0, 0, 0.2);
+}
+.rotate{
+  transform: rotateZ(180deg);
 }
 </style>
