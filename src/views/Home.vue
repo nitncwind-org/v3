@@ -49,8 +49,8 @@ export default {
     }
   },
   created() {
-    const URL1 = './data/latest.json';
-    const URL2 = './data/top.json';
+    const URL1 = process.env.BASE_URL + 'data/latest.json';
+    const URL2 = process.env.BASE_URL + 'data/top.json';
     this.axios.get(URL1).then(res => {
       let latestConcertsList = res.data.latest;
       latestConcertsList.forEach(lc => {
@@ -64,7 +64,7 @@ export default {
     });
     this.axios.get(URL2).then(res => {
       let imagesPath = res.data.images.map(e => {
-        return './images/top/' + e;
+        return process.env.BASE_URL + 'images/top/' + e;
       });
       this.images = imagesPath;
     });
