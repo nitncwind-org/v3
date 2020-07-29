@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <Loading v-show="loading"></Loading>
     <v-card>
       <v-card-title>お問い合わせ</v-card-title>
       <v-card-text>
@@ -21,6 +22,8 @@
 </template>
 
 <script>
+import Loading from '@/components/Loading'
+
 export default {
   data: function() {
     return {
@@ -52,10 +55,12 @@ export default {
       successSnackbar: false,
       failureSnackbar: false,
       message: '',
+      loading: false,
     }
   },
   methods: {
     submit(){
+      this.loading = true;
       let affiliation_kosen = this.affiliation_kosen;
       let affiliation_group = this.affiliation_group;
       if(this.affiliation == "奈良高専(OBOG含む)" || this.affiliation == "個人"){
@@ -77,6 +82,7 @@ export default {
       params.append("inquiry", this.inquiry);
       params.append("content", this.content);
       this.axios.post("https://script.google.com/macros/s/AKfycbxYDFF-V927nDu8dRQ4AOtWfZ--OQyccT0k9brXgE2AxCrWdqHa/exec", params).then(res => {
+        this.loading = false;
         if(res.data['success'] == 'true'){
           this.successSnackbar = true;
           this.$refs.form.reset()
@@ -88,6 +94,9 @@ export default {
           this.failureSnackbar = true;
       })
     }
+  },
+  components: {
+    Loading
   }
 }
 </script>
