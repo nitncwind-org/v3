@@ -1,15 +1,22 @@
 <template>
   <v-card id="f3" tile outlined>
-    <v-card-title>{{ concours.year }}年</v-card-title>
-    <v-card-text>
-      <p v-for="(c, i) in concours.concours" :key="i">
-        {{ c.label }}
-        <span :class="{ gold : isGold(c.award) }">{{ c.award }}</span>
-        <span v-if="c.isRepresent"> & <span :class="{gold: c.isRepresent}">代表</span></span>
-      </p>
-      <p v-if="concours.setPiece">曲名 {{ concours.setPiece.title }} ／ {{ concours.freeProgram.title }}</p>
-      <p v-if="concours.music">曲名 {{ concours.music.title }}</p>
+    <v-card-title class="d-none"></v-card-title>
+    <v-card-text >
+      <div >
+        <span class="h2 serif text-primary">{{ concours.year }}</span>
+      </div>
+      
+      <div>
+        <div v-for="(c, i) in concours.concours" class="h4 badge badge-dark rounded-0 mr-3 mb-2" :key="i">
+          {{ c.label }}
+          <span :class="{ gold : isGold(c.award)}">{{ c.award }}</span>
+          <span v-if="c.isRepresent"> & <span :class="{gold: c.isRepresent}">代表</span></span>
+        </div>
+        <p v-if="concours.setPiece">{{ concours.setPiece.title }} ／ {{ concours.freeProgram.title }}</p>
+        <p v-if="concours.music">{{ concours.music.title }}</p>
+      </div>
     </v-card-text>
+
   </v-card>
 </template>
 
@@ -34,6 +41,15 @@ export default {
 
 <style scoped>
 .gold {
-  color : #c06e02
+  color : #FFD700
+}
+
+.theme--light.v-card.v-card--outlined {
+  
+  border: none;
+}
+
+.theme--light.v-card.v-card--outlined:nth-child(12){
+border-top: thin solid rgba(0, 0, 0, 0.12);
 }
 </style>

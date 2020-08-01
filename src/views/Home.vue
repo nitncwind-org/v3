@@ -1,10 +1,15 @@
 <template>
+  <div>
+
   <v-container id="home">
-    <Hooper :settings="hooperSettings">
-      <Slide v-for="(image, index) in images" :key="index" :index="index">
-        <v-img :src="image" />
-      </Slide>
-    </Hooper>
+    <div class="">
+      <Hooper :settings="hooperSettings">
+        <Slide v-for="(image, index) in images" :key="index" :index="index">
+          <v-img :src="image" />
+        </Slide>
+      </Hooper>
+    </div>
+
 
     <p>奈良高専吹奏楽部のホームページへようこそ!</p>
 
@@ -16,6 +21,9 @@
     <F1 v-if="latestConcerts" v-bind:d="latestConcerts"></F1>
     <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100'}"/>
   </v-container>
+  </div>
+
+
 </template>
 
 <script>

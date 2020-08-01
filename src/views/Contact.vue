@@ -1,8 +1,10 @@
 <template>
   <v-container>
     <Loading v-show="loading"></Loading>
-    <v-card>
-      <v-card-title>お問い合わせ</v-card-title>
+    <div class="jumbotron jumbotron-fluid text-center bg-white">
+        <h1>Contact</h1>
+    </div>
+    <v-card tile outlined>
       <v-card-text>
         <v-form ref="form" v-model="valid">
           <v-text-field label="名前" :rules="[rules.required]" v-model="name"></v-text-field>
@@ -100,3 +102,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.theme--light.v-card.v-card--outlined {
+    border: none;
+}
+</style>

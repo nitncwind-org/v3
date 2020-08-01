@@ -3,9 +3,11 @@
     <div id="app">
       <Header/>
 
-      <v-content>
-        <router-view/>
-      </v-content>
+      <div class="mt-1 mt-md-6">
+        <v-content>
+          <router-view/>
+        </v-content>
+      </div>
 
       <Footer/>
     </div>
@@ -24,3 +26,39 @@ export default {
   }
 }
 </script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  *{
+    font-family: 'Lato', 'Noto Sans JP', sans-serif;
+  }
+
+  .serif{
+    font-family: 'Noto Serif JP', sans-serif;
+  }
+  .v-application a{
+    color: #6483E6 !important;
+  }
+
+  .v-application a:hover{
+    color: #1B3DB0 !important;
+  }
+
+  .v-toolbar__content a{
+    color:rgba(0, 0, 0, 0.87)!important;
+  }
+
+
+  .v-toolbar__content a:hover, a.v-list-item:hover {
+    text-decoration: none;
+  }
+
+
+
+  .text-primary{
+    color: #1B3DB0 !important;
+    caret-color: #1B3DB0 !important;
+  }
+</style>

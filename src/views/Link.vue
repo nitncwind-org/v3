@@ -1,9 +1,11 @@
 <template>
   <v-container id="link">
-    <h2>LINK集</h2>
+    <div class="jumbotron jumbotron-fluid text-center bg-white">
+        <h1>Links</h1>
+    </div>
     <div>
-      <div v-for="(group, index) in links" :key=index>
-        <h3>{{ group.groupName }}</h3>
+      <div v-for="(group, index) in links" :key=index class="mb-3">
+        <h3 class="h5">{{ group.groupName }}</h3>
         <ul>
           <li v-for="(link, index) in group.links" :key=index>
             <a v-bind:href="link.url">{{ link.name }}</a>
