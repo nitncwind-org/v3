@@ -55,6 +55,9 @@ export default {
     text-decoration: none;
   }
 
+  .centering{
+    margin: 0;
+  }
 
 
   .text-primary{
