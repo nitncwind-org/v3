@@ -54,9 +54,7 @@ export default {
     this.axios.get(URL1).then(res => {
       let latestConcertsList = res.data.latest;
       latestConcertsList.forEach(lc => {
-        let hour = lc.start.split(':')[0];
-        let minutes = lc.start.split(':')[1];
-        let concertsDate = new Date(lc.date.year, lc.date.month-1, lc.date.day, hour, minutes);
+        let concertsDate = new Date(lc.date.year, lc.date.month-1, lc.date.day+1);
         if(concertsDate >= new Date() && this.latestConcerts === null){
           this.latestConcerts = lc;
         }

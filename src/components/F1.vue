@@ -33,9 +33,7 @@ export default {
   },
   computed: {
     isEnd: function() {
-      let hour = this.d.start.split(':')[0];
-      let minutes = this.d.start.split(':')[1];
-      let concertsDate = new Date(this.d.date.year, this.d.date.month-1, this.d.date.day, hour, minutes);
+      let concertsDate = new Date(this.d.date.year, this.d.date.month-1, this.d.date.day+1);
       return concertsDate < this.date;
     }
   }
