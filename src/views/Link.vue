@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { loadCSV } from '@/lib/csv.js'
+
 export default {
   name: 'Link',
   data: function() {
@@ -23,9 +25,25 @@ export default {
     }
   },
   created: function() {
-    const URL = process.env.BASE_URL + 'data/links.json';
-    this.axios.get(URL).then(res => {
-      this.links = res.data.links;
+    const URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-Q7Js-P1gSXoL7h09WP-0zayDaCEeRjdcNdgg4pTtlXfWy8RPpmE65dlZJwhci5DcrlLnD9P3At8h/pub?gid=0&single=true&output=csv';
+    loadCSV(URL, array => {
+      return {
+        'group': array[0],
+        'name': array[1],
+        'url': array[2],
+      }
+    }, 1).then(res =>{
+      let links = res.reduce((links, link) =>
+        Object.assign(links, {
+          [link['group']]: (links[link['group']] || []).concat(link)
+        })
+      , {});
+      this.links = Object.entries(links).map(e => {
+        return {
+          'groupName': e[0],
+          'links': e[1]
+        }
+      });
     });
   }
 }
