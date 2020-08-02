@@ -1,5 +1,5 @@
 <template>
-  <v-card id="f1" :disabled="isEnd">
+  <v-card tile outlined id="f1" :disabled="isEnd">
     <v-card-title>{{ d.title }}</v-card-title>
     <v-card-text>
       <div v-if="d.notice">

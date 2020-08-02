@@ -2,10 +2,10 @@
   <v-container id="link">
   <Title en="Links" ja="リンク集"></Title>
     <div class="row">
-      <div v-for="(group, index) in links" :key=index class="col-12 col-md-6">
-        <v-card tile outlined>
+      <div v-for="(group, index) in links" :key=index class="col-12 col-md-6 mt-0 mb-0 pt-0 pb-0">
+        <v-card tile outlined >
           <v-card-title>{{ group.groupName }}</v-card-title>
-          <v-card-text>
+          <v-card-text class="pb-0">
             <ul>
             <li v-for="(link, index) in group.links" :key=index>
               <a v-bind:href="link.url">{{ link.name }}</a>
@@ -13,15 +13,6 @@
           </ul>
           </v-card-text>
         </v-card>
-        <div class="d-none">
-        <h3 class="h5">{{ group.groupName }}</h3>
-        <ul>
-          <li v-for="(link, index) in group.links" :key=index>
-            <a v-bind:href="link.url">{{ link.name }}</a>
-          </li>
-        </ul>
-
-        </div>
 
       </div>
     </div>
