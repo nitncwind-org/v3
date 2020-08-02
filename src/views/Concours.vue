@@ -6,7 +6,7 @@
 
 <style scope>
   .badge{
-    background-color: #1B3DB0;
+    background-color: #0e177f;
   }
 
 .v-slide-group__content.v-tabs-bar__content{
@@ -14,32 +14,8 @@
 }
 
 .v-application .primary--text{
-    color: #1B3DB0 !important;
-    caret-color: #1B3DB0 !important;
-}
-
-.title-borders{
-  margin: 10px auto;
-  height: 5px;
-  width: 180px;
-}
-
-.title-border:nth-child(1){
-  width: 50%;
-  height:100%;
-  background-color: #1B3DB0;
-}
-
-.title-border:nth-child(2){
-  width: 50%;
-  height: 100%;
-  background-color: #cccccc;
-}
-
-.title-border:nth-child(3){
-  width: 50%;
-  height: 100%;
-  background-color: #000000;
+    color: #0e177f !important;
+    caret-color: #0e177f !important;
 }
 
 </style>

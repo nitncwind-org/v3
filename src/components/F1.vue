@@ -1,7 +1,8 @@
 <template>
   <v-card tile outlined id="f1" :disabled="isEnd">
-    <v-card-title>{{ d.title }}</v-card-title>
+    <v-card-title class="h4 serif text-primary">{{ d.title }}</v-card-title>
     <v-card-text>
+      <h2 class="d-none h4 serif text-primary">{{ d.title }}</h2>
       <div v-if="d.notice">
         <h2>{{ d.notice.title }}</h2>
         <p>{{ d.notice.text }}</p>

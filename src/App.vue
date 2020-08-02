@@ -2,12 +2,9 @@
   <v-app>
     <div id="app">
       <Header/>
-
-      <div class="mt-1 mt-md-6">
         <v-content>
           <router-view/>
         </v-content>
-      </div>
 
       <Footer/>
     </div>
@@ -38,7 +35,7 @@ export default {
   }
 
   ::selection{
-    background-color: #1B3DB0!important;
+    background-color: #0e177f!important;
     color: #fff!important;
   }
 
@@ -50,7 +47,7 @@ export default {
   }
 
   .v-application a:hover{
-    color: #1B3DB0 !important;
+    color: #0e177f !important;
   }
 
   .v-toolbar__content a{
@@ -72,7 +69,7 @@ export default {
 
 
   .text-primary{
-    color: #1B3DB0 !important;
-    caret-color: #1B3DB0 !important;
+    color: #0e177f !important;
+    caret-color: #0e177f !important;
   }
 </style>

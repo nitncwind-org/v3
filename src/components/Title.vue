@@ -37,7 +37,7 @@ export default {
 .title-border:nth-child(1){
   width: 50%;
   height:100%;
-  background-color: #1B3DB0;
+  background-color: #0e177f;
 }
 
 .title-border:nth-child(2){

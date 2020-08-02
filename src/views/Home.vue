@@ -1,7 +1,12 @@
 <template>
   <div>
-
-  <v-container id="home">
+  <div class="jumbotron jumbotron-fluid vw-100 vh-100 d-none d-md-inline" id="top">
+    <div class="position-absolute text-justify-content d-none" id="top_title">
+      <h1 class="serif font-weight-bold ">奈良高専吹奏楽部</h1>
+      <h3 class="serif">Nationai Institute of Technology, Nara College Band</h3>
+    </div>
+  </div>
+  <v-container class="" id="home">
     <div class="">
       <Hooper :settings="hooperSettings">
         <Slide v-for="(image, index) in images" :key="index" :index="index">
@@ -105,5 +110,21 @@ export default {
 .v-application .hooper-track{
   padding: 0;
 }
+
+#top{
+  width: 100vw;
+  height: calc(100vh - 48px);
+  min-height: 400px;
+}
+
+#top_title{
+  top: 10px;
+  left: 10px;
+}
+
+header, .v-toolbar__content{
+  color: #fff!important;
+}
+
 
 </style>
