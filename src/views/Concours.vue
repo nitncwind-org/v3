@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="jumbotron jumbotron-fluid text-center bg-white">
-      <h1>Concours</h1>
-    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -20,4 +17,29 @@
     color: #1B3DB0 !important;
     caret-color: #1B3DB0 !important;
 }
+
+.title-borders{
+  margin: 10px auto;
+  height: 5px;
+  width: 180px;
+}
+
+.title-border:nth-child(1){
+  width: 50%;
+  height:100%;
+  background-color: #1B3DB0;
+}
+
+.title-border:nth-child(2){
+  width: 50%;
+  height: 100%;
+  background-color: #cccccc;
+}
+
+.title-border:nth-child(3){
+  width: 50%;
+  height: 100%;
+  background-color: #000000;
+}
+
 </style>

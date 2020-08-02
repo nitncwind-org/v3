@@ -30,13 +30,20 @@ export default {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap');
+
   *{
-    font-family: 'Lato', 'Noto Sans JP', sans-serif;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  }
+
+  ::selection{
+    background-color: #1B3DB0!important;
+    color: #fff!important;
   }
 
   .serif{
-    font-family: 'Noto Serif JP', sans-serif;
+    font-family: 'Aleo', 'Noto Serif JP', sans-serif;
   }
   .v-application a{
     color: #6483E6 !important;
@@ -56,7 +63,11 @@ export default {
   }
 
   .centering{
-    margin: 0;
+    margin: 0 auto;
+  }
+
+  .header-jp{
+    letter-spacing: 4px;
   }
 
 

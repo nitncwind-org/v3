@@ -3,7 +3,7 @@
     <v-card-title class="d-none"></v-card-title>
     <v-card-text >
       <div >
-        <span class="h2 serif text-primary">{{ concours.year }}</span>
+        <span class="h4 serif text-primary">{{ concours.year }}</span>
       </div>
       
       <div>

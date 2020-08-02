@@ -10,16 +10,29 @@
       </Hooper>
     </div>
 
+    <div class="row mt-3">
+      <div class="col-12">
+        <p>奈良高専吹奏楽部のホームページへようこそ!</p>
+          <p>
+            このホームページでは奈良高専吹奏楽部の演奏会情報やコンクール結果などを掲載しています。
+            なお、このホームページは奈良高専の公式Webサイトではありません。
+          </p>
+      </div>
+      <div class="col-12 col-md-6">
+        <h2 class="serif">Coming Concert</h2>
+        <F1 v-if="latestConcerts" v-bind:d="latestConcerts"></F1>
+        <h2 class="serif">New Updates</h2>
+        
+      </div>
+      <div class="col-12 col-md-6">
+        <h2 class="serif">Twitter</h2>
+        <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100vw'}"/>
+      </div>
+    </div>
 
-    <p>奈良高専吹奏楽部のホームページへようこそ!</p>
 
-    <p>
-      このホームページでは奈良高専吹奏楽部の演奏会情報やコンクール結果などを掲載しています。
-      なお、このホームページは奈良高専の公式Webサイトではありません。
-    </p>
-
-    <F1 v-if="latestConcerts" v-bind:d="latestConcerts"></F1>
-    <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100'}"/>
+    
+    
   </v-container>
   </div>
 
@@ -92,4 +105,5 @@ export default {
 .v-application .hooper-track{
   padding: 0;
 }
+
 </style>
