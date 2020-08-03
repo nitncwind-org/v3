@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <Loading v-show="loading"></Loading>
-    <Title en="Contact" ja="お問い合わせフォーム"></Title>
+    <Title en="Contact" ja="お問い合わせ"></Title>
     <v-card tile outlined>
       <v-card-text>
         <v-form ref="form" v-model="valid">

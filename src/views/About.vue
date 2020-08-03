@@ -1,6 +1,6 @@
 <template>
   <v-container id="about">
-    <Title en="About" ja="奈良高専吹奏楽部について"></Title>
+    <Title en="About" ja="活動について"></Title>
     <F2 v-for="(qa, index) in about_QandA" :key=index v-bind:QandA="qa"></F2>
   </v-container>
 </template>

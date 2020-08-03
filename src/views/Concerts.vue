@@ -1,7 +1,7 @@
 <template>
   <v-container id="concerts">
 
-      <Title en="Concerts" ja="コンサート情報"></Title>
+      <Title en="Concerts" ja="演奏会のお知らせ"></Title>
 
     <F1 v-for="(lc, i) in latest" v-bind:d="lc" :key=i :index=i></F1>
   </v-container>

@@ -5,26 +5,26 @@
         <v-img :src="logoImage" max-height="96" max-width="160" contain></v-img>
       </router-link>
       <div class="d-none d-sm-flex">
-      <v-btn text to="/about" large tile>About</v-btn>
-      <v-btn text to="/concerts" large tile>Concerts</v-btn>
+      <v-btn text to="/about" large tile>活動について</v-btn>
+      <v-btn text to="/concerts" large tile>演奏会のお知らせ</v-btn>
       <v-menu offset-y v-model="isOpen">
         <template v-slot:activator="{ on }">
           <v-btn v-on="on" text large tile>
-            Concours
+            活動実績
             <v-icon v-bind:class="{rotate: isOpen}">mdi-chevron-down</v-icon>
           </v-btn>
         </template>
         <v-list>
           <v-list-item to="/concours/winds">
-            <v-list-item-title>Winds</v-list-item-title>
+            <v-list-item-title>吹奏楽コンクール</v-list-item-title>
           </v-list-item>
           <v-list-item to="/concours/ensemble">
-            <v-list-item-title>Ensemble</v-list-item-title>
+            <v-list-item-title>アンサンブルコンテスト</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-btn text to="/link" large tile>Link</v-btn>
-      <v-btn text to="/contact" large tile>Contact</v-btn>
+      <v-btn text to="/link" large tile>リンク集</v-btn>
+      <v-btn text to="/contact" large tile>お問い合わせ</v-btn>
       </div>
       <v-spacer></v-spacer>
       <v-menu offset-y content-class="max" transition="slide-x-reverse-transition" origin="right top" width="100vw">

@@ -1,7 +1,7 @@
 <template>
   <div>
-  <div class="jumbotron jumbotron-fluid vw-100 vh-100 d-none d-md-inline" id="top">
-    <div class="position-absolute text-justify-content d-none" id="top_title">
+  <div class="jumbotron jumbotron-fluid d-none" id="top">
+    <div class="position-absolute text-justify-content" id="top_title">
       <h1 class="serif font-weight-bold ">奈良高専吹奏楽部</h1>
       <h3 class="serif">Nationai Institute of Technology, Nara College Band</h3>
     </div>
@@ -24,9 +24,25 @@
           </p>
       </div>
       <div class="col-12 col-md-6">
-        <h2 class="serif">Coming Concert</h2>
+        <h2 class="serif">Next Concert</h2>
         <F1 v-if="latestConcerts" v-bind:d="latestConcerts"></F1>
-        <h2 class="serif">New Updates</h2>
+        
+
+        <h2 class="mt-5 serif">Updates</h2>
+        <div id="new-updates">
+          <dl>
+            <dt class="serif text-primary">2020.08.15</dt>
+            <dd>Concert，About, Concours/windを更新し，吹奏楽コンクール実績を掲載しました</dd>
+            <dt class="serif text-primary">2020.08.12</dt>
+            <dd>Concertを更新しました</dd>
+            <dt class="serif text-primary">2020.08.08</dt>
+            <dd>Concertを更新しました</dd>
+            <dt class="serif text-primary">2020.08.01</dt>
+            <dd>Concertを更新しました</dd>
+            <dt class="serif text-primary">2020.07.30</dt>
+            <dd>Concertを更新しました</dd>
+          </dl>
+        </div>
         
       </div>
       <div class="col-12 col-md-6">
@@ -111,19 +127,33 @@ export default {
   padding: 0;
 }
 
-#top{
-  width: 100vw;
-  height: calc(100vh - 48px);
-  min-height: 400px;
+#new-updates{
+  height: 200px;
+  overflow-y: scroll;
+}
+#new-updates dt{
+  letter-spacing: 1px;
+}
+#new-updates dd{
+  margin-bottom: 1rem;
 }
 
-#top_title{
-  top: 10px;
-  left: 10px;
-}
 
-header, .v-toolbar__content{
-  color: #fff!important;
+
+@media only screen and (min-width: 576px) {
+  div#top{
+    width: 100vw;
+    height: calc(100vh - 48px);
+    min-height: 400px;
+    background-color: #111;
+    display: none;
+  }
+
+  #top_title{
+    top: 10px;
+    left: 10px;
+  }
+
 }
 
 
