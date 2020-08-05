@@ -37,11 +37,6 @@ const routes = [
         ]
     },
     {
-        path: '/ensemble',
-        name: 'Ensemble',
-        component: () => import('../views/Ensemble.vue')
-    },
-    {
         path: '/link',
         name: 'Link',
         component: () => import('../views/Link.vue')
