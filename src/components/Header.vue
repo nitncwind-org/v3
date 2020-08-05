@@ -41,8 +41,11 @@
           <v-list-item to="/concerts">
             <v-list-item-title>Concerts</v-list-item-title>
           </v-list-item>
-          <v-list-item to="/concours">
-            <v-list-item-title>Concours</v-list-item-title>
+          <v-list-item to="/concours/winds">
+            <v-list-item-title>Winds</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/concours/ensemble">
+            <v-list-item-title>Ensemble</v-list-item-title>
           </v-list-item>
           <v-list-item to="/link">
             <v-list-item-title>Link</v-list-item-title>
