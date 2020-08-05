@@ -15,45 +15,60 @@
       </Hooper>
     </div>
 
-    <div class="row mt-3">
-      <div class="col-12">
-        <p>奈良高専吹奏楽部のホームページへようこそ!</p>
+    <div class="row mt-0">
+      <v-card tile outlined id="description" class="col-12">
+        <v-card-title class="h4">奈良高専吹奏楽部のホームページへようこそ!</v-card-title>
+        <v-card-text>
           <p>
             このホームページでは奈良高専吹奏楽部の演奏会情報やコンクール結果などを掲載しています。
             なお、このホームページは奈良高専の公式Webサイトではありません。
           </p>
-      </div>
-      <div class="col-12 col-md-6">
-        <h2 class="serif">Next Concert</h2>
-        <F1 v-if="latestConcerts" v-bind:d="latestConcerts"></F1>
-        
+        </v-card-text>
+      </v-card>
 
-        <h2 class="mt-5 serif">Updates</h2>
-        <div id="new-updates">
-          <dl>
-            <dt class="serif text-primary">2020.08.15</dt>
-            <dd>Concert，About, Concours/windを更新し，吹奏楽コンクール実績を掲載しました</dd>
-            <dt class="serif text-primary">2020.08.12</dt>
-            <dd>Concertを更新しました</dd>
-            <dt class="serif text-primary">2020.08.08</dt>
-            <dd>Concertを更新しました</dd>
-            <dt class="serif text-primary">2020.08.01</dt>
-            <dd>Concertを更新しました</dd>
-            <dt class="serif text-primary">2020.07.30</dt>
-            <dd>Concertを更新しました</dd>
-          </dl>
-        </div>
+      <div class="col-12 col-md-6">
+        <v-card tile outlined id="nextConcert">
+          <v-card-title class="h4 serif">Next Concert</v-card-title>
+          <v-card-text>
+          <F1 v-if="latestConcerts" v-bind:d="latestConcerts" id="latestConcert"></F1>
+          </v-card-text>
+          
+          
+        </v-card>
+
+        <v-card tile outlined id="update-container">
+          <v-card-title class="h4 serif">Updates</v-card-title>
+          <v-card-text>
+          <div id="new-updates">
+            <dl>
+              <dt class="serif text-primary">2020.08.15</dt>
+              <dd>１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０</dd>
+              <dt class="serif text-primary">2020.08.12</dt>
+              <dd>Concertを更新しました</dd>
+              <dt class="serif text-primary">2020.08.08</dt>
+              <dd>Concertを更新しました</dd>
+              <dt class="serif text-primary">2020.08.01</dt>
+              <dd>Concertを更新しました</dd>
+              <dt class="serif text-primary">2020.07.30</dt>
+              <dd>Concertを更新しました</dd>
+            </dl>
+          </div>  
+          </v-card-text>  
+        </v-card>      
         
       </div>
+
       <div class="col-12 col-md-6">
-        <h2 class="serif">Twitter</h2>
-        <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100vw'}"/>
+        <v-card tile outlined id="twitter">
+          <v-card-title class="h4 serif">Twitter</v-card-title>
+          <v-card-text>
+          <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100vw'}"/>
+          </v-card-text>
+          
+        </v-card>        
       </div>
+
     </div>
-
-
-    
-    
   </v-container>
   </div>
 
@@ -127,6 +142,13 @@ export default {
   padding: 0;
 }
 
+
+.theme--light.v-card.v-card--outlined {
+  
+  border: none;
+}
+
+
 #new-updates{
   height: 200px;
   overflow-y: scroll;
@@ -138,6 +160,11 @@ export default {
   margin-bottom: 1rem;
 }
 
+div#latestConcert div{
+  padding-left: 0;
+  padding-right: 0;
+  padding-top:0;
+}
 
 
 @media only screen and (min-width: 576px) {
