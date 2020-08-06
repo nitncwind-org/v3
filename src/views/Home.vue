@@ -17,7 +17,7 @@
 
     <div class="row mt-0">
       <v-card tile outlined id="description" class="col-12">
-        <v-card-title class="h4">奈良高専吹奏楽部のホームページへようこそ!</v-card-title>
+        <v-card-title class="h4 mb-2 pb-0">奈良高専吹奏楽部のホームページへようこそ!</v-card-title>
         <v-card-text>
           <p>
             このホームページでは奈良高専吹奏楽部の演奏会情報やコンクール結果などを掲載しています。
@@ -28,7 +28,7 @@
 
       <div class="col-12 col-md-6">
         <v-card tile outlined id="nextConcert">
-          <v-card-title class="h4 serif">Next Concert</v-card-title>
+          <v-card-title class="h4 mb-2 pb-0 serif">Next Concert</v-card-title>
           <v-card-text>
           <F1 v-if="latestConcerts" v-bind:d="latestConcerts" id="latestConcert"></F1>
           </v-card-text>
@@ -37,7 +37,7 @@
         </v-card>
 
         <v-card tile outlined id="update-container">
-          <v-card-title class="h4 serif">Updates</v-card-title>
+          <v-card-title class="h4 mb-2 pb-0 serif">Updates</v-card-title>
           <v-card-text>
           <div id="new-updates">
             <dl>
@@ -60,7 +60,7 @@
 
       <div class="col-12 col-md-6">
         <v-card tile outlined id="twitter">
-          <v-card-title class="h4 serif">Twitter</v-card-title>
+          <v-card-title class="h4 serif mb-2 pb-0">Twitter</v-card-title>
           <v-card-text>
           <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100vw'}"/>
           </v-card-text>
