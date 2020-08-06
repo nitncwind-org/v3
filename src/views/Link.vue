@@ -4,8 +4,8 @@
     <div class="row">
       <div v-for="(group, index) in links" :key=index class="col-12 col-md-6 mt-0 mb-0 pt-0 pb-0">
         <v-card tile outlined >
-          <v-card-title>{{ group.groupName }}</v-card-title>
-          <v-card-text class="pb-0">
+          <v-card-title class="h4 mb-2 pb-0">{{ group.groupName }}</v-card-title>
+          <v-card-text>
             <ul>
             <li v-for="(link, index) in group.links" :key=index>
               <a v-bind:href="link.url">{{ link.name }}</a>

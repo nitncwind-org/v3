@@ -1,6 +1,6 @@
 <template>
   <v-card tile outlined id="f1" :disabled="isEnd">
-    <v-card-title class="serif text-primary mb-0 pb-2">{{ d.title }}</v-card-title>
+    <v-card-title class="serif text-primary mb-2 pb-0">{{ d.title }}</v-card-title>
     <v-card-text>
       <div v-if="d.notice">
         <h2>{{ d.notice.title }}</h2>
