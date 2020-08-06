@@ -1,12 +1,14 @@
 <template>
   <v-card tile outlined id="f1" :disabled="isEnd">
     <v-card-title class="serif text-primary mb-2 pb-0">{{ d.title }}</v-card-title>
-    <v-card-text class="d-flex">
-      <div id="concertInfo" >
-        <div v-if="d.notice" class="alert alert-danger" id="notice">
-          <h2 class="h6 font-weight-bold">{{ d.notice.title }}</h2>
-          <p>{{ d.notice.text }}</p>
-        </div>
+    <v-card-text class="">
+      
+      <div v-if="d.notice" class="alert alert-danger" id="notice">
+        <h2 class="h6 font-weight-bold">{{ d.notice.title }}</h2>
+        <p>{{ d.notice.text }}</p>
+      </div>
+      <div class="d-flex">
+      <div id="concertInfo">
         <div id="detail">
           <p>日時：{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</p>
           <p>{{ d.open }}開場 {{ d.start }}開演</p>
@@ -22,6 +24,7 @@
           
         </div>
       </div>
+    </div>
     </v-card-text>
   </v-card>
 </template>
@@ -74,18 +77,12 @@ export default {
 
 #notice{
   padding: 10px;
-  width: 75%;
+  width: 100%;
 }
 
 #notice p{
   margin-bottom: 0;
 }
 
-@media only screen and (max-width: 768px) {
-  #notice{
-    width: 100%;
-  }
-
-}
 
 </style>
