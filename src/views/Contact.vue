@@ -2,7 +2,7 @@
   <v-container>
     <Loading v-show="loading"></Loading>
     <Title en="Contact" ja="お問い合わせ"></Title>
-    <v-card tile outlined>
+    <v-card tile outlined id="contactForm">
       <v-card-text>
         <v-form ref="form" v-model="valid">
           <v-text-field label="名前" :rules="[rules.required]" v-model="name"></v-text-field>
@@ -106,5 +106,10 @@ export default {
 <style scoped>
 .theme--light.v-card.v-card--outlined {
     border: none;
+}
+
+#contactForm{
+  max-width: 664px;
+  margin: 0 auto;
 }
 </style>

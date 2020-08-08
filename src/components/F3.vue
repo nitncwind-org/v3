@@ -7,8 +7,8 @@
       </div>
       
       <div>
-        <div v-for="(c, i) in concours.concours" class="h4 badge badge-dark rounded-0 mr-3 mb-2" :key="i">
-          {{ c.label }}
+        <div v-for="(c, i) in concours.concours" class="badge badge-dark rounded-0 mr-2 mb-1" :key="i">
+          <span>{{ c.label }} </span>
           <span :class="{ gold : isGold(c.award)}">{{ c.award }}</span>
           <span v-if="c.isRepresent"> & <span :class="{gold: c.isRepresent}">代表</span></span>
         </div>
@@ -51,5 +51,9 @@ export default {
 
 .theme--light.v-card.v-card--outlined:nth-child(12){
 border-top: thin solid rgba(0, 0, 0, 0.12);
+}
+
+div.badge span{
+  font-size: 0.75rem;
 }
 </style>

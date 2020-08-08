@@ -1,6 +1,6 @@
 <template>
   <div>
-  <div class="jumbotron jumbotron-fluid d-none d-md-block p-0" id="top">
+  <div class="jumbotron jumbotron-fluid d-none p-0" id="top">
     <div class="position-absolute text-justify-content d-none" id="top_title">
       <h1 class="serif font-weight-bold ">奈良高専吹奏楽部</h1>
       <h3 class="serif">National Institute of Technology, Nara College Band</h3>
@@ -13,7 +13,7 @@
 
   </div>
   <v-container class="" id="home">
-    <div class="d-block d-md-none">
+    <div class="">
       <Hooper :settings="hooperSettings">
         <Slide v-for="(image, index) in images" :key="index" :index="index">
           <v-img :src="image" />
@@ -34,7 +34,7 @@
 
       <div class="col-12 col-md-6">
         <v-card tile outlined id="nextConcert">
-          <v-card-title class="h4 mb-2 pb-0 serif">Next Concert</v-card-title>
+          <v-card-title class="h4 mb-2 pb-0">次回の演奏会</v-card-title>
           <v-card-text>
           <F1 v-if="latestConcerts" v-bind:d="latestConcerts" id="latestConcert"></F1>
           </v-card-text>
@@ -43,7 +43,7 @@
         </v-card>
 
         <v-card tile outlined id="update" class="d-none">
-          <v-card-title class="h4 mb-2 pb-0 serif">Updates</v-card-title>
+          <v-card-title class="h4 mb-2 pb-0">更新情報</v-card-title>
           <v-card-text>
           <div id="new-updates">
             <dl>

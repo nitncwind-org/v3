@@ -33,22 +33,25 @@
         </template>
         <v-list :height=height class="fit" width="50vw">
           <v-list-item to="/">
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>ホーム</v-list-item-title>
           </v-list-item>
           <v-list-item to="/about">
-            <v-list-item-title>About</v-list-item-title>
+            <v-list-item-title>活動について</v-list-item-title>
           </v-list-item>
           <v-list-item to="/concerts">
-            <v-list-item-title>Concerts</v-list-item-title>
+            <v-list-item-title>演奏会のお知らせ</v-list-item-title>
           </v-list-item>
-          <v-list-item to="/concours">
-            <v-list-item-title>Concours</v-list-item-title>
+          <v-list-item to="/concours/winds">
+            <v-list-item-title>吹奏楽コンクール実績</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/concours/ensemble">
+            <v-list-item-title>アンサンブルコンテスト実績</v-list-item-title>
           </v-list-item>
           <v-list-item to="/link">
-            <v-list-item-title>Link</v-list-item-title>
+            <v-list-item-title>リンク集</v-list-item-title>
           </v-list-item>
           <v-list-item to="/contact">
-            <v-list-item-title>Contact</v-list-item-title>
+            <v-list-item-title>お問い合わせ</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
