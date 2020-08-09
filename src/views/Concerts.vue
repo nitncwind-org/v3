@@ -23,9 +23,7 @@ export default {
     this.axios.get(URL).then(res => {
       this.latest = res.data.latest;
       for(let i = 0; i < this.latest.length; i++){
-        let hour = this.latest[0].start.split(':')[0];
-        let minutes = this.latest[0].start.split(':')[1];
-        let concertsDate = new Date(this.latest[0].date.year, this.latest[0].date.month-1, this.latest[0].date.day, hour, minutes);
+        let concertsDate = new Date(this.latest[0].date.year, this.latest[0].date.month-1, this.latest[0].date.day+1);
         if(concertsDate < date){
           let c = this.latest.shift();
           this.latest.push(c);
