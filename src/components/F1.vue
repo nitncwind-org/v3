@@ -16,7 +16,7 @@
         <div id="detail">
           <p>日時：{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</p>
           <p>{{ d.open }}開場 {{ d.start }}開演</p>
-          <p>会場：{{ d.place }}</p>
+          <p>会場：{{ d.place.name }}</p>
           <p>
             入場料：<span v-if="d.fee===0">無料</span>
                   <span v-else>{{ d.fee }}円</span>
@@ -30,8 +30,9 @@
       </div>
        
     </div>
+    <div v-if="d.place.map">
     <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.114194961175!2d135.77988601523091!3d34.651818880447046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013a8d2ee4af33%3A0x7633409ce16f37a5!2zRE1HIE1PUkkg44KE44G-44Go6YOh5bGx5Z-O44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1596822109614!5m2!1sja!2sjp3" 
+              src="d.place.map" 
               width="100%"
               height="300"
               frameborder="0"
@@ -39,6 +40,7 @@
               allowfullscreen
           >
           </iframe>
+    </div>
     </v-card-text>
     
   </v-card>
