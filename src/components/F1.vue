@@ -32,7 +32,7 @@
     </div>
     <div v-if="d.place.map">
     <iframe
-              src="d.place.map" 
+              :src="d.place.map" 
               width="100%"
               height="300"
               frameborder="0"
