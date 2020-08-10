@@ -141,34 +141,13 @@ export default {
   height: auto;
 }
 
-
-@media only screen and (min-width: 576px) {
-  .theme--light.v-app-bar.v-toolbar.v-sheet{
-    background-color:rgba(0,0,255,1)!important;
-  }
-  span.v-btn__content{
-    color: white!important;
-  }
-
-  div#top{
-    width: 100vw;
-    height: calc(100vh - 48px);
-    overflow: hidden;
-    min-height: 500px;
-    background-color: #000;
-  }
-
-  #top_title{
-    top: 10px;
-    left: 10px;
-  }
-
-
-
-}
 </style>
 
 <style>
+:root{
+--primary: #0e177f!important;
+}
+
 
 /* vuetifyによる"ul"へのpadding-leftスタイルを打ち消している */
 .v-application .hooper-track{
@@ -199,7 +178,14 @@ div#latestConcert div{
   padding-top:0;
 }
 
+.text-primary{
+    color: #0e177f !important;
+    caret-color: #0e177f !important;
+  }
 
+.badge.badge-primary{
+    background-color: #0e177f;
+}
 
 
 </style>

@@ -7,7 +7,7 @@
       </div>
       
       <div>
-        <div v-for="(c, i) in concours.concours" class="badge badge-dark rounded-0 mr-2 mb-1" :key="i">
+        <div v-for="(c, i) in concours.concours" class="badge badge-primary rounded-0 mr-2 mb-1" :key="i">
           <span>{{ c.label }} </span>
           <span :class="{ gold : isGold(c.award)}">{{ c.award }}</span>
           <span v-if="c.isRepresent"> & <span :class="{gold: c.isRepresent}">代表</span></span>
