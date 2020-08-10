@@ -172,12 +172,6 @@ export default {
   margin-bottom: 1rem;
 }
 
-div#latestConcert div{
-  padding-left: 0;
-  padding-right: 0;
-  padding-top:0;
-}
-
 .text-primary{
     color: #0e177f !important;
     caret-color: #0e177f !important;

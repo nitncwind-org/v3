@@ -47,6 +47,7 @@ export default {
 
   .v-application a:hover{
     color: #0e177f !important;
+    text-decoration: none;
   }
 
   .v-toolbar__content a{
