@@ -42,15 +42,15 @@ export default {
     font-family: 'Aleo', 'Noto Serif JP', sans-serif;
   }
   .v-application a{
-    color: #6483E6 !important;
+    color: #0e177f !important;
   }
 
   .v-application a:hover{
-    color: #0e177f !important;
+    color: #6483E6  !important;
     text-decoration: none;
   }
 
-  .v-toolbar__content a{
+  .v-toolbar__content a, .v-toolbar__content a:hover{
     color:rgba(0, 0, 0, 0.87)!important;
   }
 
