@@ -31,8 +31,8 @@ export default {
     }
   },
   created() {
-    const URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQxQ-SUZmEy2TqWGIIHa6aFI_e3JY7lfASZwAhX3GLf-1_24RRw4xAjkDQPvF7UffSjSZfWullZSLFD/pub?gid=1406237477&single=true&output=csv';
-    loadCSV(URL, array => {
+    const PARAM = 'ensemble';
+    loadCSV(PARAM, array => {
       let ensemble = {
         'year': Number(array[0]),
         'music': {
