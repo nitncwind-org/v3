@@ -25,8 +25,8 @@ export default {
     }
   },
   created: function() {
-    const URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-Q7Js-P1gSXoL7h09WP-0zayDaCEeRjdcNdgg4pTtlXfWy8RPpmE65dlZJwhci5DcrlLnD9P3At8h/pub?gid=0&single=true&output=csv';
-    loadCSV(URL, array => {
+    const PARAM = 'link';
+    loadCSV(PARAM, array => {
       return {
         'group': array[0],
         'name': array[1],
