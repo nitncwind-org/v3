@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar id="header" dense>
+    <v-app-bar id="header" dense short flat>
       <router-link to="/">
         <v-img :src="logoImage" max-height="96" max-width="160" contain></v-img>
       </router-link>
