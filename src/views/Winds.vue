@@ -29,8 +29,8 @@ export default {
     }
   },
   created() {
-    const URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQxQ-SUZmEy2TqWGIIHa6aFI_e3JY7lfASZwAhX3GLf-1_24RRw4xAjkDQPvF7UffSjSZfWullZSLFD/pub?gid=0&single=true&output=csv';
-    loadCSV(URL, array => {
+    const PARAM = 'winds';
+    loadCSV(PARAM, array => {
       let concours = {
         'year': Number(array[0]),
         'setPiece': {
