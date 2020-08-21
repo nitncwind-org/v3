@@ -8,6 +8,7 @@
 
 <script>
 import F2 from "@/components/F2.vue";
+import { loadCSV } from '@/lib/csv.js';
 
 export default {
   name: 'About',
@@ -20,9 +21,17 @@ export default {
     }
   },
   created() {
-    const URL = process.env.BASE_URL + 'data/about.json'
-    this.axios.get(URL).then(res => {
-      this.about_QandA = res.data.about;
+    const PARAM = 'about';
+    loadCSV(PARAM, array => {
+      return {
+        'question': array[0],
+        'answer': array[1],
+      }
+    }, 1).then(res => {
+      res.forEach(line => {
+        line['answer'] = line['answer'].replace(/<cms-br>/g, '\n');
+      });
+      this.about_QandA = res;
     });
   }
 }
