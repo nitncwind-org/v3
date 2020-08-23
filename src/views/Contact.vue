@@ -1,7 +1,8 @@
 <template>
   <v-container>
-    <v-card>
-      <v-card-title>お問い合わせ</v-card-title>
+    <Loading v-show="loading"></Loading>
+    <Title en="Contact" ja="お問い合わせ"></Title>
+    <v-card tile outlined id="contactForm">
       <v-card-text>
         <v-form ref="form" v-model="valid">
           <v-text-field label="名前" :rules="[rules.required]" v-model="name"></v-text-field>
@@ -10,7 +11,7 @@
           <v-text-field label="団体名" v-show="affiliation=='団体'" v-model="affiliation_group"></v-text-field>
           <v-text-field label="メールアドレス" :rules="[rules.required, rules.email]" v-model="emailAddress"></v-text-field>
           <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="inquiry"></v-select>
-          <v-textarea label="お問い合わせ内容" v-model="content"></v-textarea>
+          <v-textarea label="お問い合わせ詳細" v-model="content"></v-textarea>
           <v-btn :disabled="!valid" v-on:click="submit">送信</v-btn>
         </v-form>
         <v-snackbar v-model="successSnackbar" color="success" top app transition="scroll-y-transition">送信成功</v-snackbar>
@@ -21,6 +22,9 @@
 </template>
 
 <script>
+import Loading from '@/components/Loading'
+import Title from '@/components/Title'
+
 export default {
   data: function() {
     return {
@@ -52,10 +56,12 @@ export default {
       successSnackbar: false,
       failureSnackbar: false,
       message: '',
+      loading: false,
     }
   },
   methods: {
     submit(){
+      this.loading = true;
       let affiliation_kosen = this.affiliation_kosen;
       let affiliation_group = this.affiliation_group;
       if(this.affiliation == "奈良高専(OBOG含む)" || this.affiliation == "個人"){
@@ -77,6 +83,7 @@ export default {
       params.append("inquiry", this.inquiry);
       params.append("content", this.content);
       this.axios.post("https://script.google.com/macros/s/AKfycbxYDFF-V927nDu8dRQ4AOtWfZ--OQyccT0k9brXgE2AxCrWdqHa/exec", params).then(res => {
+        this.loading = false;
         if(res.data['success'] == 'true'){
           this.successSnackbar = true;
           this.$refs.form.reset()
@@ -88,6 +95,21 @@ export default {
           this.failureSnackbar = true;
       })
     }
+  },
+  components: {
+    Loading,
+    Title
   }
 }
 </script>
+
+<style scoped>
+.theme--light.v-card.v-card--outlined {
+    border: none;
+}
+
+#contactForm{
+  max-width: 664px;
+  margin: 0 auto;
+}
+</style>
