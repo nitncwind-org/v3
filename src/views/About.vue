@@ -1,18 +1,19 @@
 <template>
   <v-container id="about">
-    <div>
-      <F2 v-for="(qa, index) in about_QandA" :key=index v-bind:QandA="qa"></F2>
-    </div>
+    <Title en="About" ja="活動について"></Title>
+    <F2 v-for="(qa, index) in about_QandA" :key=index v-bind:QandA="qa"></F2>
   </v-container>
 </template>
 
 <script>
 import F2 from "@/components/F2.vue";
+import Title from "@/components/Title.vue";
 
 export default {
   name: 'About',
   components: {
-    F2
+    F2,
+    Title
   },
   data: function() {
     return {
