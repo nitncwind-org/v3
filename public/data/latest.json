@@ -47,6 +47,27 @@
       "start": "10:30",
       "place": "Dokaka Hall",
       "fee": 1000
+    },
+    {
+      "title": "This Is Title.",
+      "date": {
+        "year": 2020,
+        "month": 10,
+        "day": 6
+      },
+      "open": "10:00",
+      "start": "10:30",
+      "place":{
+        "name": "Dokaka Hall",
+        "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.114194961175!2d135.77988601523091!3d34.651818880447046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013a8d2ee4af33%3A0x7633409ce16f37a5!2zRE1HIE1PUkkg44KE44G-44Go6YOh5bGx5Z-O44Ob44O844Or!5e0!3m2!1sja!2sjp!4v1596822109614!5m2!1sja!2sjp3"
+      },
+      "fee": 1000,
+      "notice":{
+        "type": "danger",
+        "title": "中止のお知らせ",
+        "text": "新型コロナウイルス(COVID-19)感染拡大に伴い〜１２３４５６７８９０１２３４５６７８９０"
+      },
+      "poster": "aaa"
     }
   ]
 }

@@ -1,14 +1,19 @@
 <template>
   <v-container id="link">
-    <h2>LINK集</h2>
-    <div>
-      <div v-for="(group, index) in links" :key=index>
-        <h3>{{ group.groupName }}</h3>
-        <ul>
-          <li v-for="(link, index) in group.links" :key=index>
-            <a v-bind:href="link.url">{{ link.name }}</a>
-          </li>
-        </ul>
+  <Title en="Links" ja="リンク集"></Title>
+    <div class="row">
+      <div v-for="(group, index) in links" :key=index class="col-12 col-md-6 mt-0 mb-0 pt-0 pb-0">
+        <v-card tile outlined >
+          <v-card-title class="h4 mb-2 pb-0">{{ group.groupName }}</v-card-title>
+          <v-card-text>
+            <ul>
+            <li v-for="(link, index) in group.links" :key=index>
+              <a v-bind:href="link.url">{{ link.name }}</a>
+            </li>
+          </ul>
+          </v-card-text>
+        </v-card>
+
       </div>
     </div>
   </v-container>
@@ -16,9 +21,13 @@
 
 <script>
 import { loadCSV } from '@/lib/csv.js'
+import Title from '@/components/Title.vue'
 
 export default {
   name: 'Link',
+  components:{
+    Title
+  },
   data: function() {
     return {
       "links": []
@@ -48,3 +57,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.theme--light.v-card.v-card--outlined {
+    border: none;
+}
+</style>
