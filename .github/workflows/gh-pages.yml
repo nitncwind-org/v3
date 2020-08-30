@@ -25,6 +25,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
+    - run: rm public/robots.txt
+
     - name: install
       run: npm ci
 
