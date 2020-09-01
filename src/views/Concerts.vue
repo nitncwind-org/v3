@@ -9,6 +9,7 @@
 
 <script>
 import F1 from '@/components/F1.vue'
+import { loadCSV } from '@/lib/csv.js'
 import Title from '@/components/Title.vue'
 
 export default {
@@ -23,17 +24,76 @@ export default {
     }
   },
   created() {
-    const URL = process.env.BASE_URL + 'data/latest.json';
-    let date = new Date();
-    this.axios.get(URL).then(res => {
-      this.latest = res.data.latest;
-      for(let i = 0; i < this.latest.length; i++){
-        let concertsDate = new Date(this.latest[0].date.year, this.latest[0].date.month-1, this.latest[0].date.day+1);
-        if(concertsDate < date){
-          let c = this.latest.shift();
-          this.latest.push(c);
-        }
+    const PARAM = 'concerts';
+    loadCSV(PARAM, array => {
+      const date = new Date(array[1]);
+      const openDate = new Date(array[2]);
+      const open = (array[2] !== "")?
+                  openDate.getHours() + ':' + ('0'+openDate.getMinutes()).slice(-2):
+                  '';
+      const startDate = new Date(array[3]);
+      const start = (array[3] !== "")?
+                  startDate.getHours() + ':' + ('0'+startDate.getMinutes()).slice(-2):
+                  '';
+      const notice = {};
+      if(array[11]){
+        notice['type'] = array[11],
+        notice['title'] = array[12],
+        notice['text'] = array[13],
+        notice['publishDate'] = new Date(array[14])
       }
+      return {
+        'title': array[0],
+        'date': {
+          'raw': date,
+          'year': date.getFullYear(),
+          'month': date.getMonth()+1,
+          'day': date.getDate(),
+        },
+        'open': open,
+        'start': start,
+        'place': {
+          'name': array[4],
+          'mapType': array[9],
+          'map': array[10]
+        },
+        'fee': array[5],
+        'poster': array[7]+array[8],
+        'notice': notice,
+      }
+    }, 1).then(res => {
+      const today = new Date();
+      const futureConcerts = [];
+      const pastConcerts = [];
+      res.forEach(e => {
+        if(e.date.raw < today){
+          pastConcerts.push(e);
+        }else{
+          futureConcerts.push(e);
+        }
+      });
+
+      pastConcerts.sort(function(a, b){
+        if(a.date.raw > b.date.raw){
+          return -1;
+        }
+        if(a.date.raw < b.date.raw){
+          return 1;
+        }
+        return 0;
+      });
+
+      futureConcerts.sort(function(a, b){
+        if(a.date.raw > b.date.raw){
+          return 1;
+        }
+        if(a.date.raw < b.date.raw){
+          return -1;
+        }
+        return 0;
+      });
+
+      this.latest = futureConcerts.concat(pastConcerts);
     });
   }
 }
