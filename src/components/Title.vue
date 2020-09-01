@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron jumbotron-fluid centering bg-white text-center bg-white">
+  <div class="jumbotron jumbotron-fluid centering text-center bg-none">
     <div class="w-100">
       <h1 class="serif">{{ en }}</h1>
       <div class="title-borders text-center d-flex">

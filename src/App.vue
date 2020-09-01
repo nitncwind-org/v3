@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="true">
+  <v-app :dark="true" :style="{background: '#fafafa'}">
     <div id="app">
       <Header/>
         <v-content>
@@ -54,6 +54,9 @@ export default {
     letter-spacing: 4px;
   }
 
+  .bg-none{
+    background-color: rgba(0,0,0,0);
+  }
 
 
 

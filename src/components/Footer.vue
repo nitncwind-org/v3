@@ -1,5 +1,5 @@
 <template>
-  <v-footer app absolute padless dark color="primary darken-2" class="pl-12 pr-12">
+  <v-footer app absolute padless dark color="info darken-2" class="pl-12 pr-12">
     <v-row>
       <v-col lg=4 class="d-none d-lg-block text-left text-caption">
         <span>〒639-1080</span><br/>
