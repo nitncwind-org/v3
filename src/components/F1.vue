@@ -2,14 +2,14 @@
   <v-card tile outlined id="f1" :disabled="isEnd">
     <v-card-title class="serif text-primary mb-2 pb-0">{{ d.title }}</v-card-title>
     <v-card-text class="">
-      <div v-if="d.notice" class="d-block d-lg-none alert" v-bind:class="[ d.notice.type === 'danger' ? 'alert-danger' : (d.notice.type === 'warning' ? 'alert-warning' : 'alert-info') ]"  id="notice">
+      <div v-if="isPublished" class="d-block d-lg-none alert" v-bind:class="[ d.notice.type === 'danger' ? 'alert-danger' : (d.notice.type === 'warning' ? 'alert-warning' : 'alert-info') ]"  id="notice">
         <h2 class="h6 font-weight-bold">{{ d.notice.title }}</h2>
         <p>{{ d.notice.text }}</p>
       </div>
 
       <div class="d-flex">
       <div id="concertInfo">
-        <div v-if="d.notice" class="d-none d-lg-block alert" :class="[ d.notice.type === 'danger' ? 'alert-danger' : (d.notice.type === 'warning' ? 'alert-warning' : 'alert-info') ]" id="notice">
+        <div v-if="isPublished" class="d-none d-lg-block alert" :class="[ d.notice.type === 'danger' ? 'alert-danger' : (d.notice.type === 'warning' ? 'alert-warning' : 'alert-info') ]" id="notice">
           <h2 class="h6 font-weight-bold">{{ d.notice.title }}</h2>
           <p>{{ d.notice.text }}</p>
         </div>
@@ -24,9 +24,7 @@
         </div>
       </div>
       <div v-if="d.poster" id="concertPoster" class="">
-        <div id="posterImage">
-          
-        </div>
+        <img id="posterImage" :src="d.poster">
       </div>
        
     </div>
@@ -64,6 +62,13 @@ export default {
     isEnd: function() {
       let concertsDate = new Date(this.d.date.year, this.d.date.month-1, this.d.date.day+1);
       return concertsDate < this.date;
+    },
+    isPublished: function() {
+      const today = new Date();
+      if(this.d.notice.type !== undefined && this.d.notice.publishDate <= today){
+        return true
+      }
+      return false
     }
   }
 }
