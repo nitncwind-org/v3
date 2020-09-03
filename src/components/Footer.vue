@@ -1,5 +1,5 @@
 <template>
-  <v-footer app absolute class="pa-3 pl-12 pr-12 bg-gray text-primary">
+  <v-footer app absolute height='100px' class="pl-12 pr-12 bg-gray text-primary">
     <v-row>
       <v-col lg=4 class="d-none d-lg-block text-left">
         <span>〒639-1080</span><br/>
@@ -23,7 +23,6 @@
       </v-col>
 
     </v-row>
-
   </v-footer>
 </template>
 
@@ -43,9 +42,12 @@ export default {
 </script>
 
 <style>
-
   .v-footer .col{
     margin: auto 0;
+  }
+
+  .v-footer{
+    
   }
   
 </style>
