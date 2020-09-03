@@ -25,6 +25,11 @@ const routes = [
         component: () => import('../views/Concours.vue'),
         children: [
             {
+                path: '/',
+                name: '404',
+                component: () => import('../views/404.vue')
+            },
+            {
                 path: 'winds',
                 name: 'Winds',
                 component: () => import('../views/Winds.vue')
