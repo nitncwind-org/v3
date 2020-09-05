@@ -2,10 +2,10 @@
   <v-card tile outlined id="f1" :disabled="isEnd">
     
     <v-card-text class="">
-      <div v-if="d.notice" class="alert" v-bind:class="[ d.notice.type === 'danger' ? 'alert-danger' : (d.notice.type === 'warning' ? 'alert-warning' : 'alert-info') ]"  id="notice">
-        <h2 class="h6 font-weight-bold">{{ d.notice.title }}</h2>
-        <p>{{ d.notice.text }}</p>
-      </div>
+      <v-alert v-if="d.notice" text dense v-bind:class="[ d.notice.type === 'danger' ? 'error--text' : (d.notice.type === 'warning' ? 'warning--text' : 'primary--text') ]"  id="notice">
+        <div class="title">{{ d.notice.title }}</div>
+        <div>{{ d.notice.text }}</div>
+      </v-alert>
 
       <div class="d-flex" id="concertInfo" style="column-gap: 20px; justify-content:space-between;">
 
