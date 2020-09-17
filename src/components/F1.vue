@@ -2,8 +2,8 @@
   <v-card tile outlined id="f1" :disabled="isEnd">
     
     <v-card-text class="">
-      <v-alert v-if="d.notice" text dense v-bind:class="[ d.notice.type === 'danger' ? 'error--text' : (d.notice.type === 'warning' ? 'warning--text' : 'primary--text') ]"  id="notice">
-        <div class="title">{{ d.notice.title }}</div>
+      <v-alert v-if="d.notice" text prominent :type="d.notice.type">
+        <h3 class="title font-weight-bold">{{ d.notice.title }}</h3>
         <div>{{ d.notice.text }}</div>
       </v-alert>
 
@@ -126,7 +126,9 @@ div.large{
   display: none;
 }
 
-
+.v-alert__content > .title{
+  font-family: 'Inter', 'Noto Sans JP', sans-serif!important;
+}
 
 
 
