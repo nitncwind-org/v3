@@ -126,10 +126,4 @@ div.large{
   display: none;
 }
 
-.v-alert__content > .title{
-  font-family: 'Inter', 'Noto Sans JP', sans-serif!important;
-}
-
-
-
 </style>
