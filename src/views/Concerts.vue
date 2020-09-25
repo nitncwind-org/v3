@@ -1,20 +1,20 @@
 <template>
   <v-container id="concerts">
-    <Title en="Concerts" ja="演奏会のお知らせ"></Title>
 
-    <div v-for="(lc, i) in latest" :key=i :index=i v-bind:class="{ended: lc.isEnd}">
-      <router-link :to="`/concerts/${lc.id}`">{{ lc.title }}</router-link>
-    </div>
+      <Title en="Concerts" ja="演奏会のお知らせ"></Title>
+
+    <F1 v-for="(lc, i) in latest" v-bind:d="lc" :key=i :index=i></F1>
   </v-container>
 </template>
 
 <script>
-import { loadCSV } from '@/lib/csv.js'
+import F1 from '@/components/F1.vue'
 import Title from '@/components/Title.vue'
 
 export default {
   name: 'Concerts',
   components: {
+    F1,
     Title
   },
   data: function() {
@@ -23,85 +23,18 @@ export default {
     }
   },
   created() {
-    const PARAM = 'concerts';
-    loadCSV(PARAM, array => {
-      const date = new Date(array[2]);
-      const openDate = new Date(array[3]);
-      const open = (array[3] !== "")?
-                  openDate.getHours() + ':' + ('0'+openDate.getMinutes()).slice(-2):
-                  '';
-      const startDate = new Date(array[4]);
-      const start = (array[4] !== "")?
-                  startDate.getHours() + ':' + ('0'+startDate.getMinutes()).slice(-2):
-                  '';
-      const notice = {};
-      if(array[12]){
-        notice['type'] = array[12],
-        notice['title'] = array[13],
-        notice['text'] = array[14],
-        notice['publishDate'] = new Date(array[15])
+    const URL = process.env.BASE_URL + 'data/latest.json';
+    let date = new Date();
+    this.axios.get(URL).then(res => {
+      this.latest = res.data.latest;
+      for(let i = 0; i < this.latest.length; i++){
+        let concertsDate = new Date(this.latest[0].date.year, this.latest[0].date.month-1, this.latest[0].date.day+1);
+        if(concertsDate < date){
+          let c = this.latest.shift();
+          this.latest.push(c);
+        }
       }
-      return {
-        'id': array[0],
-        'title': array[1],
-        'date': {
-          'raw': date,
-          'year': date.getFullYear(),
-          'month': date.getMonth()+1,
-          'day': date.getDate(),
-        },
-        'open': open,
-        'start': start,
-        'place': {
-          'name': array[5],
-          'mapType': array[10],
-          'map': array[11]
-        },
-        'fee': array[6],
-        'poster': array[8]+array[9],
-        'notice': notice,
-      }
-    }, 1).then(res => {
-      const today = new Date();
-      const futureConcerts = [];
-      const pastConcerts = [];
-      res.forEach(e => {
-        if(e.date.raw < today){
-          e['isEnd'] = true;
-          pastConcerts.push(e);
-        }else{
-          e['isEnd'] = false;
-          futureConcerts.push(e);
-        }
-      });
-
-      pastConcerts.sort(function(a, b){
-        if(a.date.raw > b.date.raw){
-          return -1;
-        }
-        if(a.date.raw < b.date.raw){
-          return 1;
-        }
-        return 0;
-      });
-
-      futureConcerts.sort(function(a, b){
-        if(a.date.raw > b.date.raw){
-          return 1;
-        }
-        if(a.date.raw < b.date.raw){
-          return -1;
-        }
-        return 0;
-      });
-
-      this.latest = futureConcerts.concat(pastConcerts);
     });
   }
 }
 </script>
-
-<style scoped>
-.ended{
-}
-</style>
