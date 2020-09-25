@@ -86,7 +86,6 @@ import F1 from '@/components/F1.vue';
 import { Timeline } from 'vue-tweet-embed';
 import { Hooper, Slide } from 'hooper';
 import 'hooper/dist/hooper.css';
-import { loadCSV } from '@/lib/csv.js'
 
 export default {
   name: 'Home',
@@ -113,67 +112,17 @@ export default {
     }
   },
   created() {
-    const PARAM = 'concerts';
-    loadCSV(PARAM, array => {
-      const date = new Date(array[2]);
-      const openDate = new Date(array[3]);
-      const open = (array[3] !== "")?
-                  openDate.getHours() + ':' + ('0'+openDate.getMinutes()).slice(-2):
-                  '';
-      const startDate = new Date(array[4]);
-      const start = (array[4] !== "")?
-                  startDate.getHours() + ':' + ('0'+startDate.getMinutes()).slice(-2):
-                  '';
-      const notice = {};
-      if(array[12]){
-        notice['type'] = array[12],
-        notice['title'] = array[13],
-        notice['text'] = array[14],
-        notice['publishDate'] = new Date(array[15])
-      }
-      return {
-        'id': array[0],
-        'title': array[1],
-        'date': {
-          'raw': date,
-          'year': date.getFullYear(),
-          'month': date.getMonth()+1,
-          'day': date.getDate(),
-        },
-        'open': open,
-        'start': start,
-        'place': {
-          'name': array[5],
-          'mapType': array[10],
-          'map': array[11]
-        },
-        'fee': array[6],
-        'poster': array[8]+array[9],
-        'notice': notice,
-      }
-    }, 1).then(res => {
-      const today = new Date();
-      const futureConcerts = [];
-      res.forEach(e => {
-        if(e.date.raw > today){
-          futureConcerts.push(e);
-        }
-      });
-      futureConcerts.sort(function(a, b){
-        if(a.date.raw > b.date.raw){
-          return 1;
-        }
-        if(a.date.raw < b.date.raw){
-          return -1;
-        }
-        return 0;
-      });
-      if(futureConcerts.length > 0){
-        this.latestConcerts = futureConcerts[0];
-      }
-    });
-
+    const URL1 = process.env.BASE_URL + 'data/latest.json';
     const URL2 = process.env.BASE_URL + 'data/top.json';
+    this.axios.get(URL1).then(res => {
+      let latestConcertsList = res.data.latest;
+      latestConcertsList.forEach(lc => {
+        let concertsDate = new Date(lc.date.year, lc.date.month-1, lc.date.day+1);
+        if(concertsDate >= new Date() && this.latestConcerts === null){
+          this.latestConcerts = lc;
+        }
+      });
+    });
     this.axios.get(URL2).then(res => {
       let imagesPath = res.data.images.map(e => {
         return process.env.BASE_URL + 'images/top/' + e;

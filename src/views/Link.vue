@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import { loadCSV } from '@/lib/csv.js'
 import Title from '@/components/Title.vue'
 
 export default {
@@ -34,25 +33,9 @@ export default {
     }
   },
   created: function() {
-    const PARAM = 'link';
-    loadCSV(PARAM, array => {
-      return {
-        'group': array[0],
-        'name': array[1],
-        'url': array[2],
-      }
-    }, 1).then(res =>{
-      let links = res.reduce((links, link) =>
-        Object.assign(links, {
-          [link['group']]: (links[link['group']] || []).concat(link)
-        })
-      , {});
-      this.links = Object.entries(links).map(e => {
-        return {
-          'groupName': e[0],
-          'links': e[1]
-        }
-      });
+    const URL = process.env.BASE_URL + 'data/links.json';
+    this.axios.get(URL).then(res => {
+      this.links = res.data.links;
     });
   }
 }
