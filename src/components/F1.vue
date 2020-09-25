@@ -1,5 +1,5 @@
 <template>
-  <v-card tile outlined id="f1" :disabled="isEnd">
+  <v-card tile outlined id="f1">
     <v-card-title class="serif text-primary mb-2 pb-0">{{ d.title }}</v-card-title>
     <v-card-text class="">
       <div v-if="isPublished" class="d-block d-lg-none alert" v-bind:class="[ d.notice.type === 'danger' ? 'alert-danger' : (d.notice.type === 'warning' ? 'alert-warning' : 'alert-info') ]"  id="notice">
@@ -39,6 +39,8 @@
           >
           </iframe>
     </div>
+    <div v-html="d.mainBody">
+    </div>
     </v-card-text>
     
   </v-card>
@@ -59,10 +61,6 @@ export default {
     this.date = new Date();
   },
   computed: {
-    isEnd: function() {
-      let concertsDate = new Date(this.d.date.year, this.d.date.month-1, this.d.date.day+1);
-      return concertsDate < this.date;
-    },
     isPublished: function() {
       const today = new Date();
       if(this.d.notice.type !== undefined && this.d.notice.publishDate <= today){
