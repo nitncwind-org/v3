@@ -1,6 +1,6 @@
 <template>
   <v-footer app absolute padless dark height='100px' color="info darken-2" class="pl-12 pr-12">
-  <v-row>
+    <v-row>
       <v-col lg=4 class="d-none d-lg-block text-left text-caption">
         <span>〒639-1080</span><br/>
         <span>奈良県大和郡山市矢田町22番地 合同教室</span>
@@ -55,5 +55,16 @@ export default {
     
   }
   
+</style>
+
+<style scoped>
+  .v-footer .social a{
+    color: #ffffff!important;
+  }
+  .v-footer .social a:hover{
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
 </style>
 
