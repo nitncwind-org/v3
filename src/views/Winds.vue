@@ -16,6 +16,7 @@
 
 <script>
 import F3 from '@/components/F3.vue'
+import { loadCSV } from '@/lib/csv.js'
 import Title from '@/components/Title.vue'
 
 export default {
@@ -32,10 +33,41 @@ export default {
     }
   },
   created() {
-    const URL = process.env.BASE_URL + 'data/concours.json';
-    this.axios.get(URL).then(res => {
-      this.concours = res.data.concours;
-
+    const PARAM = 'winds';
+    loadCSV(PARAM, array => {
+      let concours = {
+        'year': Number(array[0]),
+        'setPiece': {
+          'title': array[1],
+          'subtitle': array[2],
+          'composer': array[3],
+          'arranger': ''
+        },
+        'freeProgram': {
+          'title': array[4],
+          'subtitle': array[5],
+          'composer': array[6],
+          'arranger': array[7]
+        },
+        'concours': [
+          {
+            'label': '奈良県大会',
+            'award': array[9],
+            'isRepresent': false,
+          }
+        ]
+      };
+      if(array[12] !== ''){
+        concours['concours'][0]['isRepresent'] = true;
+        concours['concours'].push({
+          'label': '関西大会',
+          'award': array[12],
+          'isRepresent': false,
+        });
+      }
+      return concours;
+    }).then(res => {
+      this.concours = res.reverse();
       let m = new Map();
       this.concours.forEach(e => {
         e.generation = Math.floor(e.year / 10) * 10;
