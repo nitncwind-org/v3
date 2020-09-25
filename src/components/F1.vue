@@ -39,8 +39,7 @@
           >
           </iframe>
     </div>
-    <div>
-      {{ d.mainBody }}
+    <div v-html="d.mainBody">
     </div>
     </v-card-text>
     
