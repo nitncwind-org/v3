@@ -1,25 +1,22 @@
 <template>
   <v-container id="concerts">
-    <Title en="Concerts" ja="演奏会のお知らせ"></Title>
-
-    <div v-for="(lc, i) in latest" :key=i :index=i v-bind:class="{ended: lc.isEnd}">
-      <router-link :to="`/concerts/${lc.id}`">{{ lc.title }}</router-link>
-    </div>
+      <F1 v-if="concerts" v-bind:d="concerts"></F1>
+      <router-link to="/concerts">一覧ページに戻る</router-link>
   </v-container>
 </template>
 
 <script>
+import F1 from '@/components/F1.vue'
 import { loadCSV } from '@/lib/csv.js'
-import Title from '@/components/Title.vue'
 
 export default {
   name: 'Concerts',
   components: {
-    Title
+    F1,
   },
   data: function() {
     return {
-      latest: []
+      concerts: null,
     }
   },
   created() {
@@ -58,50 +55,17 @@ export default {
           'map': array[11]
         },
         'fee': array[6],
+        'mainBody': array[7],
         'poster': array[8]+array[9],
         'notice': notice,
       }
     }, 1).then(res => {
-      const today = new Date();
-      const futureConcerts = [];
-      const pastConcerts = [];
       res.forEach(e => {
-        if(e.date.raw < today){
-          e['isEnd'] = true;
-          pastConcerts.push(e);
-        }else{
-          e['isEnd'] = false;
-          futureConcerts.push(e);
+        if(e.id === this.$route.params.id){
+          this.concerts = e;
         }
       });
-
-      pastConcerts.sort(function(a, b){
-        if(a.date.raw > b.date.raw){
-          return -1;
-        }
-        if(a.date.raw < b.date.raw){
-          return 1;
-        }
-        return 0;
-      });
-
-      futureConcerts.sort(function(a, b){
-        if(a.date.raw > b.date.raw){
-          return 1;
-        }
-        if(a.date.raw < b.date.raw){
-          return -1;
-        }
-        return 0;
-      });
-
-      this.latest = futureConcerts.concat(pastConcerts);
     });
   }
 }
 </script>
-
-<style scoped>
-.ended{
-}
-</style>
