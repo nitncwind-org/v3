@@ -39,6 +39,9 @@
           >
           </iframe>
     </div>
+    <div>
+      {{ d.mainBody }}
+    </div>
     </v-card-text>
     
   </v-card>
