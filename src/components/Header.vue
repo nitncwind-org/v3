@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-app-bar id="header" dense>
+    <v-app-bar id="header" dense short color="secondary lighten-1">
       <router-link to="/">
-        <v-img :src="logoImage" max-height="96" max-width="160" contain></v-img>
+        <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-1"></v-img>
       </router-link>
-      <div class="d-none d-sm-flex">
+      <div class="d-none d-md-flex">
       <v-btn text to="/about" large tile>活動について</v-btn>
       <v-btn text to="/concerts" large tile>演奏会のお知らせ</v-btn>
       <v-menu offset-y v-model="isOpen">
@@ -14,7 +14,7 @@
             <v-icon v-bind:class="{rotate: isOpen}">mdi-chevron-down</v-icon>
           </v-btn>
         </template>
-        <v-list>
+        <v-list flat>
           <v-list-item to="/concours/winds">
             <v-list-item-title>吹奏楽コンクール</v-list-item-title>
           </v-list-item>
@@ -29,7 +29,7 @@
       <v-spacer></v-spacer>
       <v-menu offset-y content-class="max" transition="slide-x-reverse-transition" origin="right top" width="100vw">
         <template v-slot:activator="{ on }">
-          <v-app-bar-nav-icon class="hidden-sm-and-up" v-on="on"></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon class="hidden-md-and-up" v-on="on"></v-app-bar-nav-icon>
         </template>
         <v-list :height=height class="fit" width="50vw">
           <v-list-item to="/">
