@@ -1,8 +1,8 @@
 <template>
   <v-container id="concerts">
       <Title en="Concerts" ja="演奏会のお知らせ"></Title>
-      <router-link to="/concerts">戻る</router-link>
       <F1 v-if="concerts" v-bind:d="concerts"></F1>
+      <router-link to="/concerts">一覧ページに戻る</router-link>
   </v-container>
 </template>
 
