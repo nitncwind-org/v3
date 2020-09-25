@@ -1,6 +1,5 @@
 <template>
   <v-container id="concerts">
-      <Title en="Concerts" ja="演奏会のお知らせ"></Title>
       <F1 v-if="concerts" v-bind:d="concerts"></F1>
       <router-link to="/concerts">一覧ページに戻る</router-link>
   </v-container>
@@ -9,13 +8,11 @@
 <script>
 import F1 from '@/components/F1.vue'
 import { loadCSV } from '@/lib/csv.js'
-import Title from '@/components/Title.vue'
 
 export default {
   name: 'Concerts',
   components: {
     F1,
-    Title
   },
   data: function() {
     return {
