@@ -2,10 +2,10 @@
   <v-card tile outlined id="f1" :disabled="isEnd">
     
     <v-card-text class="">
-      <div v-if="d.notice" class="alert" v-bind:class="[ d.notice.type === 'danger' ? 'alert-danger' : (d.notice.type === 'warning' ? 'alert-warning' : 'alert-info') ]"  id="notice">
-        <h2 class="h6 font-weight-bold">{{ d.notice.title }}</h2>
-        <p>{{ d.notice.text }}</p>
-      </div>
+      <v-alert v-if="d.notice" text prominent :type="d.notice.type">
+        <h3 class="title font-weight-bold">{{ d.notice.title }}</h3>
+        <div>{{ d.notice.text }}</div>
+      </v-alert>
 
       <div class="d-flex" id="concertInfo" style="column-gap: 20px; justify-content:space-between;">
 
@@ -125,9 +125,5 @@ div.large{
 .v-card--disabled iframe{
   display: none;
 }
-
-
-
-
 
 </style>
