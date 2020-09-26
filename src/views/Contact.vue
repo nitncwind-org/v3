@@ -46,7 +46,9 @@ export default {
         '個人'
       ],
       inquiries: [
-        'なにか',
+        '活動について',
+        '演奏会について',
+        '依頼等',
         'その他'
       ],
       successSnackbar: false,
