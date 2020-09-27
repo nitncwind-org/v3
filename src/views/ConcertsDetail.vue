@@ -1,18 +1,23 @@
 <template>
   <v-container id="concerts">
+      <Title v-bind:en="concerts.title" ></Title>
       <F1 v-if="concerts" v-bind:d="concerts"></F1>
-      <router-link to="/concerts">一覧ページに戻る</router-link>
+      <div class="text-right mb-6">
+        <router-link class="align-right" to="/concerts">一覧ページに戻る</router-link>
+      </div>
   </v-container>
 </template>
 
 <script>
 import F1 from '@/components/F1.vue'
+import Title from '@/components/Title.vue'
 import { loadCSV } from '@/lib/csv.js'
 
 export default {
   name: 'Concerts',
   components: {
     F1,
+    Title,
   },
   data: function() {
     return {

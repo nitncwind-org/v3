@@ -10,7 +10,7 @@
       <div class="d-flex" id="concertInfo" style="column-gap: 20px; justify-content:space-between;">
 
           <div id="detail">
-            <v-card-title class="text-primary mt-0 mb-0 pt-0 pl-0">{{ d.title }}</v-card-title>
+            <v-card-title class="d-none text-primary mt-0 mb-0 pt-0 pl-0">{{ d.title }}</v-card-title>
             <p>日時：{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</p>
             <p>{{ d.open }}開場 {{ d.start }}開演</p>
             <p>会場：{{ d.place.name }}</p>
@@ -38,6 +38,7 @@
         >
         </iframe>
       </div>
+      <v-divider></v-divider>
       <div v-html="d.mainBody">
       </div>
     </v-card-text>
