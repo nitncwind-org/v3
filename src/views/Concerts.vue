@@ -2,8 +2,9 @@
   <v-container id="concerts">
     <Title en="Concerts" ja="演奏会のお知らせ"></Title>
 
-    <div v-for="(lc, i) in latest" :key=i :index=i v-bind:class="{ended: lc.isEnd}">
-      <router-link :to="`/concerts/${lc.id}`">{{ lc.title }}</router-link>
+    <div v-for="(lc, i) in latest" :key=i :index=i id="concertList"  v-bind:class="{ended: lc.isEnd}">
+      <router-link :to="`/concerts/${lc.id}`">{{ lc.date.year }}.{{ lc.date.month }}.{{ lc.date.day }} {{ lc.title }}</router-link>
+      <v-divider></v-divider>
     </div>
   </v-container>
 </template>
@@ -103,5 +104,10 @@ export default {
 
 <style scoped>
 .ended{
+}
+
+#concertList{
+    max-width: 664px;
+    margin: 0 auto;
 }
 </style>
