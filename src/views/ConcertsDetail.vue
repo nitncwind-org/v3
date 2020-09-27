@@ -65,6 +65,9 @@ export default {
           this.concerts = e;
         }
       });
+      if(this.concerts === null){
+        this.$router.push('/404');
+      }
     });
   }
 }
