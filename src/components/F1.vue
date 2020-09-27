@@ -2,7 +2,7 @@
   <v-card tile outlined id="f1">
     
     <v-card-text class="">
-      <v-alert v-if="d.notice" text prominent :type="d.notice.type">
+      <v-alert v-if="isPublished" text prominent :type="d.notice.type">
         <h3 class="title font-weight-bold">{{ d.notice.title }}</h3>
         <div>{{ d.notice.text }}</div>
       </v-alert>
@@ -60,9 +60,12 @@ export default {
     this.date = new Date();
   },
   computed: {
-    isEnd: function() {
-      let concertsDate = new Date(this.d.date.year, this.d.date.month-1, this.d.date.day+1);
-      return concertsDate < this.date;
+    isPublished: function() {
+      const today = new Date();
+      if(this.d.notice.type !== undefined && this.d.notice.publishDate <= today){
+        return true
+      }
+      return false
     }
   }
 }
@@ -88,18 +91,23 @@ export default {
   min-width: 180px;
   height: auto;
 }
+
 #posterImage{
   background-color: #eee;
   width: 100%;
   height: 100%;
 }
+
 div.large{
   width: -webkit-fill-available;
 }
+
 .small iframe{
   margin-top: 20px;
 }
+
 .v-card--disabled iframe{
   display: none;
 }
+
 </style>
