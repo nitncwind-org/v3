@@ -41,19 +41,6 @@ export default {
   .serif{
     font-family: 'Aleo', 'Noto Serif JP', sans-serif;
   }
-  .v-application a{
-    color: #0e177f !important;
-  }
-
-  .v-application a:hover{
-    color: #6483E6  !important;
-    text-decoration: none;
-  }
-
-  .v-toolbar__content a, .v-toolbar__content a:hover{
-    color:rgba(0, 0, 0, 0.87)!important;
-  }
-
 
   .v-toolbar__content a:hover, a.v-list-item:hover {
     text-decoration: none;
@@ -67,6 +54,9 @@ export default {
     letter-spacing: 4px;
   }
 
+  .bg-none{
+    background-color: rgba(0,0,0,0);
+  }
 
 
 
