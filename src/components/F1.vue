@@ -75,23 +75,21 @@ export default {
 .theme--light.v-card--disabled{
   background-color: #EEEEEE;
 }
-
-iframe{
-  margin-top: 20px;
+#notice{
+  padding: 10px;
+  width: 100%;
 }
-
-.v-card--disabled iframe{
-  display: none;
+#notice p{ 
+  margin-bottom: 0;
 }
-
+#detail{
+  margin-right: 5px;
+  width: 100%;
+}
 #concertPoster{
-  
-  width: 15vw;
-  min-width: 105px;
-  max-width: 210px;
+  width: 25vw;
+  min-width: 180px;
   height: auto;
-   
-  margin-left: 5px;
 }
 
 #posterImage{
@@ -100,18 +98,16 @@ iframe{
   height: 100%;
 }
 
-#concertInfo{
-  width: 100%;
-  margin-right: 5px;
+div.large{
+  width: -webkit-fill-available;
 }
 
-#notice{
-  padding: 10px;
-  width: 100%;
+.small iframe{
+  margin-top: 20px;
 }
 
-#notice p{
-  margin-bottom: 0;
+.v-card--disabled iframe{
+  display: none;
 }
 
 </style>

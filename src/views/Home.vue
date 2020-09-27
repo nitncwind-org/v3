@@ -193,10 +193,6 @@ export default {
 </style>
 
 <style>
-:root{
---primary: #0e177f!important;
-}
-
 
 /* vuetifyによる"ul"へのpadding-leftスタイルを打ち消している */
 .v-application .hooper-track{
