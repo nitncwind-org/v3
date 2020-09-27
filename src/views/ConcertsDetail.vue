@@ -54,7 +54,7 @@ export default {
           'mapType': array[10],
           'map': array[11]
         },
-        'fee': array[6],
+        'fee': Number(array[6]),
         'mainBody': array[7],
         'poster': array[8]+array[9],
         'notice': notice,

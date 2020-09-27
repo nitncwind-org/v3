@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="true" :style="{background: '#fafafa'}">
+  <v-app :dark="true">
     <div id="app">
       <Header/>
         <v-content>
