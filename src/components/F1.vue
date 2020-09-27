@@ -1,5 +1,5 @@
 <template>
-  <v-card tile outlined id="f1" :disabled="isEnd">
+  <v-card tile outlined id="f1">
     
     <v-card-text class="">
       <v-alert v-if="d.notice" text prominent :type="d.notice.type">
@@ -22,37 +22,24 @@
 
       
         
-        <div v-if="d.poster" id="concertPoster" >
-          <div id="posterImage">
-            
-          </div>
+         <div v-if="d.poster" id="concertPoster" class="">
+          <img id="posterImage" :src="d.poster">
         </div>
-
-        <div v-if="d.place.map" class="large d-none d-md-block">
-          <iframe
-            :src="d.place.map" 
-            width="100%"
-            height="300"
-            frameborder="0"
-            style="border:0"
-            allowfullscreen
-          >
-          </iframe>
-        </div>  
-    </div>
-
-    <div v-if="d.place.map" class="small d-block d-md-none">
-      <iframe
-        :src="d.place.map" 
-        width="100%"
-        height="300"
-        frameborder="0"
-        style="border:0"
-        id
-        allowfullscreen
-      >
-      </iframe>
-    </div>
+       
+      </div>
+      <div v-if="d.place.map">
+        <iframe
+          :src="d.place.map" 
+          width="100%"
+          height="300"
+          frameborder="0"
+          style="border:0"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      <div v-html="d.mainBody">
+      </div>
     </v-card-text>
     
   </v-card>
