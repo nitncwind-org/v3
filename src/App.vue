@@ -20,6 +20,26 @@ export default {
   components: {
     Header,
     Footer
+  },
+  methods: {
+    setTitle : function(routeInstance){
+      // titleのセット
+      var title = '';
+      if(routeInstance.name){
+        title = routeInstance.name + ' | ';
+      }
+      title += '奈良高専吹奏楽部';
+      document.title = title;
+    }
+  },
+  mounted : function(){
+    var routeInstance = this.$route;
+    this.setTitle(routeInstance);
+  },
+  watch: { 
+    '$route' (routeInstance) {
+      this.setTitle(routeInstance);
+    }
   }
 }
 </script>
