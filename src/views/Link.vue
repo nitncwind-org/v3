@@ -8,7 +8,7 @@
           <v-card-text>
             <ul>
             <li v-for="(link, index) in group.links" :key=index>
-              <a v-bind:href="link.url">{{ link.name }}</a>
+              <a v-bind:href="link.url" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
             </li>
           </ul>
           </v-card-text>
