@@ -21,6 +21,7 @@
 
 <script>
 import { loadCSV } from '@/lib/csv.js'
+import { LINK_URL } from '@/config/url.js'
 import Title from '@/components/Title.vue'
 
 export default {
@@ -34,8 +35,7 @@ export default {
     }
   },
   created: function() {
-    const PARAM = 'link';
-    loadCSV(PARAM, array => {
+    loadCSV(LINK_URL, array => {
       return {
         'group': array[0],
         'name': array[1],
@@ -54,6 +54,7 @@ export default {
         }
       });
     });
+    console.log(process.env);
   }
 }
 </script>
