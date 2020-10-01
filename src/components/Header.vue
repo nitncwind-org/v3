@@ -1,5 +1,6 @@
 <template>
   <div>
+    <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">{{ news.title }} <router-link :to="`/news/${news.id}`">>>詳細</router-link></v-alert>
     <v-app-bar id="header" dense short color="secondary lighten-1">
       <router-link to="/">
         <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-1"></v-img>
@@ -60,6 +61,8 @@
 </template>
 
 <script>
+import { loadCSV } from '@/lib/csv.js';
+
 export default {
   name: 'Header',
   data: function() {
@@ -67,17 +70,52 @@ export default {
       drawer: null,
       logoImage: process.env.BASE_URL + "images/logo.svg",
       isOpen: false,
+      newsList: [],
     }
   },
   computed:{
     height: function(){
       return window.innerHeight - 48;
     }
+  },
+  created(){
+    const PARAM = 'news';
+    loadCSV(PARAM, array => {
+      const publishDate = new Date(array[6]);
+      const bannerCloseDate = new Date(array[7]);
+      const today = new Date();
+      return {
+        'id': array[0],
+        'title': array[1],
+        'publishDate': {
+          'raw': publishDate,
+          'year': publishDate.getFullYear(),
+          'month': publishDate.getMonth()+1,
+          'day': publishDate.getDate(),
+        },
+        'isPublished': publishDate <= today,
+        'bannerCloseDate': {
+          'raw': bannerCloseDate,
+          'year': bannerCloseDate.getFullYear(),
+          'month': bannerCloseDate.getMonth()+1,
+          'day': bannerCloseDate.getDate(),
+        },
+        'bannerType': array[8],
+      }
+    }, 1).then(res => {
+      const newsList = [];
+      res.forEach(news => {
+        if(news['isPublished']){
+          newsList.push(news);
+        }
+      });
+      this.newsList = newsList;
+    });
   }
 }
 </script>
 
-<style>
+<style scoped>
 .v-menu__content.max{
   max-height: 100vh;
   max-width: 100vw;
@@ -95,5 +133,14 @@ export default {
 }
 .rotate{
   transform: rotateZ(180deg);
+}
+.v-alert{
+  margin-bottom: 0;
+}
+.v-sheet{
+  border-radius: 0;
+}
+.v-alert:not(.v-sheet--tile){
+  border-radius: 0;
 }
 </style>
