@@ -115,12 +115,13 @@ export default {
           'month': bannerCloseDate.getMonth()+1,
           'day': bannerCloseDate.getDate(),
         },
+        'isBannerClosed': bannerCloseDate <= today,
         'bannerType': array[8],
       }
     }, 1).then(res => {
       const newsList = [];
       res.forEach(news => {
-        if(news['isPublished']){
+        if(news['isPublished'] && !news['isBannerClosed']){
           newsList.push(news);
         }
       });
