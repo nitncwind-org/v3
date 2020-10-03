@@ -33,7 +33,7 @@ jobs:
       run: npm test
 
     - name: generate
-      run: npm run releaseBuild
+      run: npm run prod
 
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
