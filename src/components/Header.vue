@@ -62,6 +62,7 @@
 
 <script>
 import { loadCSV } from '@/lib/csv.js';
+import { NEWS_URL } from '@/config/url.js';
 
 export default {
   name: 'Header',
@@ -87,8 +88,7 @@ export default {
     }
   },
   created(){
-    const PARAM = 'news';
-    loadCSV(PARAM, array => {
+    loadCSV(NEWS_URL, array => {
       const date = new Date(array[3]);
       const publishDate = new Date(array[6]);
       const bannerCloseDate = new Date(array[7]);
