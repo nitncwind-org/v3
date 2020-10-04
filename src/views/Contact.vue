@@ -24,6 +24,7 @@
 <script>
 import Loading from '@/components/Loading'
 import Title from '@/components/Title'
+import { CONTACT_URL } from '@/config/url.js'
 
 export default {
   data: function() {
@@ -84,7 +85,7 @@ export default {
       params.append("mail", this.emailAddress);
       params.append("inquiry", this.inquiry);
       params.append("content", this.content);
-      this.axios.post("https://script.google.com/macros/s/AKfycbxYDFF-V927nDu8dRQ4AOtWfZ--OQyccT0k9brXgE2AxCrWdqHa/exec", params).then(res => {
+      this.axios.post(CONTACT_URL, params).then(res => {
         this.loading = false;
         if(res.data['success'] == 'true'){
           this.successSnackbar = true;
