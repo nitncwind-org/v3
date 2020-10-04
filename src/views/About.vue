@@ -8,6 +8,7 @@
 <script>
 import F2 from "@/components/F2.vue";
 import { loadCSV } from '@/lib/csv.js';
+import { ABOUT_URL } from '@/config/url.js';
 import Title from "@/components/Title.vue";
 
 export default {
@@ -22,8 +23,7 @@ export default {
     }
   },
   created() {
-    const PARAM = 'about';
-    loadCSV(PARAM, array => {
+    loadCSV(ABOUT_URL, array => {
       return {
         'question': array[0],
         'answer': array[1],

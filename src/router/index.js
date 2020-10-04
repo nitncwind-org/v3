@@ -7,12 +7,12 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'Home',
+        name: 'トップページ',
         component: Home
     },
     {
         path: '/about',
-        name: 'About',
+        name: '活動について',
         component: () => import('../views/About.vue')
     },
     {
@@ -25,12 +25,12 @@ const routes = [
     },
     {
         path: '/concerts/:id',
-        name: 'ConcertsDetail',
+        name: '演奏会情報',
         component: () => import('../views/ConcertsDetail.vue')
     },
     {
         path: '/concerts',
-        name: 'Concerts',
+        name: '演奏会',
         component: () => import('../views/Concerts.vue')
     },
     {
@@ -44,24 +44,24 @@ const routes = [
             },
             {
                 path: 'winds',
-                name: 'Winds',
+                name: '吹奏楽コンクール',
                 component: () => import('../views/Winds.vue')
             },
             {
                 path: 'ensemble',
-                name: 'Ensemble',
+                name: 'アンサンブルコンテスト',
                 component: () => import('../views/Ensemble.vue')
             }
         ]
     },
     {
         path: '/link',
-        name: 'Link',
+        name: 'リンク集',
         component: () => import('../views/Link.vue')
     },
     {
         path: '/contact',
-        name: 'Contact',
+        name: 'お問い合わせ',
         component: () => import('../views/Contact.vue')
     },
     {

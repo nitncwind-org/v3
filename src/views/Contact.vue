@@ -11,7 +11,7 @@
           <v-text-field label="団体名" v-show="affiliation=='団体'" v-model="affiliation_group"></v-text-field>
           <v-text-field label="メールアドレス" :rules="[rules.required, rules.email]" v-model="emailAddress"></v-text-field>
           <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="inquiry"></v-select>
-          <v-textarea label="お問い合わせ詳細" v-model="content"></v-textarea>
+          <v-textarea label="お問い合わせ詳細" :rules="[rules.required]" v-model="content"></v-textarea>
           <v-btn :disabled="!valid" v-on:click="submit">送信</v-btn>
         </v-form>
         <v-snackbar v-model="successSnackbar" color="success" top app transition="scroll-y-transition">送信成功</v-snackbar>
@@ -24,6 +24,7 @@
 <script>
 import Loading from '@/components/Loading'
 import Title from '@/components/Title'
+import { CONTACT_URL } from '@/config/url.js'
 
 export default {
   data: function() {
@@ -84,7 +85,7 @@ export default {
       params.append("mail", this.emailAddress);
       params.append("inquiry", this.inquiry);
       params.append("content", this.content);
-      this.axios.post("https://script.google.com/macros/s/AKfycbxYDFF-V927nDu8dRQ4AOtWfZ--OQyccT0k9brXgE2AxCrWdqHa/exec", params).then(res => {
+      this.axios.post(CONTACT_URL, params).then(res => {
         this.loading = false;
         if(res.data['success'] == 'true'){
           this.successSnackbar = true;

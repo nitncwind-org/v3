@@ -10,6 +10,7 @@
 
 <script>
 import { loadCSV } from '@/lib/csv.js'
+import { CONCERTS_URL } from '@/config/url.js'
 import Title from '@/components/Title.vue'
 
 export default {
@@ -23,8 +24,7 @@ export default {
     }
   },
   created() {
-    const PARAM = 'concerts';
-    loadCSV(PARAM, array => {
+    loadCSV(CONCERTS_URL, array => {
       const date = new Date(array[2]);
       const openDate = new Date(array[3]);
       const open = (array[3] !== "")?
