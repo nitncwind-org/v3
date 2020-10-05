@@ -21,6 +21,7 @@ export default {
   },
   data: function() {
     return {
+      allNews: [],
       news: null
     }
   },
@@ -31,6 +32,14 @@ export default {
       const day = ('0' + news.date.day).slice(-2);
       return year+'年'+month+'月'+day+'日';
     }
+  },
+  beforeRouteUpdate(to, from, next){
+    this.allNews.forEach(news => {
+      if(news['isPublished'] && news.id === to.params.id){
+        this.news = news;
+      }
+    });
+    next();
   },
   created() {
     loadCSV(NEWS_URL, array => {
@@ -72,6 +81,7 @@ export default {
           this.news = news;
         }
       });
+      this.allNews = res;
     });
   }
 }
