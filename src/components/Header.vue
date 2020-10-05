@@ -1,5 +1,6 @@
 <template>
   <div>
+    <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">{{ getFormatDate(news) }} {{ news.title }} <router-link :to="`/news/${news.id}`">>>詳細</router-link></v-alert>
     <v-app-bar id="header" dense short color="secondary lighten-1">
       <router-link to="/">
         <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-1"></v-img>
@@ -60,6 +61,9 @@
 </template>
 
 <script>
+import { loadCSV } from '@/lib/csv.js';
+import { NEWS_URL } from '@/config/url.js';
+
 export default {
   name: 'Header',
   data: function() {
@@ -67,17 +71,67 @@ export default {
       drawer: null,
       logoImage: process.env.BASE_URL + "images/logo.svg",
       isOpen: false,
+      newsList: [],
     }
   },
   computed:{
     height: function(){
       return window.innerHeight - 48;
     }
+  },
+  methods: {
+    getFormatDate: function(news){
+      const year = news.date.year;
+      const month = ('0' + news.date.month).slice(-2);
+      const day = ('0' + news.date.day).slice(-2);
+      return year+'年'+month+'月'+day+'日';
+    }
+  },
+  created(){
+    loadCSV(NEWS_URL, array => {
+      const date = new Date(array[3]);
+      const publishDate = new Date(array[6]);
+      const bannerCloseDate = new Date(array[7]);
+      const today = new Date();
+      return {
+        'id': array[0],
+        'title': array[1],
+        'date': {
+          'raw': date,
+          'year': date.getFullYear(),
+          'month': date.getMonth()+1,
+          'day': date.getDate(),
+        },
+        'publishDate': {
+          'raw': publishDate,
+          'year': publishDate.getFullYear(),
+          'month': publishDate.getMonth()+1,
+          'day': publishDate.getDate(),
+        },
+        'isPublished': publishDate <= today,
+        'bannerCloseDate': {
+          'raw': bannerCloseDate,
+          'year': bannerCloseDate.getFullYear(),
+          'month': bannerCloseDate.getMonth()+1,
+          'day': bannerCloseDate.getDate(),
+        },
+        'isBannerClosed': bannerCloseDate <= today,
+        'bannerType': array[8],
+      }
+    }, 1).then(res => {
+      const newsList = [];
+      res.forEach(news => {
+        if(news['isPublished'] && !news['isBannerClosed']){
+          newsList.push(news);
+        }
+      });
+      this.newsList = newsList;
+    });
   }
 }
 </script>
 
-<style>
+<style scoped>
 .v-menu__content.max{
   max-height: 100vh;
   max-width: 100vw;
@@ -95,5 +149,14 @@ export default {
 }
 .rotate{
   transform: rotateZ(180deg);
+}
+.v-alert{
+  margin-bottom: 0;
+}
+.v-sheet{
+  border-radius: 0;
+}
+.v-alert:not(.v-sheet--tile){
+  border-radius: 0;
 }
 </style>
