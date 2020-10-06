@@ -1,5 +1,5 @@
 <template>
-  <v-footer app absolute padless dark height='100px' color="info darken-2" class="pl-12 pr-12">
+  <v-footer app absolute padless dark height='100px' color="info darken-2" class="pl-3 pr-3 pl-lg-12 pr-lg-12">
     <v-row>
       <v-col lg=4 class="d-none d-lg-block text-left text-caption">
         <span>〒639-1080</span><br/>
@@ -10,7 +10,7 @@
 
         <div class="d-inline d-lg-none text-center">
           <br/>
-          <span>〒639-1080 奈良県大和郡山市矢田町22番地 合同教室</span><br/>
+          <span>奈良県大和郡山市矢田町22番地 合同教室</span><br/>
           <div class="social">
             <a href="https://twitter.com/NITNC_Band">
               <span><v-icon size="20px" class="mr-1">mdi-twitter</v-icon>@NITNC_Band</span>
