@@ -7,10 +7,15 @@
         <div>{{ d.notice.text }}</div>
       </v-alert>
 
-      <div class="d-flex" id="concertInfo" style="column-gap: 20px; justify-content:space-between;">
+      <v-row>
+        <v-col cols=12 md=4>
+          <div v-if="d.poster" class="">
+            <img id="posterImage" :src="d.poster">
+          </div>
+        </v-col>
 
+        <v-col cols=12 md=8>
           <div id="detail">
-            <v-card-title class="d-none text-primary mt-0 mb-0 pt-0 pl-0">{{ d.title }}</v-card-title>
             <p>日時：{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</p>
             <p>{{ d.open }}開場 {{ d.start }}開演</p>
             <p>会場：{{ d.place.name }}</p>
@@ -19,25 +24,22 @@
                     <span v-else>{{ d.fee }}円</span>
             </p>
           </div>
+          <div v-if="d.place.map">
+            <iframe
+              :src="d.place.map" 
+              width="100%"
+              height="380"
+              frameborder="0"
+              style="border:0"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </v-col>
+
+      </v-row>
 
       
-        
-         <div v-if="d.poster" id="concertPoster" class="">
-          <img id="posterImage" :src="d.poster">
-        </div>
-       
-      </div>
-      <div v-if="d.place.map">
-        <iframe
-          :src="d.place.map" 
-          width="100%"
-          height="300"
-          frameborder="0"
-          style="border:0"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
       <v-divider></v-divider>
       <div v-html="d.mainBody">
       </div>
@@ -86,11 +88,6 @@ export default {
 #detail{
   margin-right: 5px;
   width: 100%;
-}
-#concertPoster{
-  width: 25vw;
-  min-width: 180px;
-  height: auto;
 }
 
 #posterImage{
