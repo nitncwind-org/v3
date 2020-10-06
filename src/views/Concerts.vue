@@ -3,7 +3,11 @@
     <Title en="Concerts" ja="演奏会のお知らせ"></Title>
 
     <div v-for="(lc, i) in latest" :key=i :index=i id="concertList"  v-bind:class="{ended: lc.isEnd}">
-      <router-link :to="`/concerts/${lc.id}`">{{ lc.date.year }}.{{ lc.date.month }}.{{ lc.date.day }} {{ lc.title }}</router-link>
+      <v-row>
+      <v-col cols=4 md=3><span class="list_date">{{ lc.date.year }}年{{ ('0' + lc.date.month).slice(-2) }}月{{ ('0' + lc.date.day).slice(-2) }}日</span></v-col>
+      
+      <v-col cols=8 md=9><router-link :to="`/concerts/${lc.id}`"><span>{{ lc.title }}</span></router-link></v-col>
+      </v-row>
       <v-divider></v-divider>
     </div>
   </v-container>
