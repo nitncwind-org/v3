@@ -3,7 +3,7 @@
     <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">{{ getFormatDate(news) }} {{ news.title }} <router-link :to="`/news/${news.id}`">>>詳細</router-link></v-alert>
     <v-app-bar id="header" dense flat short color="secondary lighten-1">
       <router-link to="/">
-        <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-1"></v-img>
+        <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-5"></v-img>
       </router-link>
       <div class="d-none d-md-flex">
       <v-btn text to="/about" large tile>活動について</v-btn>
