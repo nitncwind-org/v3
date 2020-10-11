@@ -1,6 +1,7 @@
 <template>
   <v-container id="concerts">
-      <h2 v-if="concerts" class="concertTitle mt-10 mb-6 text-center">{{ concerts.title }}</h2>
+      <Title class="concertTitle" v-bind:en="concerts.title" ja=""></Title>
+      
       <F1 v-if="concerts" v-bind:d="concerts"></F1>
       <div class="text-right mb-6">
         <router-link class="align-right" to="/concerts">一覧ページに戻る</router-link>
@@ -10,12 +11,14 @@
 
 <script>
 import F1 from '@/components/F1.vue'
+import Title from '@/components/Title.vue'
 import { loadCSV } from '@/lib/csv.js'
 
 export default {
   name: 'Concerts',
   components: {
     F1,
+    Title
   },
   data: function() {
     return {
@@ -75,6 +78,14 @@ export default {
 
 <style scoped>
   .concertTitle{
-    letter-spacing: 0.25em;
+    letter-spacing: 0.15em;
+  }
+
+  @media screen and (min-width: 1264px) {
+    #concerts{
+      max-width: 900px;
+      margin: 0 auto;
+    }
   }
 </style>
+

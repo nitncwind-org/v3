@@ -9,7 +9,7 @@
 
       <v-row>
         <v-col cols=12 md=4>
-          <div v-if="d.poster" class="">
+          <div v-if="d.poster" class="centering">
             <img id="posterImage" :src="d.poster">
           </div>
         </v-col>
@@ -88,6 +88,7 @@ export default {
 </script>
 
 <style scoped>
+
 .theme--light.v-card--disabled{
   background-color: #EEEEEE;
 }
@@ -105,6 +106,12 @@ export default {
   height: 100%;
 }
 
+@media screen and (max-width: 960px) {
+  #posterImage{
+    width: 60%;
+  }
+}
+
 div.large{
   width: -webkit-fill-available;
 }
@@ -119,6 +126,18 @@ div.large{
 
 #detail_table td{
   border: none;
+}
+
+.centering{
+  text-align: center;
+}
+
+.theme--light.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    background: rgba(0,0,0,0);
+}
+
+.v-data-table td {
+    font-size: 1rem;
 }
 
 </style>
