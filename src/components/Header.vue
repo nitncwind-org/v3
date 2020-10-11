@@ -8,7 +8,7 @@
       <div class="d-none d-md-flex">
       <v-btn text to="/about" large tile>活動について</v-btn>
       <v-btn text to="/concerts" large tile>演奏会のお知らせ</v-btn>
-      <v-menu offset-y v-model="isOpen">
+      <v-menu offset-y content-class="pulldown" v-model="isOpen">
         <template v-slot:activator="{ on }">
           <v-btn v-on="on" text large tile>
             活動実績
@@ -19,6 +19,7 @@
           <v-list-item to="/concours/winds">
             <v-list-item-title>吹奏楽コンクール</v-list-item-title>
           </v-list-item>
+          <hr class="list-splitter">
           <v-list-item to="/concours/ensemble">
             <v-list-item-title>アンサンブルコンテスト</v-list-item-title>
           </v-list-item>
@@ -139,6 +140,10 @@ export default {
   right: 0;
   box-shadow: 0 10000px 0 10000px rgba(0, 0, 0, 0.2);
 }
+.v-menu__content.pulldown{
+  box-shadow: none;
+  border: 2px solid var(--v-secondary-base);
+}
 .v-list.fit{
   margin-left: 50vw;
   z-index: 9;
@@ -146,6 +151,10 @@ export default {
   border-radius: 0;
   right: 0;
   box-shadow: 0 10px 0 10000px rgba(0, 0, 0, 0.2);
+}
+.list-splitter{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 .rotate{
   transform: rotateZ(180deg);
