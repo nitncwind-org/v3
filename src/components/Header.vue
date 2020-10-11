@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">{{ getFormatDate(news) }} {{ news.title }} <router-link :to="`/news/${news.id}`">>>詳細</router-link></v-alert>
-    <v-app-bar id="header" dense short color="secondary lighten-1">
+    <v-app-bar id="header" dense flat short color="secondary lighten-1">
       <router-link to="/">
         <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-1"></v-img>
       </router-link>
