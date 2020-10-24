@@ -54,7 +54,7 @@
 
       
       <v-divider></v-divider>
-      <div v-html="d.mainBody">
+      <div class="detail-content" v-html="d.mainBody">
       </div>
     </v-card-text>
     
@@ -138,6 +138,14 @@ div.large{
 
 .v-data-table td {
     font-size: 1rem;
+}
+
+{/* detail content */}
+div.detail-content{
+  color: #222;
+}
+div.detail-content >>> h3{
+  margin-top: 20px;
 }
 
 </style>
