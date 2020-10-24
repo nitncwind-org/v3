@@ -53,7 +53,7 @@
       </v-row>
 
       
-      <v-divider></v-divider>
+      
       <div class="detail-content" v-html="d.mainBody">
       </div>
     </v-card-text>
