@@ -16,26 +16,26 @@
 
         <v-col cols=12 md=8>
           <v-simple-table class="mb-6" id="detail_table">
-              <tbody>
-                <tr>
-                  <td>日時</td>
-                  <td>{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</td>
-                </tr>
-                <tr>
-                  <td>開場 / 開演</td>
-                  <td>{{ d.open }} / {{ d.start }}</td>
-                </tr>
-                <tr>
-                  <td>会場</td>
-                  <td>{{ d.place.name }}</td>
-                </tr>
-                <tr>
-                  <td>入場料</td>
-                  <td><span v-if="d.fee===0">無料</span>
-                    <span v-else>{{ d.fee }}円</span>
-                  </td>
-                </tr>
-              </tbody>
+            <tbody>
+              <tr>
+                <td>日時</td>
+                <td>{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</td>
+              </tr>
+              <tr>
+                <td>開場 / 開演</td>
+                <td>{{ d.open }} / {{ d.start }}</td>
+              </tr>
+              <tr>
+                <td>会場</td>
+                <td>{{ d.place.name }}</td>
+              </tr>
+              <tr>
+                <td>入場料</td>
+                <td><span v-if="d.fee===0">無料</span>
+                  <span v-else>{{ d.fee }}円</span>
+                </td>
+              </tr>
+            </tbody>
           </v-simple-table>
           <div v-if="d.place.map">
             <iframe
