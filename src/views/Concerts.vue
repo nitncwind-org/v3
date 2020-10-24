@@ -104,4 +104,5 @@ export default {
 <style scoped>
 .ended{
 }
+
 </style>
