@@ -1,5 +1,5 @@
 <template>
-  <v-footer app absolute padless dark height='100px' color="info darken-2" class="pl-12 pr-12">
+  <v-footer app absolute padless dark height='100px' color="info darken-2" class="pl-3 pr-3 pl-lg-12 pr-lg-12">
     <v-row>
       <v-col lg=4 class="d-none d-lg-block text-left text-caption">
         <span>〒639-1080</span><br/>
@@ -8,7 +8,7 @@
       <v-col col=12 lg=4 class="text-center d-inline text-caption">
         <span>&copy; 2014-{{ now }} 奈良高専吹奏楽部</span>
 
-        <div class="d-inline d-lg-none text-center">
+        <div class="d-inline d-lg-none text-center text-small">
           <br/>
           <span>〒639-1080 奈良県大和郡山市矢田町22番地 合同教室</span><br/>
           <div class="social">
@@ -50,10 +50,6 @@ export default {
   .v-footer .col{
     margin: auto 0;
   }
-
-  .v-footer{
-    
-  }
   
 </style>
 
@@ -64,6 +60,10 @@ export default {
   .v-footer .social a:hover{
     opacity: 0.7;
     text-decoration: none;
+  }
+
+  .v-footer .text-small{
+    font-size: 1rem;
   }
 
 </style>
