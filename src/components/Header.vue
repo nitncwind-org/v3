@@ -29,35 +29,35 @@
       <v-btn text to="/contact" large tile>お問い合わせ</v-btn>
       </div>
       <v-spacer></v-spacer>
-      <v-menu offset-y content-class="max" transition="slide-x-reverse-transition" origin="right top" width="100vw">
-        <template v-slot:activator="{ on }">
-          <v-app-bar-nav-icon class="hidden-md-and-up" v-on="on"></v-app-bar-nav-icon>
-        </template>
-        <v-list :height=height class="fit" width="50vw">
-          <v-list-item to="/">
-            <v-list-item-title>ホーム</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/about">
-            <v-list-item-title>活動について</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/concerts">
-            <v-list-item-title>演奏会のお知らせ</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/concours/winds">
-            <v-list-item-title>吹奏楽コンクール実績</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/concours/ensemble">
-            <v-list-item-title>アンサンブルコンテスト実績</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/link">
-            <v-list-item-title>リンク集</v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/contact">
-            <v-list-item-title>お問い合わせ</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
+
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
     </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" right width="100vw" app>
+      <v-list>
+        <v-list-item to="/">
+          <v-list-item-title>ホーム</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/about">
+          <v-list-item-title>活動について</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/concerts">
+          <v-list-item-title>演奏会のお知らせ</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/concours/winds">
+          <v-list-item-title>吹奏楽コンクール実績</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/concours/ensemble">
+          <v-list-item-title>アンサンブルコンテスト実績</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/link">
+          <v-list-item-title>リンク集</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/contact">
+          <v-list-item-title>お問い合わせ</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 
@@ -133,24 +133,9 @@ export default {
 </script>
 
 <style scoped>
-.v-menu__content.max{
-  max-height: 100vh;
-  max-width: 100vw;
-  border-radius: 0;
-  right: 0;
-  box-shadow: 0 10000px 0 10000px rgba(0, 0, 0, 0.2);
-}
 .v-menu__content.pulldown{
   box-shadow: none;
   border: 2px solid var(--v-secondary-base);
-}
-.v-list.fit{
-  margin-left: 50vw;
-  z-index: 9;
-  padding: 0;
-  border-radius: 0;
-  right: 0;
-  box-shadow: 0 10px 0 10000px rgba(0, 0, 0, 0.2);
 }
 .list-splitter{
   margin-top: .5rem;
