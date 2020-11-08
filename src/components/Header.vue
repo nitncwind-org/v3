@@ -33,27 +33,27 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" right width="100vw" app>
+    <v-navigation-drawer v-model="drawer" right app temporary width="100vw">
       <v-list>
-        <v-list-item to="/">
+        <v-list-item to="/" v-on:click="drawer = false">
           <v-list-item-title>ホーム</v-list-item-title>
         </v-list-item>
-        <v-list-item to="/about">
+        <v-list-item to="/about" v-on:click="drawer = false">
           <v-list-item-title>活動について</v-list-item-title>
         </v-list-item>
-        <v-list-item to="/concerts">
+        <v-list-item to="/concerts" v-on:click="drawer = false">
           <v-list-item-title>演奏会のお知らせ</v-list-item-title>
         </v-list-item>
-        <v-list-item to="/concours/winds">
+        <v-list-item to="/concours/winds" v-on:click="drawer = false">
           <v-list-item-title>吹奏楽コンクール実績</v-list-item-title>
         </v-list-item>
-        <v-list-item to="/concours/ensemble">
+        <v-list-item to="/concours/ensemble" v-on:click="drawer = false">
           <v-list-item-title>アンサンブルコンテスト実績</v-list-item-title>
         </v-list-item>
-        <v-list-item to="/link">
+        <v-list-item to="/link" v-on:click="drawer = false">
           <v-list-item-title>リンク集</v-list-item-title>
         </v-list-item>
-        <v-list-item to="/contact">
+        <v-list-item to="/contact" v-on:click="drawer = false">
           <v-list-item-title>お問い合わせ</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -69,7 +69,7 @@ export default {
   name: 'Header',
   data: function() {
     return {
-      drawer: null,
+      drawer: false,
       logoImage: process.env.BASE_URL + "images/logo.svg",
       isOpen: false,
       newsList: [],
