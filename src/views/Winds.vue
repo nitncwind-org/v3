@@ -17,6 +17,7 @@
 <script>
 import F3 from '@/components/F3.vue'
 import { loadCSV } from '@/lib/csv.js'
+import { WINDS_URL } from '@/config/url.js'
 import Title from '@/components/Title.vue'
 
 export default {
@@ -33,8 +34,7 @@ export default {
     }
   },
   created() {
-    const PARAM = 'winds';
-    loadCSV(PARAM, array => {
+    loadCSV(WINDS_URL, array => {
       let concours = {
         'year': Number(array[0]),
         'setPiece': {

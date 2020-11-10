@@ -7,38 +7,54 @@
         <div>{{ d.notice.text }}</div>
       </v-alert>
 
-      <div class="d-flex" id="concertInfo" style="column-gap: 20px; justify-content:space-between;">
-
-          <div id="detail">
-            <v-card-title class="text-primary mt-0 mb-0 pt-0 pl-0">{{ d.title }}</v-card-title>
-            <p>日時：{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</p>
-            <p>{{ d.open }}開場 {{ d.start }}開演</p>
-            <p>会場：{{ d.place.name }}</p>
-            <p>
-              入場料：<span v-if="d.fee===0">無料</span>
-                    <span v-else>{{ d.fee }}円</span>
-            </p>
+      <v-row>
+        <v-col cols=12 md=4>
+          <div v-if="d.poster" class="centering">
+            <img id="posterImage" :src="d.poster">
           </div>
+        </v-col>
+
+        <v-col cols=12 md=8>
+          <v-simple-table class="mb-6" id="detail_table">
+            <tbody>
+              <tr>
+                <td>日時</td>
+                <td>{{ d.date.year }}年{{ d.date.month }}月{{ d.date.day }}日</td>
+              </tr>
+              <tr>
+                <td>開場 / 開演</td>
+                <td>{{ d.open }} / {{ d.start }}</td>
+              </tr>
+              <tr>
+                <td>会場</td>
+                <td>{{ d.place.name }}</td>
+              </tr>
+              <tr>
+                <td>入場料</td>
+                <td><span v-if="d.fee===0">無料</span>
+                  <span v-else>{{ d.fee }}円</span>
+                </td>
+              </tr>
+            </tbody>
+          </v-simple-table>
+          <div v-if="d.place.map">
+            <iframe
+              :src="d.place.map" 
+              width="100%"
+              height="380"
+              frameborder="0"
+              style="border:0"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </v-col>
+
+      </v-row>
 
       
-        
-         <div v-if="d.poster" id="concertPoster" class="">
-          <img id="posterImage" :src="d.poster">
-        </div>
-       
-      </div>
-      <div v-if="d.place.map">
-        <iframe
-          :src="d.place.map" 
-          width="100%"
-          height="300"
-          frameborder="0"
-          style="border:0"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
-      <div v-html="d.mainBody">
+      
+      <div class="detail-content" v-html="d.mainBody">
       </div>
     </v-card-text>
     
@@ -72,6 +88,7 @@ export default {
 </script>
 
 <style scoped>
+
 .theme--light.v-card--disabled{
   background-color: #EEEEEE;
 }
@@ -82,20 +99,17 @@ export default {
 #notice p{ 
   margin-bottom: 0;
 }
-#detail{
-  margin-right: 5px;
-  width: 100%;
-}
-#concertPoster{
-  width: 25vw;
-  min-width: 180px;
-  height: auto;
-}
 
 #posterImage{
   background-color: #eee;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  #posterImage{
+    width: 60%;
+  }
 }
 
 div.large{
@@ -108,6 +122,30 @@ div.large{
 
 .v-card--disabled iframe{
   display: none;
+}
+
+#detail_table td{
+  border: none;
+}
+
+.centering{
+  text-align: center;
+}
+
+.theme--light.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    background: rgba(0,0,0,0);
+}
+
+.v-data-table td {
+    font-size: 1rem;
+}
+
+{/* detail content */}
+div.detail-content{
+  color: #222;
+}
+div.detail-content >>> h3{
+  margin-top: 20px;
 }
 
 </style>

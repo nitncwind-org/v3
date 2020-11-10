@@ -8,7 +8,7 @@
           <v-card-text>
             <ul>
             <li v-for="(link, index) in group.links" :key=index>
-              <a v-bind:href="link.url">{{ link.name }}</a>
+              <a v-bind:href="link.url" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
             </li>
           </ul>
           </v-card-text>
@@ -21,6 +21,7 @@
 
 <script>
 import { loadCSV } from '@/lib/csv.js'
+import { LINK_URL } from '@/config/url.js'
 import Title from '@/components/Title.vue'
 
 export default {
@@ -34,8 +35,7 @@ export default {
     }
   },
   created: function() {
-    const PARAM = 'link';
-    loadCSV(PARAM, array => {
+    loadCSV(LINK_URL, array => {
       return {
         'group': array[0],
         'name': array[1],
