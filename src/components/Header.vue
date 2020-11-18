@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">
+    <v-alert v-for="(news, i) in newsList" :key=i :index=i :color="news.bannerType" dense text dismissible border="left">
       <router-link :to="`/news/${news.id}`" class="banner-color">{{ news.title }} >>詳細</router-link>
     </v-alert>
     <v-app-bar id="header" dense flat short color="secondary lighten-1">
