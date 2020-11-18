@@ -1,6 +1,8 @@
 <template>
   <div>
-    <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">{{ getFormatDate(news) }} {{ news.title }} <router-link :to="`/news/${news.id}`">>>詳細</router-link></v-alert>
+    <v-alert v-for="(news, i) in newsList" :key=i :index=i :color="news.bannerType" dense text dismissible border="left">
+      <router-link :to="`/news/${news.id}`" class="banner-color">{{ news.title }} >>詳細</router-link>
+    </v-alert>
     <v-app-bar id="header" dense flat short color="secondary lighten-1">
       <router-link to="/">
         <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-5"></v-img>
@@ -80,14 +82,6 @@ export default {
       return window.innerHeight - 48;
     }
   },
-  methods: {
-    getFormatDate: function(news){
-      const year = news.date.year;
-      const month = ('0' + news.date.month).slice(-2);
-      const day = ('0' + news.date.day).slice(-2);
-      return year+'年'+month+'月'+day+'日';
-    }
-  },
   created(){
     loadCSV(NEWS_URL, array => {
       const date = new Date(array[3]);
@@ -152,5 +146,8 @@ export default {
 }
 .v-alert:not(.v-sheet--tile){
   border-radius: 0;
+}
+.banner-color{
+  color: inherit;
 }
 </style>
