@@ -1,6 +1,8 @@
 <template>
   <div>
-    <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">{{ getFormatDate(news) }} {{ news.title }} <router-link :to="`/news/${news.id}`">>>詳細</router-link></v-alert>
+    <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">
+      <router-link :to="`/news/${news.id}`" class="banner-color">{{ getFormatDate(news) }} {{ news.title }} >>詳細</router-link>
+    </v-alert>
     <v-app-bar id="header" dense flat short color="secondary lighten-1">
       <router-link to="/">
         <v-img :src="logoImage" max-height="96" max-width="160" contain class="mr-5"></v-img>
@@ -152,5 +154,8 @@ export default {
 }
 .v-alert:not(.v-sheet--tile){
   border-radius: 0;
+}
+.banner-color{
+  color: inherit;
 }
 </style>
