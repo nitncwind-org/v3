@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-alert v-for="(news, i) in newsList" :key=i :index=i :type="news.bannerType">
-      <router-link :to="`/news/${news.id}`" class="banner-color">{{ getFormatDate(news) }} {{ news.title }} >>詳細</router-link>
+      <router-link :to="`/news/${news.id}`" class="banner-color">{{ news.title }} >>詳細</router-link>
     </v-alert>
     <v-app-bar id="header" dense flat short color="secondary lighten-1">
       <router-link to="/">
@@ -80,14 +80,6 @@ export default {
   computed:{
     height: function(){
       return window.innerHeight - 48;
-    }
-  },
-  methods: {
-    getFormatDate: function(news){
-      const year = news.date.year;
-      const month = ('0' + news.date.month).slice(-2);
-      const day = ('0' + news.date.day).slice(-2);
-      return year+'年'+month+'月'+day+'日';
     }
   },
   created(){
