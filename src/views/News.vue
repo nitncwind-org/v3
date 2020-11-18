@@ -1,8 +1,13 @@
 <template>
   <v-container>
     <Title en="News" ja="お知らせ"></Title>
-    <div v-for="(news, i) in newsList" :key=i :index=i>
-      <router-link :to="`/news/${news.id}`">{{ getFormatDate(news) }} {{ news.title }}</router-link>
+    <div v-for="(news, i) in newsList" id="newsList" :key=i :index=i>
+      <v-row>
+        <v-col cols=4 md=4 class="pl-8 pl-md-12" >{{ getFormatDate(news) }} </v-col>
+        <v-col cols=8 md=8 ><router-link :to="`/news/${news.id}`">{{ news.title }}</router-link></v-col>
+      </v-row>
+      <v-divider></v-divider>
+      
     </div>
   </v-container>
 </template>
@@ -76,3 +81,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#newsList{
+    max-width: 640px;
+    margin: 0 auto;
+}
+</style>
+
