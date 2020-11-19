@@ -3,7 +3,7 @@
     <Title en="News" ja="お知らせ"></Title>
     <div v-for="(news, i) in newsList" id="newsList" :key=i :index=i>
       <v-row>
-        <v-col cols=4 md=4 class="pl-4 pl-md-12" >{{ getFormatDate(news) }}</v-col>
+        <v-col cols=4 md=4 class="pl-4 pl-md-12 d-flex flex-column justify-center" >{{ getFormatDate(news) }}</v-col>
         <v-col cols=8 md=8 ><router-link :to="`/news/${news.id}`">{{ news.title }}</router-link></v-col>
       </v-row>
       <v-divider></v-divider>
@@ -32,7 +32,7 @@ export default {
       const year = news.date.year;
       const month = ('0' + news.date.month).slice(-2);
       const day = ('0' + news.date.day).slice(-2);
-      return year+'年'+month+'月'+day+'日';
+      return year+'/'+month+'/'+day;
     }
   },
   created() {

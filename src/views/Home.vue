@@ -37,6 +37,7 @@
           <v-card-title class="h4 mb-2 pb-0">次回の演奏会</v-card-title>
           <v-card-text>
           <F1 v-if="latestConcerts" v-bind:d="latestConcerts" id="latestConcert"></F1>
+          <p v-else>演奏会の予定はありません</p>
           </v-card-text>
           
           

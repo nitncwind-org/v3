@@ -4,7 +4,7 @@
 
     <div v-for="(lc, i) in latest" :key=i :index=i id="concertList"  v-bind:class="{ended: lc.isEnd}">
       <v-row>
-        <v-col cols=4 md=5 class="pl-8 pl-md-12" ><span>{{ lc.date.year }}年{{ ('0' + lc.date.month).slice(-2) }}月{{ ('0' + lc.date.day).slice(-2) }}日</span></v-col>
+        <v-col cols=4 md=5 class="pl-8 pl-md-12 d-flex flex-column justify-center"><span>{{ lc.date.year }}/{{ ('0' + lc.date.month).slice(-2) }}/{{ ('0' + lc.date.day).slice(-2) }}</span></v-col>
       
         <v-col cols=8 md=7 ><router-link :to="`/concerts/${lc.id}`"><span>{{ lc.title }}</span></router-link></v-col>
       </v-row>
