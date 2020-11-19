@@ -2,8 +2,9 @@
   <v-container id="newsDetail">
       <div class="pt-4 pt-md-8" v-if="news" >
         <div class="text-right">{{ getFormatDate(news) }}</div>
-        <div class="text-right">{{ news.sender }}</div>
         <div>{{ news.addressee }}</div>
+        <div class="text-right">{{ news.sender }}</div>
+        
         <div class="text-center pt-12 pb-8 h5">{{ news.title }}</div>
         <div v-html="news.text"></div>
       </div>
