@@ -28,7 +28,6 @@ export default {
   },
   data() {
     return {
-      ensemble: [],
       generationEnsemble: new Map(),
       selectedGeneration: null,
     }
@@ -65,9 +64,8 @@ export default {
       }
       return ensemble;
     }).then(res => {
-      this.ensemble = res.reverse();
       let m = new Map();
-      this.ensemble.forEach(e => {
+      res.reverse().forEach(e => {
         if(isNaN(e.year)){
           return;
         }

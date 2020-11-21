@@ -1,7 +1,7 @@
 <template>
   <v-container id="about">
     <Title en="About" ja="活動について" />
-    <F2 v-for="(qa, index) in about_QandA" :key="index" :qand-a="qa" />
+    <F2 v-for="(qa, index) in about_QandA" :key="index" :q-and-a="qa" />
   </v-container>
 </template>
 

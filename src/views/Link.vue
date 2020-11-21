@@ -2,7 +2,7 @@
   <v-container id="link">
     <Title en="Links" ja="リンク集" />
     <div class="row">
-      <div v-for="(group, index) in links" :key="index" class="col-12 col-md-6 mt-0 mb-0 pt-0 pb-0">
+      <div v-for="(group, i) in links" :key="i" class="col-12 col-md-6 mt-0 mb-0 pt-0 pb-0">
         <v-card tile outlined>
           <v-card-title class="h4 mb-2 pb-0">
             {{ group.groupName }}

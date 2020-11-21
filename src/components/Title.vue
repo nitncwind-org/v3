@@ -17,10 +17,18 @@
 <script>
 export default {
   name: 'Title',
-  props: [
-    'ja',
-    'en'
-  ]
+  props: {
+    'ja': {
+      type: String,
+      require: true,
+      default: '',
+    },
+    'en': {
+      type: String,
+      require: true,
+      default: '',
+    }
+  }
 }
 </script>
 

@@ -63,7 +63,11 @@
 export default {
   name: 'F1',
   props: {
-    d: Object
+    d: {
+      type: Object,
+      require: true,
+      default: () => {}
+    }
   },
   data: function() {
     return {

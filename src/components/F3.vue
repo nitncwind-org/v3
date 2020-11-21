@@ -31,7 +31,11 @@
 export default {
   name: 'F3',
   props: {
-    concours: Object
+    concours: {
+      type: Object,
+      require: true,
+      default: () => {}
+    }
   },
   computed: {
     isGold: function() {
