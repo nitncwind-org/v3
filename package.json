@@ -40,13 +40,20 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/max-attributes-per-line": [
+        "off"
+      ],
+      "vue/no-v-html": [
+        "off"
+      ]
+    }
   },
   "browserslist": [
     "> 1%",
