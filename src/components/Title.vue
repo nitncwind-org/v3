@@ -1,16 +1,17 @@
 <template>
   <div class="jumbotron jumbotron-fluid centering text-center bg-none">
     <div class="w-100">
-      <h1 class="serif">{{ en }}</h1>
+      <h1 class="serif">
+        {{ en }}
+      </h1>
       <div class="title-borders text-center d-flex">
-        <div class="title-border"></div>
-        <div class="title-border"></div>
-        <div class="title-border"></div>
+        <div class="title-border" />
+        <div class="title-border" />
+        <div class="title-border" />
       </div>
       <span class="font-weight-bold header-jp">{{ ja }}</span>
     </div>
   </div>
-
 </template>
 
 <script>

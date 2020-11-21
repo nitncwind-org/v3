@@ -1,14 +1,20 @@
 <template>
   <v-container id="concerts">
-    <Title en="Concerts" ja="演奏会のお知らせ"></Title>
+    <Title en="Concerts" ja="演奏会のお知らせ" />
 
-    <div v-for="(lc, i) in latest" :key=i :index=i id="concertList"  v-bind:class="{ended: lc.isEnd}">
+    <div v-for="(lc, i) in latest" id="concertList" :key="i" :index="i" :class="{ended: lc.isEnd}">
       <v-row>
-        <v-col cols=4 md=5 class="pl-8 pl-md-12 d-flex flex-column justify-center"><span>{{ lc.date.year }}/{{ ('0' + lc.date.month).slice(-2) }}/{{ ('0' + lc.date.day).slice(-2) }}</span></v-col>
+        <v-col cols="4" md="5" class="pl-8 pl-md-12 d-flex flex-column justify-center">
+          <span>{{ lc.date.year }}/{{ ('0' + lc.date.month).slice(-2) }}/{{ ('0' + lc.date.day).slice(-2) }}</span>
+        </v-col>
       
-        <v-col cols=8 md=7 ><router-link :to="`/concerts/${lc.id}`"><span>{{ lc.title }}</span></router-link></v-col>
+        <v-col cols="8" md="7">
+          <router-link :to="`/concerts/${lc.id}`">
+            <span>{{ lc.title }}</span>
+          </router-link>
+        </v-col>
       </v-row>
-      <v-divider></v-divider>
+      <v-divider />
     </div>
   </v-container>
 </template>

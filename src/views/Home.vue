@@ -1,85 +1,101 @@
 <template>
   <div>
-  <div class="jumbotron jumbotron-fluid d-none p-0" id="top">
-    <div class="position-absolute text-justify-content d-none" id="top_title">
-      <h1 class="serif font-weight-bold ">奈良高専吹奏楽部</h1>
-      <h3 class="serif">National Institute of Technology, Nara College Band</h3>
-    </div>
-    <Hooper :settings="hooperSettings" :mouseDrag="false" :wheelControl="false">
-        <Slide v-for="(image, index) in images" :key="index" :index="index" >
-          <v-img :src="image" />
-        </Slide>
-    </Hooper>
-
-  </div>
-  <v-container class="" id="home">
-    <div class="">
-      <Hooper :settings="hooperSettings">
+    <div id="top" class="jumbotron jumbotron-fluid d-none p-0">
+      <div id="top_title" class="position-absolute text-justify-content d-none">
+        <h1 class="serif font-weight-bold ">
+          奈良高専吹奏楽部
+        </h1>
+        <h3 class="serif">
+          National Institute of Technology, Nara College Band
+        </h3>
+      </div>
+      <Hooper :settings="hooperSettings" :mouse-drag="false" :wheel-control="false">
         <Slide v-for="(image, index) in images" :key="index" :index="index">
           <v-img :src="image" />
         </Slide>
       </Hooper>
     </div>
+    <v-container id="home" class="">
+      <div class="">
+        <Hooper :settings="hooperSettings">
+          <Slide v-for="(image, index) in images" :key="index" :index="index">
+            <v-img :src="image" />
+          </Slide>
+        </Hooper>
+      </div>
 
-    <div class="row mt-0">
-      <v-card tile outlined id="description" class="col-12">
-        <v-card-title class="h4 mb-2 pb-0">奈良高専吹奏楽部のホームページへようこそ!</v-card-title>
-        <v-card-text>
-          <p>
-            このホームページでは奈良高専吹奏楽部の演奏会情報やコンクール結果などを掲載しています。
-            なお、このホームページは奈良高専の公式Webサイトではありません。
-          </p>
-        </v-card-text>
-      </v-card>
-
-      <div class="col-12 col-md-6">
-        <v-card tile outlined id="nextConcert">
-          <v-card-title class="h4 mb-2 pb-0">次回の演奏会</v-card-title>
+      <div class="row mt-0">
+        <v-card id="description" tile outlined class="col-12">
+          <v-card-title class="h4 mb-2 pb-0">
+            奈良高専吹奏楽部のホームページへようこそ!
+          </v-card-title>
           <v-card-text>
-          <F1 v-if="latestConcerts" v-bind:d="latestConcerts" id="latestConcert"></F1>
-          <p v-else>演奏会の予定はありません</p>
+            <p>
+              このホームページでは奈良高専吹奏楽部の演奏会情報やコンクール結果などを掲載しています。
+              なお、このホームページは奈良高専の公式Webサイトではありません。
+            </p>
           </v-card-text>
-          
-          
         </v-card>
 
-        <v-card tile outlined id="update" class="d-none">
-          <v-card-title class="h4 mb-2 pb-0">更新情報</v-card-title>
-          <v-card-text>
-          <div id="new-updates">
-            <dl>
-              <dt class="serif text-primary">2020.08.15</dt>
-              <dd>１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０</dd>
-              <dt class="serif text-primary">2020.08.12</dt>
-              <dd>Concertを更新しました</dd>
-              <dt class="serif text-primary">2020.08.08</dt>
-              <dd>Concertを更新しました</dd>
-              <dt class="serif text-primary">2020.08.01</dt>
-              <dd>Concertを更新しました</dd>
-              <dt class="serif text-primary">2020.07.30</dt>
-              <dd>Concertを更新しました</dd>
-            </dl>
-          </div>  
-          </v-card-text>  
-        </v-card>      
-        
-      </div>
+        <div class="col-12 col-md-6">
+          <v-card id="nextConcert" tile outlined>
+            <v-card-title class="h4 mb-2 pb-0">
+              次回の演奏会
+            </v-card-title>
+            <v-card-text>
+              <F1 v-if="latestConcerts" id="latestConcert" :d="latestConcerts" />
+              <p v-else>
+                演奏会の予定はありません
+              </p>
+            </v-card-text>
+          </v-card>
 
-      <div class="col-12 col-md-6">
-        <v-card tile outlined id="twitter">
-          <v-card-title class="h4 serif mb-2 pb-0">Twitter</v-card-title>
-          <v-card-text>
-          <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100vw'}"/>
-          </v-card-text>
-          
-        </v-card>        
-      </div>
+          <v-card id="update" tile outlined class="d-none">
+            <v-card-title class="h4 mb-2 pb-0">
+              更新情報
+            </v-card-title>
+            <v-card-text>
+              <div id="new-updates">
+                <dl>
+                  <dt class="serif text-primary">
+                    2020.08.15
+                  </dt>
+                  <dd>１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０</dd>
+                  <dt class="serif text-primary">
+                    2020.08.12
+                  </dt>
+                  <dd>Concertを更新しました</dd>
+                  <dt class="serif text-primary">
+                    2020.08.08
+                  </dt>
+                  <dd>Concertを更新しました</dd>
+                  <dt class="serif text-primary">
+                    2020.08.01
+                  </dt>
+                  <dd>Concertを更新しました</dd>
+                  <dt class="serif text-primary">
+                    2020.07.30
+                  </dt>
+                  <dd>Concertを更新しました</dd>
+                </dl>
+              </div>  
+            </v-card-text>  
+          </v-card>
+        </div>
 
-    </div>
-  </v-container>
+        <div class="col-12 col-md-6">
+          <v-card id="twitter" tile outlined>
+            <v-card-title class="h4 serif mb-2 pb-0">
+              Twitter
+            </v-card-title>
+            <v-card-text>
+              <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100vw'}" />
+            </v-card-text>
+          </v-card>        
+        </div>
+      </div>
+    </v-container>
   </div>
-
-
 </template>
 
 <script>

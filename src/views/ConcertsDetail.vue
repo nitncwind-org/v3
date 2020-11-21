@@ -1,11 +1,13 @@
 <template>
   <v-container id="concerts">
-      <Title class="concertTitle" v-bind:en="concerts.title" ja=""></Title>
+    <Title class="concertTitle" :en="concerts.title" ja="" />
       
-      <F1 v-if="concerts" v-bind:d="concerts"></F1>
-      <div class="text-right mb-6">
-        <router-link class="align-right" to="/concerts">一覧ページに戻る</router-link>
-      </div>
+    <F1 v-if="concerts" :d="concerts" />
+    <div class="text-right mb-6">
+      <router-link class="align-right" to="/concerts">
+        一覧ページに戻る
+      </router-link>
+    </div>
   </v-container>
 </template>
 

@@ -1,12 +1,12 @@
 <template>
   <v-app :dark="true">
     <div id="app">
-      <Header/>
-        <v-content>
-          <router-view/>
-        </v-content>
+      <Header />
+      <v-content>
+        <router-view />
+      </v-content>
 
-      <Footer/>
+      <Footer />
     </div>
   </v-app>
 </template>
@@ -21,6 +21,15 @@ export default {
     Header,
     Footer
   },
+  watch: { 
+    '$route' (routeInstance) {
+      this.setTitle(routeInstance);
+    }
+  },
+  mounted : function(){
+    var routeInstance = this.$route;
+    this.setTitle(routeInstance);
+  },
   methods: {
     setTitle : function(routeInstance){
       // titleのセット
@@ -30,15 +39,6 @@ export default {
       }
       title += '奈良高専吹奏楽部';
       document.title = title;
-    }
-  },
-  mounted : function(){
-    var routeInstance = this.$route;
-    this.setTitle(routeInstance);
-  },
-  watch: { 
-    '$route' (routeInstance) {
-      this.setTitle(routeInstance);
     }
   }
 }
