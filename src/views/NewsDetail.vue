@@ -1,13 +1,17 @@
 <template>
-  <v-container>
-      <div v-if="news">
-        <div>{{ getFormatDate(news) }}</div>
+  <v-container id="newsDetail">
+      <div class="pt-4 pt-md-8" v-if="news" >
+        <div class="text-right">{{ getFormatDate(news) }}</div>
         <div>{{ news.addressee }}</div>
-        <div>{{ news.sender }}</div>
-        <div>{{ news.title }}</div>
+        <div class="text-right">{{ news.sender }}</div>
+        
+        <div class="text-center pt-12 pb-8 h5">{{ news.title }}</div>
         <div v-html="news.text"></div>
       </div>
-      <router-link to="/news">一覧ページに戻る</router-link>
+      <div class="text-right pt-8 pb-8">
+      <router-link to="/news" >一覧ページに戻る</router-link>
+      </div>
+      
   </v-container>
 </template>
 
@@ -86,3 +90,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#newsDetail{
+    max-width: 640px;
+    margin: 0 auto;
+}
+</style>
+
