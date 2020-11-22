@@ -34,7 +34,7 @@ export default {
 
 <style scoped>
 .theme--light.v-card.v-card--outlined {
-    border: none;
+  border: none;
 }
 
 .title-borders{
@@ -60,5 +60,4 @@ export default {
   height: 100%;
   background-color: #000000;
 }
-
 </style>

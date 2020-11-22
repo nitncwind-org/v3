@@ -89,8 +89,8 @@ export default {
 
 <style scoped>
 #newsList{
-    max-width: 640px;
-    margin: 0 auto;
+  max-width: 640px;
+  margin: 0 auto;
 }
 </style>
 

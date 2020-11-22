@@ -60,8 +60,7 @@ export default {
 </script>
 
 <style scoped>
-
 .theme--light.v-card.v-card--outlined {
-    border: none;
+  border: none;
 }
 </style>

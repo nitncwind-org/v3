@@ -45,24 +45,23 @@ export default {
 </script>
 
 <style>
-  .v-footer .col{
-    margin: auto 0;
-  }
-  
+.v-footer .col{
+  margin: auto 0;
+}
 </style>
 
 <style scoped>
-  .v-footer .social a{
-    color: #ffffff!important;
-  }
-  .v-footer .social a:hover{
-    opacity: 0.7;
-    text-decoration: none;
-  }
+.v-footer .social a{
+  color: #ffffff!important;
+}
 
-  .v-footer .text-small{
-    font-size: 1rem;
-  }
+.v-footer .social a:hover{
+  opacity: 0.7;
+  text-decoration: none;
+}
 
+.v-footer .text-small{
+  font-size: 1rem;
+}
 </style>
 

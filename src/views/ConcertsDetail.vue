@@ -1,7 +1,7 @@
 <template>
   <v-container id="concerts">
     <Title class="concertTitle" :en="concerts.title" ja="" />
-      
+
     <ConcertInfo v-if="concerts" :d="concerts" />
     <div class="text-right mb-6">
       <router-link class="align-right" to="/concerts">
@@ -82,15 +82,15 @@ export default {
 </script>
 
 <style scoped>
-  .concertTitle{
-    letter-spacing: 0.15em;
-  }
+.concertTitle{
+  letter-spacing: 0.15em;
+}
 
-  @media screen and (min-width: 1264px) {
-    #concerts{
-      max-width: 900px;
-      margin: 0 auto;
-    }
+@media screen and (min-width: 1264px) {
+  #concerts{
+    max-width: 900px;
+    margin: 0 auto;
   }
+}
 </style>
 

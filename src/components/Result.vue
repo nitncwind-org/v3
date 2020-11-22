@@ -5,10 +5,10 @@
         {{ concours.year }}
       </v-card-title>
       <v-card-text>
-        <div class="">
+        <div>
           <span class="h4 serif text-primary">{{ concours.year }}</span>
         </div>
-        
+
         <div>
           <div v-for="(c, i) in concours.concours" :key="i" class="badge badge-primary rounded-0 mr-2 mb-1">
             <span>{{ c.label }} </span>
@@ -56,12 +56,11 @@ export default {
 }
 
 .theme--light.v-card.v-card--outlined {
-  
   border: none;
 }
 
 .theme--light.v-card.v-card--outlined:nth-child(12){
-border-top: thin solid rgba(0, 0, 0, 0.12);
+  border-top: thin solid rgba(0, 0, 0, 0.12);
 }
 
 div.badge span{

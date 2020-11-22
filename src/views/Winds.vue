@@ -7,7 +7,7 @@
       </v-tab>
     </v-tabs>
     <v-tabs-items v-model="selectedGeneration">
-      <v-tab-item v-for="[generation, con] in generationConcours" :key="generation" :index="generation" class="">
+      <v-tab-item v-for="[generation, con] in generationConcours" :key="generation" :index="generation">
         <v-row>
           <Result v-for="(c, index) in con" :key="index" :concours="c" class="col-md-4 col-sm-6 col-12 mb-0 pb-0" />
         </v-row>

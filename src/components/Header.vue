@@ -143,22 +143,28 @@ export default {
   box-shadow: none;
   border: 2px solid var(--v-secondary-base);
 }
+
 .list-splitter{
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
+
 .rotate{
   transform: rotateZ(180deg);
 }
+
 .v-alert{
   margin-bottom: 0;
 }
+
 .v-sheet{
   border-radius: 0;
 }
+
 .v-alert:not(.v-sheet--tile){
   border-radius: 0;
 }
+
 .banner-color{
   color: inherit;
 }

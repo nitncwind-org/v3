@@ -8,7 +8,7 @@
       <div class="text-right">
         {{ news.sender }}
       </div>
-        
+
       <div class="text-center pt-12 pb-8 h5">
         {{ news.title }}
       </div>
@@ -100,8 +100,8 @@ export default {
 
 <style scoped>
 #newsDetail{
-    max-width: 640px;
-    margin: 0 auto;
+  max-width: 640px;
+  margin: 0 auto;
 }
 </style>
 

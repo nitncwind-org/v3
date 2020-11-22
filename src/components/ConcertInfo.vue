@@ -1,6 +1,6 @@
 <template>
   <v-card tile outlined>
-    <v-card-text class="">
+    <v-card-text>
       <v-alert v-if="isPublished" text prominent :type="d.notice.type">
         <h3 class="title font-weight-bold">
           {{ d.notice.title }}
@@ -41,7 +41,7 @@
           </v-simple-table>
           <div v-if="d.place.map">
             <iframe
-              :src="d.place.map" 
+              :src="d.place.map"
               width="100%"
               height="380"
               frameborder="0"
@@ -51,9 +51,6 @@
           </div>
         </v-col>
       </v-row>
-
-      
-      
       <div class="detail-content" v-html="d.mainBody" />
     </v-card-text>
   </v-card>
@@ -90,15 +87,16 @@ export default {
 </script>
 
 <style scoped>
-
 .theme--light.v-card--disabled{
   background-color: #EEEEEE;
 }
+
 #notice{
   padding: 10px;
   width: 100%;
 }
-#notice p{ 
+
+#notice p{
   margin-bottom: 0;
 }
 
@@ -135,19 +133,18 @@ div.large{
 }
 
 .theme--light.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
-    background: rgba(0,0,0,0);
+  background: rgba(0,0,0,0);
 }
 
 .v-data-table td {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-{/* detail content */}
 div.detail-content{
   color: #222;
 }
+
 div.detail-content >>> h3{
   margin-top: 20px;
 }
-
 </style>

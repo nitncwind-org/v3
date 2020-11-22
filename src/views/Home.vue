@@ -15,8 +15,8 @@
         </Slide>
       </Hooper>
     </div>
-    <v-container id="home" class="">
-      <div class="">
+    <v-container id="home">
+      <div>
         <Hooper :settings="hooperSettings">
           <Slide v-for="(image, index) in images" :key="index" :index="index">
             <v-img :src="image" />
@@ -78,8 +78,8 @@
                   </dt>
                   <dd>Concertを更新しました</dd>
                 </dl>
-              </div>  
-            </v-card-text>  
+              </div>
+            </v-card-text>
           </v-card>
         </div>
 
@@ -91,7 +91,7 @@
             <v-card-text>
               <Timeline :id="user_id" source-type="profile" :options="{height: '500', width: '100vw'}" />
             </v-card-text>
-          </v-card>        
+          </v-card>
         </div>
       </div>
     </v-container>
@@ -206,42 +206,37 @@ export default {
 .hooper{
   height: auto;
 }
-
 </style>
 
 <style>
-
 /* vuetifyによる"ul"へのpadding-leftスタイルを打ち消している */
 .v-application .hooper-track{
   padding: 0;
 }
 
-
 .theme--light.v-card.v-card--outlined {
-  
   border: none;
 }
-
 
 #new-updates{
   height: 200px;
   overflow-y: scroll;
 }
+
 #new-updates dt{
   letter-spacing: 1px;
 }
+
 #new-updates dd{
   margin-bottom: 1rem;
 }
 
 .text-primary{
-    color: #0e177f !important;
-    caret-color: #0e177f !important;
-  }
+  color: #0e177f !important;
+  caret-color: #0e177f !important;
+}
 
 .badge.badge-primary{
     background-color: #0e177f;
 }
-
-
 </style>
