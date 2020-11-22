@@ -2,7 +2,7 @@
   <v-container id="concerts">
     <Title class="concertTitle" :en="concerts.title" ja="" />
       
-    <F1 v-if="concerts" :d="concerts" />
+    <ConcertInfo v-if="concerts" :d="concerts" />
     <div class="text-right mb-6">
       <router-link class="align-right" to="/concerts">
         一覧ページに戻る
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import F1 from '@/components/F1.vue'
+import ConcertInfo from '@/components/ConcertInfo.vue'
 import Title from '@/components/Title.vue'
 import { loadCSV } from '@/lib/csv.js'
 import { CONCERTS_URL } from '@/config/url.js'
@@ -20,7 +20,7 @@ import { CONCERTS_URL } from '@/config/url.js'
 export default {
   name: 'Concerts',
   components: {
-    F1,
+    ConcertInfo,
     Title
   },
   data: function() {

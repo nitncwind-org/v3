@@ -1,5 +1,5 @@
 <template>
-  <v-card id="f1" tile outlined>
+  <v-card tile outlined>
     <v-card-text class="">
       <v-alert v-if="isPublished" text prominent :type="d.notice.type">
         <h3 class="title font-weight-bold">
@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  name: 'F1',
+  name: 'ConcertInfo',
   props: {
     d: {
       type: Object,

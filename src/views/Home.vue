@@ -43,7 +43,7 @@
               次回の演奏会
             </v-card-title>
             <v-card-text>
-              <F1 v-if="latestConcerts" id="latestConcert" :d="latestConcerts" />
+              <ConcertInfo v-if="latestConcerts" id="latestConcert" :d="latestConcerts" />
               <p v-else>
                 演奏会の予定はありません
               </p>
@@ -99,7 +99,7 @@
 </template>
 
 <script>
-import F1 from '@/components/F1.vue';
+import ConcertInfo from '@/components/ConcertInfo.vue';
 import { Timeline } from 'vue-tweet-embed';
 import { Hooper, Slide } from 'hooper';
 import 'hooper/dist/hooper.css';
@@ -109,7 +109,7 @@ import { CONCERTS_URL } from '@/config/url.js';
 export default {
   name: 'Home',
   components: {
-    F1,
+    ConcertInfo,
     Timeline,
     Hooper,
     Slide,

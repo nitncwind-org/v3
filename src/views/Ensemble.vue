@@ -8,14 +8,14 @@
     </v-tabs>
     <v-tabs-items v-model="selectedGeneration">
       <v-tab-item v-for="[generation, ensemble] in generationEnsemble" :key="generation" :index="generation" class="row">
-        <F3 v-for="(e, index) in ensemble" :key="index" :concours="e" class="col-md-4 col-sm-6 col-12 mb-0 pb-0" />
+        <Result v-for="(e, index) in ensemble" :key="index" :concours="e" class="col-md-4 col-sm-6 col-12 mb-0 pb-0" />
       </v-tab-item>
     </v-tabs-items>
   </v-container>
 </template>
 
 <script>
-import F3 from '@/components/F3.vue'
+import Result from '@/components/Result.vue'
 import { loadCSV } from '@/lib/csv.js'
 import { ENSEMBLE_URL } from '@/config/url.js'
 import Title from '@/components/Title.vue'
@@ -23,7 +23,7 @@ import Title from '@/components/Title.vue'
 export default {
   name: 'Ensemble',
   components: {
-    F3,
+    Result,
     Title
   },
   data() {

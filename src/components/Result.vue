@@ -1,6 +1,6 @@
 <template>
   <v-col cols="12" sm="6" md="4">
-    <v-card id="f3" tile outlined>
+    <v-card tile outlined>
       <v-card-title class="h4 serif text-primary d-none">
         {{ concours.year }}
       </v-card-title>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'F3',
+  name: 'Result',
   props: {
     concours: {
       type: Object,

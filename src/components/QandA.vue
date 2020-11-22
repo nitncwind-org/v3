@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'F2',
+  name: 'QandA',
   props: {
     'qAndA': {
       type: Object,

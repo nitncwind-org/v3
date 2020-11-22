@@ -1,12 +1,12 @@
 <template>
   <v-container id="about">
     <Title en="About" ja="活動について" />
-    <F2 v-for="(qa, index) in about_QandA" :key="index" :q-and-a="qa" />
+    <QandA v-for="(qa, index) in about_QandA" :key="index" :q-and-a="qa" />
   </v-container>
 </template>
 
 <script>
-import F2 from "@/components/F2.vue";
+import QandA from "@/components/QandA.vue";
 import { loadCSV } from '@/lib/csv.js';
 import { ABOUT_URL } from '@/config/url.js';
 import Title from "@/components/Title.vue";
@@ -14,7 +14,7 @@ import Title from "@/components/Title.vue";
 export default {
   name: 'About',
   components: {
-    F2,
+    QandA,
     Title
   },
   data: function() {
