@@ -1,19 +1,20 @@
 <template>
   <v-container id="link">
-  <Title en="Links" ja="リンク集"></Title>
+    <Title en="Links" ja="リンク集" />
     <div class="row">
-      <div v-for="(group, index) in links" :key=index class="col-12 col-md-6 mt-0 mb-0 pt-0 pb-0">
-        <v-card tile outlined >
-          <v-card-title class="h4 mb-2 pb-0">{{ group.groupName }}</v-card-title>
+      <div v-for="(group, i) in links" :key="i" class="col-12 col-md-6 mt-0 mb-0 pt-0 pb-0">
+        <v-card tile outlined>
+          <v-card-title class="h4 mb-2 pb-0">
+            {{ group.groupName }}
+          </v-card-title>
           <v-card-text>
             <ul>
-            <li v-for="(link, index) in group.links" :key=index>
-              <a v-bind:href="link.url" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
-            </li>
-          </ul>
+              <li v-for="(link, index) in group.links" :key="index">
+                <a :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+              </li>
+            </ul>
           </v-card-text>
         </v-card>
-
       </div>
     </div>
   </v-container>
@@ -59,8 +60,7 @@ export default {
 </script>
 
 <style scoped>
-
 .theme--light.v-card.v-card--outlined {
-    border: none;
+  border: none;
 }
 </style>

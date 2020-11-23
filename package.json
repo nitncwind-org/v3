@@ -65,7 +65,8 @@
       ],
       "vue/no-v-html": [
         "off"
-      ]
+      ],
+      "no-trailing-spaces": "warn"
     }
   },
   "browserslist": [

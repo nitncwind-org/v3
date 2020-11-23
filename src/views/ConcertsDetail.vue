@@ -1,16 +1,18 @@
 <template>
   <v-container id="concerts">
-      <Title class="concertTitle" v-bind:en="concerts.title" ja=""></Title>
-      
-      <F1 v-if="concerts" v-bind:d="concerts"></F1>
-      <div class="text-right mb-6">
-        <router-link class="align-right" to="/concerts">一覧ページに戻る</router-link>
-      </div>
+    <Title class="concertTitle" :en="concerts.title" ja="" />
+
+    <ConcertInfo v-if="concerts" :d="concerts" />
+    <div class="text-right mb-6">
+      <router-link class="align-right" to="/concerts">
+        一覧ページに戻る
+      </router-link>
+    </div>
   </v-container>
 </template>
 
 <script>
-import F1 from '@/components/F1.vue'
+import ConcertInfo from '@/components/ConcertInfo.vue'
 import Title from '@/components/Title.vue'
 import { loadCSV } from '@/lib/csv.js'
 import { CONCERTS_URL } from '@/config/url.js'
@@ -18,7 +20,7 @@ import { CONCERTS_URL } from '@/config/url.js'
 export default {
   name: 'Concerts',
   components: {
-    F1,
+    ConcertInfo,
     Title
   },
   data: function() {
@@ -80,15 +82,15 @@ export default {
 </script>
 
 <style scoped>
-  .concertTitle{
-    letter-spacing: 0.15em;
-  }
+.concertTitle{
+  letter-spacing: 0.15em;
+}
 
-  @media screen and (min-width: 1264px) {
-    #concerts{
-      max-width: 900px;
-      margin: 0 auto;
-    }
+@media screen and (min-width: 1264px) {
+  #concerts{
+    max-width: 900px;
+    margin: 0 auto;
   }
+}
 </style>
 
