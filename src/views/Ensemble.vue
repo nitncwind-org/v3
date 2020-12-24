@@ -1,20 +1,21 @@
 <template>
   <v-container>
-    
-      <Title en="Ensemble Contest" ja="アンサンブルコンテスト実績"></Title>
-      <v-tabs mandatory v-model="selectedGeneration" dense show-arrows>
-        <v-tab v-for="generation in generationEnsemble.keys()" :key="generation" :index="generation" :value="generation">{{ generation }}s</v-tab>
-      </v-tabs>
-      <v-tabs-items v-model="selectedGeneration">
-        <v-tab-item v-for="[generation, ensemble] in generationEnsemble" :key="generation" :index="generation" class="row">
-          <F3 v-for="(e, index) in ensemble" :key=index v-bind:concours="e" class="col-sm-6 col-12 mb-0 pb-0"></F3>
-        </v-tab-item>
-      </v-tabs-items>
+    <Title en="Ensemble Contest" ja="アンサンブルコンテスト実績" />
+    <v-tabs v-model="selectedGeneration" mandatory dense show-arrows>
+      <v-tab v-for="generation in generationEnsemble.keys()" :key="generation" :index="generation" :value="generation">
+        {{ generation }}s
+      </v-tab>
+    </v-tabs>
+    <v-tabs-items v-model="selectedGeneration">
+      <v-tab-item v-for="[generation, ensemble] in generationEnsemble" :key="generation" :index="generation" class="row">
+        <Result v-for="(e, index) in ensemble" :key="index" :concours="e" class="col-sm-6 col-12 mb-0 pb-0" />
+      </v-tab-item>
+    </v-tabs-items>
   </v-container>
 </template>
 
 <script>
-import F3 from '@/components/F3.vue'
+import Result from '@/components/Result.vue'
 import { loadCSV } from '@/lib/csv.js'
 import { ENSEMBLE_URL } from '@/config/url.js'
 import Title from '@/components/Title.vue'
@@ -22,12 +23,11 @@ import Title from '@/components/Title.vue'
 export default {
   name: 'Ensemble',
   components: {
-    F3,
+    Result,
     Title
   },
   data() {
     return {
-      ensemble: [],
       generationEnsemble: new Map(),
       selectedGeneration: null,
     }
@@ -64,9 +64,8 @@ export default {
       }
       return ensemble;
     }).then(res => {
-      this.ensemble = res.reverse();
       let m = new Map();
-      this.ensemble.forEach(e => {
+      res.reverse().forEach(e => {
         if(isNaN(e.year)){
           return;
         }

@@ -1,21 +1,27 @@
 <template>
   <v-container>
-    <Loading v-show="loading"></Loading>
-    <Title en="Contact" ja="お問い合わせ"></Title>
-    <v-card tile outlined id="contactForm">
+    <Loading v-show="loading" />
+    <Title en="Contact" ja="お問い合わせ" />
+    <v-card id="contactForm" tile outlined>
       <v-card-text>
         <v-form ref="form" v-model="valid">
-          <v-text-field label="名前" :rules="[rules.required]" v-model="name"></v-text-field>
-          <v-select label="所属" :rules="[rules.required]" :items="affiliations" v-model="affiliation"></v-select>
-          <v-text-field label="所属高専" v-show="affiliation=='他高専(OBOG含む)'" v-model="affiliation_kosen"></v-text-field>
-          <v-text-field label="団体名" v-show="affiliation=='団体'" v-model="affiliation_group"></v-text-field>
-          <v-text-field label="メールアドレス" :rules="[rules.required, rules.email]" v-model="emailAddress"></v-text-field>
-          <v-select label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" v-model="inquiry"></v-select>
-          <v-textarea label="お問い合わせ詳細" :rules="[rules.required]" v-model="content"></v-textarea>
-          <v-btn :disabled="!valid" v-on:click="submit">送信</v-btn>
+          <v-text-field v-model="name" label="名前" :rules="[rules.required]" />
+          <v-select v-model="affiliation" label="所属" :rules="[rules.required]" :items="affiliations" />
+          <v-text-field v-show="affiliation=='他高専(OBOG含む)'" v-model="affiliation_kosen" label="所属高専" />
+          <v-text-field v-show="affiliation=='団体'" v-model="affiliation_group" label="団体名" />
+          <v-text-field v-model="emailAddress" label="メールアドレス" :rules="[rules.required, rules.email]" />
+          <v-select v-model="inquiry" label="お問い合わせ内容" :rules="[rules.required]" :items="inquiries" />
+          <v-textarea v-model="content" label="お問い合わせ詳細" :rules="[rules.required]" />
+          <v-btn :disabled="!valid" @click="submit">
+            送信
+          </v-btn>
         </v-form>
-        <v-snackbar v-model="successSnackbar" color="success" top app transition="scroll-y-transition">送信成功</v-snackbar>
-        <v-snackbar v-model="failureSnackbar" color="error" top app transition="scroll-y-transition">送信失敗<br>{{ message }}</v-snackbar>
+        <v-snackbar v-model="successSnackbar" color="success" top app transition="scroll-y-transition">
+          送信成功
+        </v-snackbar>
+        <v-snackbar v-model="failureSnackbar" color="error" top app transition="scroll-y-transition">
+          送信失敗<br>{{ message }}
+        </v-snackbar>
       </v-card-text>
     </v-card>
   </v-container>
@@ -27,6 +33,10 @@ import Title from '@/components/Title'
 import { CONTACT_URL } from '@/config/url.js'
 
 export default {
+  components: {
+    Loading,
+    Title
+  },
   data: function() {
     return {
       valid: false,
@@ -98,17 +108,13 @@ export default {
           this.failureSnackbar = true;
       })
     }
-  },
-  components: {
-    Loading,
-    Title
   }
 }
 </script>
 
 <style scoped>
 .theme--light.v-card.v-card--outlined {
-    border: none;
+  border: none;
 }
 
 #contactForm{
