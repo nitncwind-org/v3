@@ -8,7 +8,7 @@
     </v-tabs>
     <v-tabs-items v-model="selectedGeneration">
       <v-tab-item v-for="[generation, ensemble] in generationEnsemble" :key="generation" :index="generation" class="row">
-        <Result v-for="(e, index) in ensemble" :key="index" :concours="e" class="col-md-4 col-sm-6 col-12 mb-0 pb-0" />
+        <Result v-for="(e, index) in ensemble" :key="index" :concours="e" class="col-sm-6 col-12 mb-0 pb-0" />
       </v-tab-item>
     </v-tabs-items>
   </v-container>

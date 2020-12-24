@@ -1,0 +1,7 @@
+@import '~vuetify/src/styles/styles.sass';
+
+$container-max-widths: (
+  'md': map-get($grid-breakpoints, 'md') * 0.8,
+  'lg': map-get($grid-breakpoints, 'lg') * 0.6,
+  'xl': map-get($grid-breakpoints, 'xl') * 0.6
+);

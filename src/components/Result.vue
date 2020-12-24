@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12" sm="6" md="4">
+  <v-col>
     <v-card tile outlined>
       <v-card-title class="h4 serif text-primary d-none">
         {{ concours.year }}

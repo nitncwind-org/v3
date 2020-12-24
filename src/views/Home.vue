@@ -37,7 +37,7 @@
           </v-card-text>
         </v-card>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-9">
           <v-card id="nextConcert" tile outlined>
             <v-card-title class="h4 mb-2 pb-0">
               次回の演奏会
@@ -83,7 +83,7 @@
           </v-card>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-3">
           <v-card id="twitter" tile outlined>
             <v-card-title class="h4 serif mb-2 pb-0">
               Twitter
