@@ -1,35 +1,31 @@
 <template>
   <v-container id="concerts">
-    <Title en="Concerts" ja="演奏会のお知らせ" />
-    <div v-for="(lc, i) in latest" id="concertList" :key="i" :index="i" :class="{ended: lc.isEnd}">
-      <v-row>
-        <v-col cols="4" md="5" class="pl-8 pl-md-12 d-flex flex-column justify-center">
-          <span>{{ lc.date.year }}/{{ ('0' + lc.date.month).slice(-2) }}/{{ ('0' + lc.date.day).slice(-2) }}</span>
-        </v-col>
-        <v-col cols="8" md="7">
-          <router-link :to="`/concerts/${lc.id}`">
-            <span>{{ lc.title }}</span>
-          </router-link>
-        </v-col>
-      </v-row>
-      <v-divider />
+    <Title class="concertTitle" :en="concerts.title" ja="" />
+
+    <ConcertInfo v-if="concerts" :d="concerts" />
+    <div class="text-right mb-6">
+      <router-link class="align-right" to="/concerts">
+        一覧ページに戻る
+      </router-link>
     </div>
   </v-container>
 </template>
 
 <script>
+import ConcertInfo from '@/components/ConcertInfo.vue'
+import Title from '@/components/Title.vue'
 import { loadCSV } from '@/lib/csv.js'
 import { CONCERTS_URL } from '@/config/url.js'
-import Title from '@/components/Title.vue'
 
 export default {
   name: 'Concerts',
   components: {
+    ConcertInfo,
     Title
   },
   data: function() {
     return {
-      latest: []
+      concerts: null,
     }
   },
   created() {
@@ -67,55 +63,34 @@ export default {
           'map': array[11]
         },
         'fee': Number(array[6]),
+        'mainBody': array[7],
         'poster': array[8]+array[9],
         'notice': notice,
       }
     }, 1).then(res => {
-      const today = new Date();
-      const futureConcerts = [];
-      const pastConcerts = [];
       res.forEach(e => {
-        if(e.date.raw < today){
-          e['isEnd'] = true;
-          pastConcerts.push(e);
-        }else{
-          e['isEnd'] = false;
-          futureConcerts.push(e);
+        if(e.id === this.$route.params.id){
+          this.concerts = e;
         }
       });
-
-      pastConcerts.sort(function(a, b){
-        if(a.date.raw > b.date.raw){
-          return -1;
-        }
-        if(a.date.raw < b.date.raw){
-          return 1;
-        }
-        return 0;
-      });
-
-      futureConcerts.sort(function(a, b){
-        if(a.date.raw > b.date.raw){
-          return 1;
-        }
-        if(a.date.raw < b.date.raw){
-          return -1;
-        }
-        return 0;
-      });
-
-      this.latest = futureConcerts.concat(pastConcerts);
+      if(this.concerts === null){
+        this.$router.push('/404');
+      }
     });
   }
 }
 </script>
 
 <style scoped>
-.ended{
+.concertTitle{
+  letter-spacing: 0.15em;
 }
 
-#concertList{
-  max-width: 500px;
-  margin: 0 auto;
+@media screen and (min-width: 1264px) {
+  #concerts{
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
 </style>
+
