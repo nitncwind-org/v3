@@ -103,8 +103,9 @@ export default {
           this.failureSnackbar = true;
           this.message = res.data['message']
         }
-      }).catch(() => {
+      }).catch((error) => {
           this.failureSnackbar = true;
+          this.message = error;
       }).finally(() => {
         this.loading = false;
       })
