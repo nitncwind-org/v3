@@ -96,7 +96,6 @@ export default {
       params.append("inquiry", this.inquiry);
       params.append("content", this.content);
       this.axios.post(CONTACT_URL, params).then(res => {
-        this.loading = false;
         if(res.data['success'] == 'true'){
           this.successSnackbar = true;
           this.$refs.form.reset()
@@ -106,6 +105,8 @@ export default {
         }
       }).catch(() => {
           this.failureSnackbar = true;
+      }).finally(() => {
+        this.loading = false;
       })
     }
   }
