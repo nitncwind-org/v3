@@ -76,6 +76,9 @@ export default {
           this.news = news;
         }
       });
+      if(this.news === null){
+        this.$router.replace({path: '/404'});
+      }
       this.allNews = res;
     });
   },
